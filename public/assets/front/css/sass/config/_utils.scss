@@ -1,0 +1,118 @@
+/*Custom container class*/
+@mixin generate-containers($container-max-width) {
+  @each $size in $container-max-width {
+    $class: nth($size, 1);
+    $width: nth($size, 2);
+
+    .container-#{$class} {
+      max-width: $width;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+
+      @media screen and (min-width:992px) {
+        padding-left: 6.718vw;
+        padding-right: 6.718vw;
+      }
+
+      @media screen and (min-width:1921px) {
+        padding-left: 129px;
+        padding-right: 129px;
+      }
+    }
+  }
+}
+
+$container-max-width: (
+  ("sm", 570px),
+  ("md", 768px),
+  ("lg", 992px),
+  ("xl", 1200px),
+  ("2xl", 1400px),
+  ("3xl", 1920px)
+);
+
+@include generate-containers($container-max-width);
+
+
+/*Custom Color ve background class*/
+$primary: #0f1c44;
+$secondary: #ff4200;
+$tertiary: #650b77;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary
+);
+
+@mixin generate-background-classes($colors) {
+  @each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+@mixin generate-text-classes($colors) {
+  @each $name, $color in $colors {
+    .text-#{$name} {
+      color: $color;
+    }
+  }
+}
+
+@include generate-background-classes($colors);
+@include generate-text-classes($colors);
+
+:root {
+  --swiper-theme-color:$secondary;
+  --swiper-navigation-color:#0f1c44;
+  --swiper-navigation-size:26px;
+}
+
+
+/*Standart css style*/
+.tansform90 {
+  transform: rotate(90deg) !important;
+  transition: all .3s linear;
+}
+.transform45{
+  transform: rotate(45deg) !important;
+  transition: all .3s linear;
+}
+.transform23{
+  transform: rotate(-23deg) !important;
+  transition: all 0.3s linear;
+  display: inline-block;
+  transform-origin: center center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.icon-instagram{
+  font-size: 24px;
+}
+.icon-twitter{
+  font-size: 22px;
+}
+.icon-linkedin-2{
+  font-size: 25px;
+}

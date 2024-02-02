@@ -1,0 +1,139 @@
+nav {
+    &>ul {
+        gap: 63.3px;
+
+        @media screen and (max-width:1440px) {
+            gap: 20px
+        }
+
+        @media screen and (min-width:992px) {
+            display: flex;
+            align-items: center;
+        }
+
+        &>li {
+            position: relative;
+        }
+    }
+
+    .menuItem {
+        cursor: pointer;
+
+        @media screen and (max-width:991.98px) {
+            &.active {
+                .menuLink {
+                    .tansform90 {
+                        transform: rotate(-90deg) !important;
+                    }
+                }
+            }
+        }
+
+        .menuLink {
+            font-size: 13.3px;
+            display: flex;
+            align-items: center;
+            color: #0f1c44;
+            transition: all .3s linear;
+
+            @media screen and (max-width:991.98px) {
+                justify-content: center;
+                font-weight: 600;
+                display: inline-flex;
+            }
+
+        }
+
+        @media screen and (min-width:992px) {
+            &:hover {
+                &>.menuLink {
+                    color: #ff4200;
+                }
+            }
+        }
+
+        &+.menuItem {
+            white-space: nowrap;
+        }
+    }
+
+    &:not(.show) {
+        &>ul {
+            &>li {
+                @media screen and (min-width:992px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+
+                .icon-right-arrow {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 2px;
+                    font-size: 18px;
+                }
+
+                @media screen and (min-width:992px) {
+                    &:hover {
+                        .subMenu {
+                            height: auto;
+                            visibility: visible;
+                            overflow: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &.active {
+                    .subMenu {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            @media screen and (max-width:991.98px) {
+                .menuItem {
+                    .menuLink {
+                        padding-top: 2px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            @media screen and (min-width:992px) {
+                position: absolute;
+                height: 0;
+                visibility: hidden;
+                overflow: hidden;
+                opacity: 0;
+                top: 100%;
+                z-index: 2;
+                background: #ffffff;
+                min-width: 300px;
+                left: -24px;
+                padding-left: 24px;
+                padding-bottom: 20px;
+                border-radius: 0 0 20px 20px;
+                box-shadow: 0 14px 21px -1px rgba(0, 0, 0, 0.2);
+                transition: all .3s linear;
+            }
+        }
+    }
+
+    &.light {
+        .menuItem {
+            .menuLink {
+                color: #ffffff;
+                @media screen and (min-width:992px) {
+                    &:not(span):hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}

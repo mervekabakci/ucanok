@@ -1,0 +1,261 @@
+footer {
+    padding-bottom: 36px;
+    @media screen and (max-width:991.98px) {
+        padding-bottom: 0;
+     }
+
+    .footer {
+        background-color: #0f1c44;
+        height: 632px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (max-width:991.98px) {
+            height: 400px;
+            padding-bottom: 30px;
+         }
+
+        .top {
+            display: flex;
+            padding-top: 42px;
+            padding-left: 80px;
+            padding-right: 42px;
+            flex: 1;
+            @media screen and (max-width:1199.98px) {
+                padding-left: 24px;
+            }
+            @media screen and (max-width:991.98px) {
+                display: block;
+                text-align: center;
+            }
+            .leftColumn {
+                padding-top: 21px;
+                @media screen and (max-width:991.98px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .rightColumn {
+                flex: 1;
+                padding-left: 6vw;
+                padding-top: 38px;
+                @media screen and (max-width:1199.98px) {
+                    padding-left: 40px;
+                }
+                @media screen and (max-width:991.98px) {
+                    display: none;
+                }
+
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    max-height: 332px;
+                    justify-content: space-between;
+
+                    &>ul {
+                        align-items: flex-start;
+
+                        &>.menuItem {
+                            &+.menuItem {
+                                padding-left: 5.1vw;
+                                @media screen and (max-width:1199.98px) {
+                                    padding-left: 24px;
+                                }
+                            }
+
+                            &>.menuLink {
+                                text-transform: uppercase;
+                                position: relative;
+                                font-size: 15.5px;
+                                &:not(.noLine){
+                                    &:after {
+                                        content: "";
+                                        width: 20px;
+                                        height: 1px;
+                                        position: absolute;
+                                        bottom: -2px;
+                                        left: -2px;
+                                        background-color: #ffffff;
+                                    }
+                                }
+                            }
+
+                            &>.subMenu {
+                                padding-top: 9px;
+
+                                .menuItem {
+                                    padding-top: 9px;
+                                }
+                            }
+                        }
+
+                        .subMenu {
+                            &.grid {
+                                display: grid;
+                                grid-template-columns: repeat(4, min-content);
+                                gap: 10px;
+                                padding-top: 17px;
+                                @media screen and (min-width:992px) {
+                                    grid-template-columns: repeat(3, min-content);
+                                }
+                                @media screen and (min-width:1200px) {
+                                    grid-template-columns: repeat(4, min-content);
+                                }
+                                @media screen and (min-width:1366px) {
+                                    grid-template-columns: repeat(5, min-content);
+                                }
+                                @media screen and (min-width:1500px) {
+                                    grid-template-columns: repeat(6, min-content);
+                                }
+                                .menuItem {
+                                    padding-left: 0;
+                                    display: flex;
+                                    align-items: center;
+                                    & + .menuItem{
+                                        padding-left: 0;
+                                        display: flex;
+                                        align-items: center;
+                                        position: relative;
+                                        justify-content: space-around;
+                                        min-width: 163px;
+                                        &:before{
+                                            content: "|";
+                                            display: inline-block;
+                                            position: relative;
+                                            color: #606060;
+                                        }
+                                    }
+                                    @media screen and (min-width:992px) and (max-width:1200px) {
+                                        &:nth-child(3n + 1){
+                                            padding-left: 0;
+                                            justify-content: flex-start;
+                                            min-width: initial;
+                                            &:before{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                               
+                                    @media screen and (min-width:1200px) and (max-width:1366px) {
+                                        &:nth-child(4n + 1){
+                                            padding-left: 0;
+                                            justify-content: flex-start;
+                                            min-width: initial;
+                                            &:before{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                               
+                                    @media screen and (min-width:1366px)  and (max-width:1499.98px) {
+                                        &:nth-child(5n + 1){
+                                            padding-left: 0;
+                                            justify-content: flex-start;
+                                            min-width: initial;
+                                            &:before{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    @media screen and (min-width:1500px) {
+                                        &:nth-child(6n + 1){
+                                            padding-left: 0;
+                                            justify-content: flex-start;
+                                            min-width: initial;
+                                            &:before{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            padding-left: 92px;
+            height: 58px;
+            @media screen and (max-width:1199.98px) {
+                padding-left: 24px;
+            }
+            @media screen and (max-width:991.98px) {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .copyRight {
+                font-weight: 400;
+                font-size: 12.3px;
+                color: #ffffff;
+                width: 400px;
+                @media screen and (min-width:1366px) {
+                    width: 32.3%;
+                    min-width: 300px;
+                    max-width: 507px;
+                }
+            }
+
+            nav {
+                @media screen and (max-width:991.98px) {
+                    padding-bottom:20px;
+                 }
+                & > ul{
+                    gap: 47px;
+                }
+                .menuItem {
+                    .menuLink {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+    }
+    .contact-buttons{
+        @media screen and (max-width:991.98px) {
+           padding-top: 0;
+        }
+        a{
+            @media screen and (max-width:991.98px) {
+                justify-content: center;
+            }
+        }
+    }
+}
+.contact-buttons{
+    padding-top: 20px;
+    a{
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 12.9px;
+        margin-top: 27px;
+        transition: all .3s linear;
+
+        .icon-linkedin-2{
+            font-size: 24px;
+            margin-right: 24px;
+            transition: all .3s linear;
+        }
+        .icon-phone{
+            font-size: 24px;
+            transition: all .3s linear;
+            margin-right: 24px;
+        }
+        @media screen and (min-width:992px) {
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
