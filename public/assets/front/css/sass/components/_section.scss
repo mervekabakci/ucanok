@@ -45,7 +45,7 @@
                 padding-top: 0;
                 flex-direction: row;
                 padding-left: 120px;
-                bottom: 0!important;
+                bottom: 0 !important;
             }
         }
 
@@ -55,7 +55,7 @@
 
             @media screen and (max-width:991.98px) {
                 flex-direction: row;
-                bottom:0!important;
+                bottom: 0 !important;
             }
 
             a {
@@ -68,13 +68,101 @@
                 @media screen and (max-width:991.98px) {
                     margin-top: 0;
                     margin-left: 16px;
-                    span{
-                        &:before{
+
+                    span {
+                        &:before {
                             color: #ffffff;
                         }
                     }
                 }
             }
+        }
+    }
+}
+
+section {
+    overflow: hidden;
+    width: 100%;
+    &:not(.homeSection){
+        padding: 80px 0;
+    }
+
+    .sectionHead {
+        display: flex;
+        align-items: center;
+
+        .sectionTitle {
+            font-weight: 500;
+            font-size: 14px;
+            color: #0f1c44;
+            border-left: 1px solid #ff4200;
+            padding-left: 10px;
+            display: inline-block;
+
+
+        }
+
+        .buttons {
+            margin-left: auto;
+        }
+    }
+
+    &.acticleSection{
+        height: 410px;
+        & > div{
+            height: 100%;
+            & > div{
+                height: 100%;
+            }
+        }
+        .leftColumn{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80%;
+            padding-bottom: 50px;
+        }
+        .categoryName{
+            font-weight: 400;
+            color: #bebebe;
+            font-size: 10px;
+        }
+        .articleTitle{
+            font-weight: 500;
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .articleWrites{
+            font-weight: 500;
+            color: #ffffff;
+            font-size: 10px;
+
+        }
+        .articleImages {
+            height: 80%;
+            aspect-ratio: 3/2;
+            margin-left: auto;
+            overflow: hidden;
+            
+            .imageWrapper {
+                display: block;
+            }
+        }
+    }
+
+    .teamLogo{
+
+    }
+    .teamContent{
+        .title{
+            font-weight: 600;
+            font-size: 16px;
+            color: #0f1c44;
+        }
+        p{
+            font-weight: 400;
+            font-size: 9px;
+            color: #0f1c44;
         }
     }
 }

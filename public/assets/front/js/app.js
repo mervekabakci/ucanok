@@ -20,6 +20,30 @@ if (wWidth <= 992) {
   })
 }
 
+
+/**Tab Js 
+ * 
+ * 
+ * 
+*/
+$(".tabContent").children(".tabsContent").parent().addClass("submain");
+
+$(".tabsTitle > .tabButton").click(function () {
+    var $elemnt = $(this),
+        $indis = $(this).index(),
+        $tab = $elemnt.siblings(),
+        $content = $tab.parent().siblings().children();
+
+        $tab.removeClass("active");
+        $elemnt.addClass("active");
+
+        $content.removeClass("active");
+        $content.eq($indis).addClass("active");
+});
+/**Tab js end
+ * 
+ * 
+ */
 const homeCarousel = new Swiper('.homeCarousel', {
   loop: true,
   pagination: {
@@ -37,4 +61,14 @@ const homeCarousel = new Swiper('.homeCarousel', {
       },
     }
   }
+});
+
+var calismaSlider = new Swiper(".calismaSlider", {
+  slidesPerView: 2.7,
+  loop:true,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-calisma-next',
+    prevEl: '.swiper-calisma-prev',
+  },
 });

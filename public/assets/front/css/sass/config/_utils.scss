@@ -39,11 +39,13 @@ $container-max-width: (
 $primary: #0f1c44;
 $secondary: #ff4200;
 $tertiary: #650b77;
+$gray :#f2f2f2;
 
 $colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "tertiary": $tertiary
+  "tertiary": $tertiary,
+  "gray": $gray
 );
 
 @mixin generate-background-classes($colors) {
@@ -87,6 +89,11 @@ $colors: (
   display: inline-block;
   transform-origin: center center;
 }
+.transform180{
+  transform: rotate(180deg) !important;
+  transition: all 0.3s linear;
+  display: inline-block;
+}
 
 .imageWrapper {
   position: relative;
@@ -105,6 +112,12 @@ $colors: (
 
 .w-100 {
   width: 100% !important;
+}
+.d-flex{
+  display: flex;
+  &.hstack{
+    align-items: center;
+  }
 }
 
 .icon-instagram{

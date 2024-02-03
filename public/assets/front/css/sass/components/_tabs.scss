@@ -1,0 +1,58 @@
+.customTabs{
+    max-width:100%;
+ 
+    .tabsTitle{
+        display: flex;
+        flex-wrap: wrap;
+
+        .tabButton{
+            color:#707070;
+            font-weight: 400;
+            font-size:10px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            position: relative;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            & + .tabButton{
+                margin-left: 20px;
+            }
+            &:after{
+                content: "";
+                width: 0;
+                height: 1px;
+                background-color: #d9d9d9;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: all .3s linear;
+            }
+            @media screen and (min-width:992px) {
+                &:hover{
+                    color:#ff4200;
+                    &:after{
+                        width: 100%;
+                    }
+                }
+            }
+            &.active{
+                color:#ff4200;
+                &:after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .tabsContent{
+        width: 100%;
+        .tabContent{
+            background-color:#ffffff;
+            font-size:12px;
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

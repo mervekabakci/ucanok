@@ -1,4 +1,7 @@
 .swiper {
+  .swiper-slide{
+    overflow: hidden;
+  }
   &.homeCarousel {
     width: 100%;
     height: 69.7vh;
@@ -70,21 +73,6 @@
         letter-spacing: 0.2px;
       }
 
-      .all-btn {
-        color: #999999;
-        font-size: 13px;
-        margin-top: 10px;
-        margin-left: 7px;
-
-        .icon-right-arrow-1 {
-          font-size: 18px;
-          color: #999999;
-          margin-left: 6px;
-          position: relative;
-          bottom: -1px;
-
-        }
-      }
     }
 
     .swiper-button-prev,
@@ -93,6 +81,21 @@
       @media screen and (max-width:992px) {
         display: none;
       }
+    }
+  }
+
+  &.calismaSlider {
+    overflow: visible;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      background-color: #ffffff;
+      z-index: 2;
     }
   }
 
@@ -160,6 +163,54 @@
   }
 }
 
+
+.navigationButtonWrapper {
+  display: flex;
+  align-items: center;
+
+  .navButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      font-weight: 400;
+      font-size: 9px;
+      color: #999999;
+
+      &.icon-next-right-icon {
+        color: #999999;
+        font-size: 10px;
+      }
+    }
+
+    @media screen and (min-width:992px) {
+      &:hover {
+        span {
+          color: #0f1c44;
+
+          &.icon-next-right-icon {
+            color: #0f1c44;
+          }
+        }
+      }
+    }
+
+    &.navButtonPrev {
+      .icon-next-right-icon {
+        margin-right: 10px;
+      }
+    }
+
+    &.navButtonNext {
+      margin-left: 30px;
+
+      .icon-next-right-icon {
+        margin-left: 10px;
+      }
+    }
+  }
+}
 
 .swiper-pagination {
   .swiper-pagination-bullet {

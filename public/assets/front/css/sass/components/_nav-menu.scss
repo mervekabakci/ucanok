@@ -64,18 +64,6 @@ nav {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-
-                }
-
-                .icon-right-arrow {
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-left: 2px;
-                    font-size: 18px;
-                }
-
-                @media screen and (min-width:992px) {
                     &:hover {
                         .subMenu {
                             height: auto;
@@ -84,6 +72,14 @@ nav {
                             opacity: 1;
                         }
                     }
+                }
+
+                .icon-right-arrow {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 2px;
+                    font-size: 18px;
                 }
 
                 &.active {
