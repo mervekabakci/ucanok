@@ -42,6 +42,9 @@
                 transition: all .3s linear;
             }
         }
+        .all-btn{
+            margin-left: 0;
+        }
         @media screen and (min-width:992px) {
             &:hover{
                 .image-overlay{
@@ -68,7 +71,8 @@
                 justify-content: space-between;
                 background-color: #f2f2f2;
                 transition: all .3s linear;
-                aspect-ratio: 5/4;
+                aspect-ratio:5/4.25;
+                padding: 46px 0 0;
 
                 @media screen and (min-width:992px) {
                     &:hover{
@@ -87,27 +91,56 @@
                                 color: #ffffff;
                             }
                         }
+                        .card-footer{
+                            span{
+                                color: #ffffff;
+                            }
+                        }
                     }
                 }
             }
+            .card-body{
+                padding: 0 50px;
+            }
             .card-title{
                 font-weight: 500;
-                font-size: 13px;
+                font-size: 22px;
                 color: #0f1c44;
+                padding-bottom: 15px;
             }
             .card-text{
                 font-weight: 300;
-                font-size: 9px;
+                font-size: 14px;
                 color: #454545;
+                letter-spacing: -0.1px;
+                line-height: 27px;
+                padding-bottom: 39px;
             }
             .card-footer{
                 text-align: right;
+                span{
+                    color: #0f1c44;
+                    margin-right: 30px;
+                    margin-bottom: 28px;
+                    display: block;
+                    font-size: 5.7vw;
+                    &.icon-pedestrian{
+
+                    }
+                }
+                img{
+                    width: 5.7vw;
+                    margin-right: 30px;
+                    margin-bottom: 22px;
+                }
             }
         }
     }
     &.type2{
+        margin: -45px;
         .card{
-            width: 33.33333%1;
+            width: 33.33333%;
+            padding: 45px;
             a{
                 width: 100%;
                 height: 100%;
@@ -117,17 +150,21 @@
             .imageWrapper{
                 aspect-ratio: 5/3;
             }
+            .card-body{
+                padding: 10px 0;
+            }
             .card-text{
                 p{
                     font-weight: 400;
-                    font-size: 12px;
+                    font-size: 17px;
                     color: #0f1c44;
-                    transition: all .3s linear;
+                    transition: all 0.3s linear;
+                    padding: 6px 0;
                 }
             }
             .date{
                 font-weight: 400;
-                font-size: 9px;
+                font-size: 13px;
                 color: #707070;
                 transition: all .3s linear;
             }

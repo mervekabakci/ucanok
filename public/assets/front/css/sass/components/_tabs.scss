@@ -8,14 +8,14 @@
         .tabButton{
             color:#707070;
             font-weight: 400;
-            font-size:10px;
+            font-size:15px;
             cursor: pointer;
             transition: all .3s ease-in-out;
             position: relative;
-            margin-bottom: 20px;
-            margin-top: 20px;
+            margin-bottom: 37px;
+            margin-top: 23px;
             & + .tabButton{
-                margin-left: 20px;
+                margin-left: 36px;
             }
             &:after{
                 content: "";

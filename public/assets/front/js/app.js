@@ -44,10 +44,10 @@ $(".tabsTitle > .tabButton").click(function () {
  * 
  * 
  */
-const homeCarousel = new Swiper('.homeCarousel', {
+var homeCarousel = new Swiper('.homeCarousel', {
   loop: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-paginationCarousel',
     clickable: true,
   },
   grabCursor: true,
@@ -64,9 +64,9 @@ const homeCarousel = new Swiper('.homeCarousel', {
 });
 
 var calismaSlider = new Swiper(".calismaSlider", {
-  slidesPerView: 2.7,
+  slidesPerView: 2.76,
   loop:true,
-  spaceBetween: 30,
+  spaceBetween: 55,
   navigation: {
     nextEl: '.swiper-calisma-next',
     prevEl: '.swiper-calisma-prev',

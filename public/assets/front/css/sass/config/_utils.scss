@@ -9,6 +9,7 @@
       margin-right: auto;
       margin-left: auto;
       width: 100%;
+      position: relative;
 
       @media screen and (min-width:992px) {
         padding-left: 6.718vw;
@@ -119,7 +120,9 @@ $colors: (
     align-items: center;
   }
 }
-
+.d-block{
+  display: block!important;
+}
 .icon-instagram{
   font-size: 24px;
 }
@@ -128,4 +131,7 @@ $colors: (
 }
 .icon-linkedin-2{
   font-size: 25px;
+}
+.preLine{
+  white-space: pre-line;
 }
