@@ -1,22 +1,37 @@
 /*Genel banner*/
-.bannerWrapper{
-    .bannerContainer{
+.bannerWrapper {
+    &.type2 {
+        .breadCrumb {
+            padding-left: 6.5vw;
+            padding-top: 1.2vw;
+        }
+    }
+
+    .breadCrumb {
+        padding-left: 6.5vw;
+        padding-top: 0.2vw;
+    }
+
+    .bannerContainer {
         height: 390px;
         position: relative;
         overflow: hidden;
-        .bannerImage{
+
+        .bannerImage {
             width: 100%;
             height: 100%;
-            img{
+
+            img {
                 min-height: 100%;
                 object-fit: cover;
                 width: 100;
             }
         }
-        .bannerDesc{
+
+        .bannerDesc {
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.2);
+            background-color: rgba(0, 0, 0, 0.2);
             position: absolute;
             top: 0;
             left: 0;
@@ -24,20 +39,24 @@
             z-index: 1;
             display: flex;
             align-items: flex-end;
-            padding-bottom: 30px;
+            padding-bottom: 88px;
+            padding-left: 123px;
         }
     }
-    .pageTitle{
-        h2{
+
+    .pageTitle {
+        h2 {
             font-family: "Cormorant Garamond", serif;
-            font-size: 38px;
+            font-size: 25px;
+            text-transform: uppercase;
             font-weight: 600;
-            line-height: 59px;
+            line-height: 47px;
             color: #ffffff;
             position: relative;
-            &:after{
+
+            &:after {
                 content: "";
-                width: 80%;
+                width: 59%;
                 height: 2px;
                 background-color: #ffffff;
                 display: block;
@@ -47,37 +66,56 @@
 }
 
 /*Genel breadcrumb*/
-.breadCrumb{
-    a{
+.breadCrumb {
+    a {
         font-weight: 400;
         color: #868686;
         font-size: 12px;
         padding-right: 10px;
-        & + a{
+
+        &+a {
             border-left: 1px solid #868686;
-            padding:0 10px;
+            padding: 0 10px;
         }
-        &.active{
+
+        &.active {
             color: #0f1c44;
         }
     }
 }
 
 /*Genel sosyal medya paylas*/
-.shareWrapper{
+.shareWrapper {
     display: flex;
     align-items: center;
     margin-left: auto;
-    span{
+    justify-content: space-between;
+    padding-right: 6vw;
+    min-width: 27.3%;
+    width: 27.3%;
+    span {
         font-weight: 300;
-        font-size: 10px;
+        font-size: 14px;
         color: #454545;
     }
-    .socialShare{
+
+    .socialShare {
         display: flex;
         align-items: center;
-        a{
+        padding-right: 36px;
+        a {
             cursor: pointer;
+            padding: 0 15px;
+            &.linkedin{
+               span{
+                font-size: 32px;
+               }
+            }
+            &.twitter{
+               span{
+                font-size: 27px;
+               }
+            }
         }
     }
 }
@@ -85,8 +123,34 @@
 /*banner makale*/
 .acticleSection {
     height: 438px;
+
     &>div {
         height: 100%;
+    }
+
+    &.type2 {
+        height: 467px !important;
+        padding-top: 30px;
+        margin-bottom: 15px;
+        .leftColumn {
+            padding-left: 6.5vw;
+            padding-bottom: 7vw;
+        }
+
+        .articleImages {
+            height: 70%;
+            margin-right: 126px;
+        }
+
+        h1 {
+            font-size: 39px;
+        }
+
+        .articleWrites {
+            font-weight: 500;
+            color: #454545;
+            font-size: 17px;
+        }
     }
 
     .leftColumn {

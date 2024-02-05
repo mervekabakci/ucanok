@@ -1,0 +1,281 @@
+.cards:not(.swiper-wrapper) {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px;
+}
+.cards:not(.swiper-wrapper) .card {
+  padding: 20px;
+}
+.cards:not(.swiper-wrapper) .card.type1 {
+  width: 31%;
+  padding: 20px 20px 60px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a {
+  padding: 35px 0 0;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body {
+  padding: 0 40px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body .card-title {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body .card-text {
+  line-height: 22px;
+  padding-bottom: 26px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body .all-btn {
+  font-size: 12.4px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-footer span {
+  margin-right: 25px;
+  font-size: 4.7vw;
+}
+.cards.swiper-wrapper.type1 .card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.cards .card .image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(15, 28, 68, 0.8);
+  color: #ffffff;
+  font-size: 43px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.cards .card .image-overlay .icon-right-arrow-1 {
+  transform: rotate(-23deg) translate(-261px, 30px) scale(0) !important;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.cards .card .all-btn {
+  margin-left: 0;
+}
+@media screen and (min-width: 992px) {
+  .cards .card:hover .image-overlay {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+  .cards .card:hover .image-overlay .icon-right-arrow-1 {
+    transform: rotate(-23deg) translate(0, 0) scale(1) !important;
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
+  }
+}
+.cards.type1 .card a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  transition: all 0.3s linear;
+  aspect-ratio: 5/4.25;
+  padding: 46px 0 0;
+}
+@media screen and (max-width: 640px) {
+  .cards.type1 .card a {
+    aspect-ratio: 5/3.65;
+    padding: 25px 0 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cards.type1 .card a:hover {
+    background-color: #0f1c44;
+  }
+  .cards.type1 .card a:hover img {
+    filter: invert(1);
+  }
+  .cards.type1 .card a:hover .card-title,
+  .cards.type1 .card a:hover .card-text,
+  .cards.type1 .card a:hover .all-btn {
+    color: #ffffff;
+  }
+  .cards.type1 .card a:hover .all-btn span {
+    transform: translate(5px, -5px);
+  }
+  .cards.type1 .card a:hover .all-btn .icon-right-arrow-1 {
+    transform: rotate(-23deg) translate(5px, -5px) scale(1.1) !important;
+    color: #ffffff;
+  }
+  .cards.type1 .card a:hover .card-footer span {
+    color: #ffffff;
+  }
+}
+.cards.type1 .card .card-body {
+  padding: 0 50px;
+}
+.cards.type1 .card .card-title {
+  font-weight: 500;
+  font-size: 22px;
+  color: #0f1c44;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 991.98px) {
+  .cards.type1 .card .card-title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cards.type1 .card .card-title {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+}
+.cards.type1 .card .card-text {
+  font-weight: 300;
+  font-size: 14px;
+  color: #454545;
+  letter-spacing: -0.1px;
+  line-height: 27px;
+  padding-bottom: 39px;
+}
+@media screen and (max-width: 991.98px) {
+  .cards.type1 .card .card-text {
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 20px;
+  }
+}
+.cards.type1 .card .card-footer {
+  text-align: right;
+}
+.cards.type1 .card .card-footer span {
+  color: #0f1c44;
+  margin-right: 30px;
+  margin-bottom: 28px;
+  display: block;
+  font-size: 5.7vw;
+}
+.cards.type1 .card .card-footer img {
+  width: 5.7vw;
+  margin-right: 30px;
+  margin-bottom: 22px;
+}
+.cards.type2 {
+  margin: -45px;
+}
+@media screen and (max-width: 1440px) {
+  .cards.type2 {
+    margin: -45px -15px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cards.type2 {
+    flex-wrap: wrap;
+    margin: -5px -15px;
+  }
+}
+.cards.type2.makaleler {
+  margin: -27px;
+}
+.cards.type2.makaleler .card {
+  padding: 30px;
+}
+.cards.type2.makaleler .card .card-text p {
+  font-size: 15px;
+}
+.cards.type2.d-block {
+  padding-left: 6px;
+}
+.cards.type2.d-block .card {
+  width: 100%;
+  padding: 45px 45px 0px;
+}
+.cards.type2.d-block .card .card-body {
+  padding: 5px 0;
+}
+.cards.type2.d-block .card .card-body .card-text p {
+  font-size: 12.5px;
+}
+.cards.type2.d-block .card .imageWrapper {
+  aspect-ratio: 5/4;
+}
+.cards.type2.teamlist .card .card-body {
+  display: flex;
+  justify-content: space-between;
+}
+.cards.type2.teamlist .card .card-text {
+  display: flex;
+  flex-direction: column;
+}
+.cards.type2.teamlist .card .card-text span.name {
+  font-size: 18px;
+}
+.cards.type2.teamlist .card .card-text span.titleTag {
+  font-size: 14px;
+}
+.cards.type2 .card {
+  width: 33.33333%;
+  padding: 45px;
+}
+@media screen and (max-width: 1440px) {
+  .cards.type2 .card {
+    padding: 45px 15px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cards.type2 .card {
+    width: 100%;
+    padding: 10px 15px;
+  }
+}
+.cards.type2 .card a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cards.type2 .card .imageWrapper {
+  aspect-ratio: 5/3;
+}
+.cards.type2 .card .card-body {
+  padding: 10px 0;
+}
+.cards.type2 .card .card-text p {
+  font-weight: 400;
+  font-size: 17px;
+  color: #0f1c44;
+  transition: all 0.3s linear;
+  padding: 6px 0;
+}
+@media screen and (max-width: 1200px) {
+  .cards.type2 .card .card-text p {
+    font-size: 14px;
+  }
+}
+.cards.type2 .card .date {
+  font-weight: 400;
+  font-size: 13px;
+  color: #707070;
+  transition: all 0.3s linear;
+}
+@media screen and (max-width: 1200px) {
+  .cards.type2 .card .date {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cards.type2 .card:hover .date {
+    color: #ff4200;
+  }
+  .cards.type2 .card:hover .card-text p {
+    color: #ff4200;
+  }
+}/*# sourceMappingURL=_card.css.map */
