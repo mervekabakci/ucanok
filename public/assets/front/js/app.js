@@ -1,7 +1,20 @@
 var wWidth = $(window).width();
-$(window).on("load", function () {
-  $("#preloader").fadeOut();
-})
+$(window).on('load', function () {
+  if ($('.preloader').length) {
+    $('.preloader').remove();
+  }
+});
+
+document.addEventListener('scroll', function() {
+  var header = document.getElementById('header');
+
+  if (window.scrollY > 0) {
+    header.classList.add('fixed');
+  } else {
+    header.classList.remove('fixed');
+  }
+});
+
 
 $(".navMenuButton").on("click", function () {
   $(this).toggleClass("active");
@@ -29,16 +42,16 @@ if (wWidth <= 992) {
 $(".tabContent").children(".tabsContent").parent().addClass("submain");
 
 $(".tabsTitle > .tabButton").click(function () {
-    var $elemnt = $(this),
-        $indis = $(this).index(),
-        $tab = $elemnt.siblings(),
-        $content = $tab.parent().siblings().children();
+  var $elemnt = $(this),
+    $indis = $(this).index(),
+    $tab = $elemnt.siblings(),
+    $content = $tab.parent().siblings().children();
 
-        $tab.removeClass("active");
-        $elemnt.addClass("active");
+  $tab.removeClass("active");
+  $elemnt.addClass("active");
 
-        $content.removeClass("active");
-        $content.eq($indis).addClass("active");
+  $content.removeClass("active");
+  $content.eq($indis).addClass("active");
 });
 /**Tab js end
  * 
@@ -64,11 +77,31 @@ var homeCarousel = new Swiper('.homeCarousel', {
 });
 
 var calismaSlider = new Swiper(".calismaSlider", {
-  slidesPerView: 2.76,
-  loop:true,
+  slidesPerView: 1,
+  centerMode: true,
+  loop: true,
   spaceBetween: 55,
   navigation: {
     nextEl: '.swiper-calisma-next',
     prevEl: '.swiper-calisma-prev',
   },
+  breakpoints: {
+    // when window width is >= 
+    481: {
+      slidesPerView: 1.5,
+      centerMode: false,
+    },
+    670: {
+      slidesPerView: 2,
+      centerMode: false,
+    },
+    992: {
+      slidesPerView: 2.36,
+      centerMode: false,
+    },
+    1280: {
+      slidesPerView: 2.76,
+      centerMode: false,
+    }
+  }
 });

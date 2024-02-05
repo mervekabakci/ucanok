@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset CSS */
 /* Box Sizing */
 *,
@@ -9,6 +10,20 @@
 /* Typography */
 html {
   font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  width: 0;
+  /* Chrome, Safari, Edge ve Opera için */
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  width: 0;
+  /* Chrome, Safari, Edge ve Opera için */
 }
 
 body,
@@ -444,8 +459,95 @@ video {
   white-space: pre-line;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.preloader .preloader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  backface-visibility: hidden;
+}
+.preloader .preloader-container .icon-right-arrow-1 {
+  font-size: 36px;
+  color: #0f1c44;
+  transform: rotate(-23deg) translate(0, 0) scale(1);
+  animation: growShrink 2s infinite;
+  position: absolute;
+}
+
+@keyframes growShrink {
+  0% {
+    transform: rotate(-23deg) translate(0, 0) scale(1);
+  }
+  50% {
+    transform: rotate(-23deg) translate(5px, 0) scale(1.2);
+  }
+  100% {
+    transform: rotate(-23deg) translate(0, 0) scale(1);
+  }
+}
+.loader {
+  max-width: 15rem;
+  width: 100%;
+  height: auto;
+  stroke-linecap: round;
+}
+
+circle {
+  fill: none;
+  stroke-width: 3.5;
+  animation-name: preloader;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: 170px 170px;
+  will-change: transform;
+}
+circle:nth-of-type(1) {
+  stroke-dasharray: 550px;
+}
+circle:nth-of-type(2) {
+  stroke-dasharray: 500px;
+}
+circle:nth-of-type(3) {
+  stroke-dasharray: 450px;
+}
+circle:nth-of-type(4) {
+  stroke-dasharray: 300px;
+}
+circle:nth-of-type(1) {
+  animation-delay: -0.15s;
+}
+circle:nth-of-type(2) {
+  animation-delay: -0.3s;
+}
+circle:nth-of-type(3) {
+  animation-delay: -0.45s;
+}
+circle:nth-of-type(4) {
+  animation-delay: -0.6s;
+}
+
+@keyframes preloader {
+  50% {
+    transform: rotate(360deg);
+  }
+}
 header {
   height: 76px;
+  transition: all 0.3s linear;
+  position: absolute;
 }
 @media screen and (max-width: 991.98px) {
   header .mobileHeader {
@@ -596,6 +698,13 @@ header .language a + a:before {
     visibility: visible;
   }
 }
+header.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: #ffffff;
+  width: 100%;
+}
 
 .logo {
   text-align: right;
@@ -633,7 +742,7 @@ footer {
 }
 @media screen and (max-width: 991.98px) {
   footer {
-    padding-bottom: 0;
+    padding: 26px 26px 0 26px;
   }
 }
 footer .footer {
@@ -1518,6 +1627,11 @@ section {
 section:not(.homeSection) {
   padding: 90px 0;
 }
+@media screen and (max-width: 1440px) {
+  section:not(.homeSection) {
+    padding: 50px 0;
+  }
+}
 section .sectionHead {
   display: flex;
   align-items: center;
@@ -1541,18 +1655,52 @@ section .sectionHead .buttons {
 section .sectionContent {
   padding-left: 6.4vw;
 }
+@media screen and (max-width: 991.98px) {
+  section.calismaAlanlariSection .sectionHead {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
 section.calismaAlanlariSection .sectionContent {
   padding-left: 1.5vw;
+}
+@media screen and (max-width: 991.98px) {
+  section.calismaAlanlariSection .sectionContent {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 }
 section.guncelSection .sectionHead {
   margin-top: 52px;
 }
+@media screen and (max-width: 991.98px) {
+  section.guncelSection .sectionHead {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
 section.guncelSection .sectionContent {
   padding-left: 2.5vw;
+}
+@media screen and (max-width: 991.98px) {
+  section.guncelSection .sectionContent {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 }
 section.acticleSection {
   height: 478px;
   padding: 36px 0 36px 26px;
+}
+@media screen and (max-width: 1280px) {
+  section.acticleSection {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  section.acticleSection {
+    padding: 36px 26px 36px 26px;
+  }
 }
 section.acticleSection > div {
   height: 100%;
@@ -1573,16 +1721,31 @@ section.acticleSection .categoryName {
   color: #bebebe;
   font-size: 14.5px;
 }
+@media screen and (max-width: 1280px) {
+  section.acticleSection .categoryName {
+    font-size: 11px;
+  }
+}
 section.acticleSection .articleTitle {
   font-weight: 500;
   font-size: 28px;
   color: #ffffff;
   line-height: 31px;
 }
+@media screen and (max-width: 1280px) {
+  section.acticleSection .articleTitle {
+    font-size: 22px;
+  }
+}
 section.acticleSection .articleWrites {
   font-weight: 500;
   color: #ffffff;
   font-size: 14px;
+}
+@media screen and (max-width: 1280px) {
+  section.acticleSection .articleWrites {
+    font-size: 12px;
+  }
 }
 section.acticleSection .all-btn {
   margin-left: 0;
@@ -1600,6 +1763,11 @@ section.acticleSection .articleImages .imageWrapper {
 section.teamSection {
   padding: 36px 0 36px 26px;
 }
+@media screen and (max-width: 991.98px) {
+  section.teamSection {
+    padding: 36px 26px 36px 26px;
+  }
+}
 section .teamLogo {
   width: 350px;
   margin-left: 6.4vw;
@@ -1616,6 +1784,11 @@ section .teamContent .title {
   display: block;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 1280px) {
+  section .teamContent .title {
+    font-size: 22px;
+  }
+}
 section .teamContent p {
   font-weight: 400;
   font-size: 14px;
@@ -1623,6 +1796,11 @@ section .teamContent p {
   width: 77%;
   margin-bottom: 41px;
   margin-top: 11px;
+}
+@media screen and (max-width: 1280px) {
+  section .teamContent p {
+    font-size: 12px;
+  }
 }
 
 .customTabs {

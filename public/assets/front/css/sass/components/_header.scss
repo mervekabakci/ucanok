@@ -1,5 +1,7 @@
 header {
     height: 76px;
+    transition: all .3s linear;
+    position: absolute;
 
     .mobileHeader {
         @media screen and (max-width:991.98px) {
@@ -168,6 +170,13 @@ header {
                 visibility: visible;
             }
         }
+    }
+    &.fixed{
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        background: #ffffff;
+        width: 100%;
     }
 }
 
