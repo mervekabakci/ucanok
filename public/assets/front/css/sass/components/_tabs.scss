@@ -1,23 +1,39 @@
-.customTabs{
-    max-width:100%;
- 
-    .tabsTitle{
+.customTabs {
+    max-width: 100%;
+
+    .tabsTitle {
         display: flex;
         flex-wrap: wrap;
 
-        .tabButton{
-            color:#707070;
+        .tabButton {
+            color: #707070;
             font-weight: 400;
-            font-size:15px;
+            font-size: 15px;
             cursor: pointer;
             transition: all .3s ease-in-out;
             position: relative;
             margin-bottom: 37px;
             margin-top: 23px;
-            & + .tabButton{
-                margin-left: 36px;
+
+            @media screen and (max-width:991.98px) {
+                font-size: 14px;
+                margin-bottom: 16px;
+                margin-top: 16px;
             }
-            &:after{
+
+            @media screen and (max-width:480px) {
+                font-size: 11px;
+            }
+
+            &+.tabButton {
+                margin-left: 36px;
+
+                @media screen and (max-width:991.98px) {
+                    margin-left: 10px;
+                }
+            }
+
+            &:after {
                 content: "";
                 width: 0;
                 height: 1px;
@@ -27,30 +43,36 @@
                 bottom: 0;
                 transition: all .3s linear;
             }
+
             @media screen and (min-width:992px) {
-                &:hover{
-                    color:#ff4200;
-                    &:after{
+                &:hover {
+                    color: #ff4200;
+
+                    &:after {
                         width: 100%;
                     }
                 }
             }
-            &.active{
-                color:#ff4200;
-                &:after{
+
+            &.active {
+                color: #ff4200;
+
+                &:after {
                     width: 100%;
                 }
             }
         }
     }
-    .tabsContent{
+
+    .tabsContent {
         width: 100%;
-        .tabContent{
-            background-color:#ffffff;
-            font-size:12px;
+
+        .tabContent {
+            background-color: #ffffff;
+            font-size: 12px;
             display: none;
 
-            &.active{
+            &.active {
                 display: block;
             }
         }

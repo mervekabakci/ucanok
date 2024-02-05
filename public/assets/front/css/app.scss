@@ -7,12 +7,29 @@ h1 {
     font-weight: 600;
     line-height: 59px;
     color: #0f1c44;
+
+    @media screen and (max-width:991.98px) {
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
 
 h5 {
     font-weight: 500;
     color: #0f1c44;
     font-size: 14px;
+}
+
+main {
+    @media screen and (max-width:991.98px) {
+        padding-top: 60px
+    }
+
+    @media screen and (min-width:992px) {
+        padding-top: 76px;
+    }
+
+
 }
 
 .paragraph {
@@ -32,12 +49,43 @@ h5 {
     margin-top: 10px;
     margin-left: 7px;
 
+    @media screen and (max-width:991.98px) {
+        font-size: 10px;
+    }
+
+    span {
+        transition: all .3s linear;
+        display: inline-block;
+    }
+
     .icon-right-arrow-1 {
         font-size: 18px;
         color: #999999;
         margin-left: 6px;
         position: relative;
         bottom: -1px;
+        transition: all .3s linear;
 
+        @media screen and (max-width:991.98px) {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        .all-btn {
+            &:hover {
+                color: #0f1c44;
+
+                span {
+                    transform: translate(5px, -5px);
+                }
+
+                .icon-right-arrow-1 {
+                    transform: rotate(-23deg) translate(5px, -5px) scale(1.1) !important;
+                    color: #0f1c44;
+
+                }
+            }
+        }
     }
 }

@@ -14,6 +14,12 @@ document.addEventListener('scroll', function() {
     header.classList.remove('fixed');
   }
 });
+//Animasyonlar icin aos init kullaniliyor
+AOS.init({
+  offset: 50,
+  easing: 'ease',
+  once: true,
+});
 
 
 $(".navMenuButton").on("click", function () {

@@ -1,8 +1,13 @@
 footer {
-   padding: 48px 0 30px 26px;
+    padding: 48px 0 30px 26px;
+
     @media screen and (max-width:991.98px) {
         padding: 26px 26px 0 26px;
-     }
+    }
+
+    @media screen and (max-width:480px) {
+        padding: 16px;
+    }
 
     .footer {
         background-color: #0f1c44;
@@ -10,10 +15,15 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
         @media screen and (max-width:991.98px) {
             height: 400px;
             padding-bottom: 30px;
-         }
+        }
+
+        @media screen and (max-width:480px) {
+            height: 340px;
+        }
 
         .top {
             display: flex;
@@ -21,15 +31,23 @@ footer {
             padding-left: 80px;
             padding-right: 42px;
             flex: 1;
+
             @media screen and (max-width:1199.98px) {
                 padding-left: 24px;
             }
+
             @media screen and (max-width:991.98px) {
                 display: block;
                 text-align: center;
             }
+
+            @media screen and (max-width:480px) {
+                padding-top: 20px;
+            }
+
             .leftColumn {
                 padding-top: 21px;
+
                 @media screen and (max-width:991.98px) {
                     display: flex;
                     flex-direction: column;
@@ -42,9 +60,11 @@ footer {
                 flex: 1;
                 padding-left: 6vw;
                 padding-top: 38px;
+
                 @media screen and (max-width:1199.98px) {
                     padding-left: 40px;
                 }
+
                 @media screen and (max-width:991.98px) {
                     display: none;
                 }
@@ -62,6 +82,7 @@ footer {
                         &>.menuItem {
                             &+.menuItem {
                                 padding-left: 5.1vw;
+
                                 @media screen and (max-width:1199.98px) {
                                     padding-left: 24px;
                                 }
@@ -71,7 +92,8 @@ footer {
                                 text-transform: uppercase;
                                 position: relative;
                                 font-size: 15.5px;
-                                &:not(.noLine){
+
+                                &:not(.noLine) {
                                     &:after {
                                         content: "";
                                         width: 20px;
@@ -99,79 +121,92 @@ footer {
                                 grid-template-columns: repeat(4, min-content);
                                 gap: 10px;
                                 padding-top: 17px;
+
                                 @media screen and (min-width:992px) {
                                     grid-template-columns: repeat(3, min-content);
                                 }
+
                                 @media screen and (min-width:1200px) {
                                     grid-template-columns: repeat(4, min-content);
                                 }
+
                                 @media screen and (min-width:1366px) {
                                     grid-template-columns: repeat(5, min-content);
                                 }
+
                                 @media screen and (min-width:1500px) {
                                     grid-template-columns: repeat(6, min-content);
                                 }
+
                                 .menuItem {
                                     padding-left: 0;
                                     display: flex;
                                     align-items: center;
-                                    & + .menuItem{
+
+                                    &+.menuItem {
                                         padding-left: 0;
                                         display: flex;
                                         align-items: center;
                                         position: relative;
                                         justify-content: space-around;
                                         min-width: 163px;
-                                        &:before{
+
+                                        &:before {
                                             content: "|";
                                             display: inline-block;
                                             position: relative;
                                             color: #606060;
                                         }
                                     }
+
                                     @media screen and (min-width:992px) and (max-width:1200px) {
-                                        &:nth-child(3n + 1){
+                                        &:nth-child(3n + 1) {
                                             padding-left: 0;
                                             justify-content: flex-start;
                                             min-width: initial;
-                                            &:before{
+
+                                            &:before {
                                                 display: none;
                                             }
                                         }
                                     }
-                               
+
                                     @media screen and (min-width:1200px) and (max-width:1366px) {
-                                        &:nth-child(4n + 1){
+                                        &:nth-child(4n + 1) {
                                             padding-left: 0;
                                             justify-content: flex-start;
                                             min-width: initial;
-                                            &:before{
+
+                                            &:before {
                                                 display: none;
                                             }
                                         }
                                     }
-                               
-                                    @media screen and (min-width:1366px)  and (max-width:1499.98px) {
-                                        &:nth-child(5n + 1){
+
+                                    @media screen and (min-width:1366px) and (max-width:1499.98px) {
+                                        &:nth-child(5n + 1) {
                                             padding-left: 0;
                                             justify-content: flex-start;
                                             min-width: initial;
-                                            &:before{
+
+                                            &:before {
                                                 display: none;
                                             }
                                         }
                                     }
+
                                     @media screen and (min-width:1500px) {
-                                        &:nth-child(6n + 1){
+                                        &:nth-child(6n + 1) {
                                             padding-left: 0;
                                             justify-content: flex-start;
                                             min-width: initial;
-                                            &:before{
+
+                                            &:before {
                                                 display: none;
                                             }
                                         }
                                     }
-                                    
+
                                 }
                             }
                         }
@@ -185,18 +220,27 @@ footer {
             align-items: center;
             padding-left: 92px;
             height: 58px;
+
             @media screen and (max-width:1199.98px) {
                 padding-left: 24px;
             }
+
             @media screen and (max-width:991.98px) {
                 flex-direction: column-reverse;
                 text-align: center;
+                padding-left: 0;
             }
+
             .copyRight {
                 font-weight: 400;
                 font-size: 12.3px;
                 color: #ffffff;
                 width: 400px;
+
+                @media screen and (max-width:991.98px) {
+                    font-size: 10px;
+                }
+
                 @media screen and (min-width:1366px) {
                     width: 32.3%;
                     min-width: 300px;
@@ -206,11 +250,13 @@ footer {
 
             nav {
                 @media screen and (max-width:991.98px) {
-                    padding-bottom:20px;
-                 }
-                & > ul{
+                    padding-bottom: 20px;
+                }
+
+                &>ul {
                     gap: 47px;
                 }
+
                 .menuItem {
                     .menuLink {
                         font-size: 12px;
@@ -220,20 +266,24 @@ footer {
         }
 
     }
-    .contact-buttons{
+
+    .contact-buttons {
         @media screen and (max-width:991.98px) {
-           padding-top: 0;
+            padding-top: 0;
         }
-        a{
+
+        a {
             @media screen and (max-width:991.98px) {
                 justify-content: center;
             }
         }
     }
 }
-.contact-buttons{
+
+.contact-buttons {
     padding-top: 20px;
-    a{
+
+    a {
         display: flex;
         align-items: center;
         font-weight: 400;
@@ -242,18 +292,20 @@ footer {
         margin-top: 27px;
         transition: all .3s linear;
 
-        .icon-linkedin-2{
+        .icon-linkedin-2 {
             font-size: 24px;
             margin-right: 24px;
             transition: all .3s linear;
         }
-        .icon-phone{
+
+        .icon-phone {
             font-size: 24px;
             transition: all .3s linear;
             margin-right: 24px;
         }
+
         @media screen and (min-width:992px) {
-            &:hover{
+            &:hover {
                 opacity: 0.7;
             }
         }

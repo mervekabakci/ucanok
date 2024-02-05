@@ -2,6 +2,10 @@ header {
     height: 76px;
     transition: all .3s linear;
     position: absolute;
+    width: 100%;
+    @media screen and (max-width:991.98px ) {
+        height: 60px
+    }
 
     .mobileHeader {
         @media screen and (max-width:991.98px) {
@@ -177,6 +181,7 @@ header {
         z-index: 99;
         background: #ffffff;
         width: 100%;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     }
 }
 

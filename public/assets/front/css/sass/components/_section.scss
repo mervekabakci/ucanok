@@ -21,14 +21,17 @@
         }
 
         @media screen and (max-width:991.98px) {
-            height: 50px;
-            width: 100%;
-            bottom: 0;
             z-index: 99;
-            top: auto;
-            flex-direction: row;
-            padding-right: 40px;
-            padding-left: 40px;
+            width: 50px;
+            padding-bottom: 10px;
+            // height: 50px;
+            // width: 100%;
+            // bottom: 0;
+            // z-index: 99;
+            // top: auto;
+            // flex-direction: row;
+            // padding-right: 40px;
+            // padding-left: 40px;
         }
 
         @media screen and (min-width:1921px) {
@@ -46,10 +49,11 @@
             width: auto;
 
             @media screen and (max-width:991.98px) {
-                padding-top: 0;
-                flex-direction: row;
-                padding-left: 120px;
-                bottom: 0 !important;
+                padding-top: 50px;
+                // padding-top: 0;
+                // flex-direction: row;
+                // padding-left: 120px;
+                // bottom: 0 !important;
             }
         }
 
@@ -57,10 +61,10 @@
             display: flex;
             flex-direction: column;
 
-            @media screen and (max-width:991.98px) {
-                flex-direction: row;
-                bottom: 0 !important;
-            }
+            // @media screen and (max-width:991.98px) {
+            //     flex-direction: row;
+            //     bottom: 0 !important;
+            // }
 
             a {
                 display: flex;
@@ -69,13 +73,31 @@
                 height: 22px;
                 margin-top: 20px;
 
-                @media screen and (max-width:991.98px) {
-                    margin-top: 0;
-                    margin-left: 16px;
+                span {
+                    &:before {
+                        transition: all .3s linear;
+                    }
+                }
 
-                    span {
-                        &:before {
-                            color: #ffffff;
+                @media screen and (max-width:991.98px) {
+                    margin-top: 10px;
+                    // margin-top: 0;
+                    // margin-left: 16px;
+                    // span {
+                    //     &:before {
+                    //         color: #ffffff;
+                    //     }
+                    // }
+                }
+
+                @media screen and (min-width:992px) {
+                    &:hover {
+                        span {
+                            transform: translateY(-5px);
+
+                            &:before {
+                                color: #ff4200;
+                            }
                         }
                     }
                 }
@@ -90,8 +112,13 @@ section {
 
     &:not(.homeSection) {
         padding: 90px 0;
+
         @media screen and (max-width:1440px) {
-             padding: 50px 0;
+            padding: 50px 0;
+        }
+
+        @media screen and (max-width:991.98px) {
+            padding: 10px 0;
         }
     }
 
@@ -100,6 +127,10 @@ section {
         align-items: center;
         padding-left: 1.5vw;
         margin-top: 17px;
+
+        @media screen and (max-width:480px) {
+            flex-wrap: wrap;
+        }
 
         .sectionTitle {
             font-weight: 500;
@@ -111,10 +142,24 @@ section {
             line-height: 20px;
             margin-top: 10px;
             margin-bottom: 10px;
+
+            @media screen and (max-width:991.98px) {
+                font-size: 18px;
+            }
+
+            @media screen and (max-width:480px) {
+                font-size: 16px;
+                line-height: 14px;
+                width: 100%;
+            }
         }
 
         .buttons {
             margin-left: auto;
+
+            @media screen and (max-width:480px) {
+                margin: 20px auto 0 auto;
+            }
         }
     }
 
@@ -123,17 +168,25 @@ section {
     }
 
     &.calismaAlanlariSection {
-        .sectionHead{
-            @media screen  and (max-width:991.98px){
+        .sectionHead {
+            @media screen and (max-width:991.98px) {
                 padding-left: 26px;
                 padding-right: 26px;
             }
+
         }
+
         .sectionContent {
             padding-left: 1.5vw;
-            @media screen  and (max-width:991.98px){
+
+            @media screen and (max-width:991.98px) {
                 padding-left: 26px;
                 padding-right: 26px;
+            }
+
+            @media screen and (max-width:480px) {
+                padding-left: 0;
+                padding-right: 0;
             }
         }
     }
@@ -141,17 +194,30 @@ section {
     &.guncelSection {
         .sectionHead {
             margin-top: 52px;
-            @media screen  and (max-width:991.98px){
+
+            @media screen and (max-width:991.98px) {
                 padding-left: 26px;
                 padding-right: 26px;
+                margin-top: 0;
+            }
+
+            @media screen and (max-width:480px) {
+                padding-left: 16px;
+                padding-right: 16px;
             }
         }
 
         .sectionContent {
             padding-left: 2.5vw;
-            @media screen  and (max-width:991.98px){
+
+            @media screen and (max-width:991.98px) {
                 padding-left: 26px;
                 padding-right: 26px;
+            }
+
+            @media screen and (max-width:480px) {
+                padding-left: 16px;
+                padding-right: 16px;
             }
         }
     }
@@ -159,12 +225,20 @@ section {
     &.acticleSection {
         height: 478px;
         padding: 36px 0 36px 26px;
-        @media screen  and (max-width:1280px){
+
+        @media screen and (max-width:1280px) {
             height: 300px;
         }
-        @media screen  and (max-width:991.98px){
+
+        @media screen and (max-width:991.98px) {
             padding: 36px 26px 36px 26px;
         }
+
+        @media screen and (max-width:480px) {
+            height: 200px;
+            padding: 16px;
+        }
+
         &>div {
             height: 100%;
 
@@ -180,14 +254,24 @@ section {
             height: 75%;
             padding-bottom: 4.6vw;
             padding-left: 4.1vw;
+
+            @media screen and (max-width:991.98px) {
+                padding-left: 10px;
+                padding-bottom: 10px;
+            }
         }
 
         .categoryName {
             font-weight: 400;
             color: #bebebe;
             font-size: 14.5px;
-            @media screen  and (max-width:1280px){
+
+            @media screen and (max-width:1280px) {
                 font-size: 11px;
+            }
+
+            @media screen and (max-width:991.98px) {
+                font-size: 10px;
             }
         }
 
@@ -196,8 +280,19 @@ section {
             font-size: 28px;
             color: #ffffff;
             line-height: 31px;
-            @media screen  and (max-width:1280px){
+
+            @media screen and (max-width:1280px) {
                 font-size: 22px;
+            }
+
+            @media screen and (max-width:991.98px) {
+                font-size: 16px;
+                line-height: 18px;
+            }
+
+            @media screen and (max-width:991.98px) {
+                font-size: 14px;
+                line-height: 16px;
             }
         }
 
@@ -205,8 +300,13 @@ section {
             font-weight: 500;
             color: #ffffff;
             font-size: 14px;
-            @media screen  and (max-width:1280px){
+
+            @media screen and (max-width:1280px) {
                 font-size: 12px;
+            }
+
+            @media screen and (max-width:991.98px) {
+                font-size: 10px;
             }
         }
 
@@ -221,28 +321,65 @@ section {
             overflow: hidden;
             margin-right: 40px;
 
+            @media screen and (max-width:991.98px) {
+                margin-right: 10px;
+            }
+
             .imageWrapper {
                 display: block;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            &:hover {
+                .all-btn {
+                    color: #ffffff;
+
+                    span {
+                        transform: translate(5px, -5px);
+                    }
+
+                    .icon-right-arrow-1 {
+                        transform: rotate(-23deg) translate(5px, -5px) scale(1.1) !important;
+                        color: #ffffff;
+
+                    }
+                }
             }
         }
     }
 
     &.teamSection {
         padding: 36px 0 36px 26px;
-        @media screen  and (max-width:991.98px){
+
+        @media screen and (max-width:991.98px) {
             padding: 36px 26px 36px 26px;
-        }   
+        }
+
+        @media screen and (max-width:480px) {
+            padding: 16px;
+        }
     }
 
     .teamLogo {
         width: 350px;
         margin-left: 6.4vw;
         margin-top: 11px;
+
+        @media screen and (max-width:991.98px) {
+            margin-left: 10px;
+            width: 150px;
+        }
     }
 
     .teamContent {
         padding-left: 9.1vw;
         height: 233px;
+
+        @media screen and (max-width:991.98px) {
+            padding-left: 16px;
+            height: 220px;
+        }
 
         .title {
             font-weight: 600;
@@ -250,8 +387,18 @@ section {
             color: #0f1c44;
             display: block;
             margin-bottom: 10px;
-            @media screen  and (max-width:1280px){
+
+            @media screen and (max-width:1280px) {
                 font-size: 22px;
+            }
+
+            @media screen and (max-width:991.98px) {
+                font-size: 16px;
+                padding-top: 20px;
+            }
+
+            @media screen and (max-width:480px) {
+                font-size: 14px;
             }
         }
 
@@ -262,8 +409,14 @@ section {
             width: 77%;
             margin-bottom: 41px;
             margin-top: 11px;
-            @media screen  and (max-width:1280px){
+
+            @media screen and (max-width:1280px) {
                 font-size: 12px;
+            }
+
+            @media screen and (max-width:991.98px) {
+                width: 100%;
+                margin-bottom: 20px;
             }
         }
     }
