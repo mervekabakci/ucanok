@@ -1,0 +1,88 @@
+.fixTitle {
+    h4 {
+        font-weight: 500;
+        color: #0f1c44;
+        font-size: 12px;
+        border-left: 2px solid #ff4200;
+        padding-left: 10px;
+        line-height: 10px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    &.type2{
+        h4{
+            color:#ff4200 ;
+        }
+    }
+}
+
+.pageWrapper {
+    .leftColumn {
+        flex: 1;
+    }
+
+    .rightColumn {
+        width: 300px;
+        min-width: 300px;
+    }
+
+    .shortText {
+
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: #0f1c44;
+    }
+
+    .paragraph {
+        p {}
+    }
+}
+
+/*Kurumsal Sayfa List*/
+.degerlerList{
+    .item{
+        display: flex;
+        align-items: flex-start;
+        .icon{
+            margin-right: 20px;
+            margin-top: 30px;
+        }
+        .title{
+            font-weight: 600;
+            color: #0f1c44;
+            font-size: 14px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 14px;
+            color: #4f4f4f;
+        }
+    }
+}
+.listWrapper {
+    .list {
+        list-style-type: disc;
+        padding-left: 30px;
+
+        li {
+            &::marker {
+                font-size: 10px;
+                color: #ff4200;
+            }
+        }
+
+        a {
+            font-weight: 400;
+            color: #454545;
+            font-size: 12px;
+            transition: all .3s linear;
+
+            @media screen and (min-width:992px) {
+                &:hover {
+                    color: #ff4200;
+                }
+            }
+        }
+    }
+}

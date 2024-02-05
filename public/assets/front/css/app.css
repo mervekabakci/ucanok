@@ -1642,12 +1642,209 @@ section .teamContent p {
   }
 }
 
+/*Genel banner*/
+.bannerWrapper .bannerContainer {
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+}
+.bannerWrapper .bannerContainer .bannerImage {
+  width: 100%;
+  height: 100%;
+}
+.bannerWrapper .bannerContainer .bannerImage img {
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100;
+}
+.bannerWrapper .bannerContainer .bannerDesc {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+.bannerWrapper .pageTitle h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 59px;
+  color: #ffffff;
+  position: relative;
+}
+.bannerWrapper .pageTitle h2:after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+}
+
+/*Genel breadcrumb*/
+.breadCrumb a {
+  font-weight: 400;
+  color: #868686;
+  font-size: 12px;
+  padding-right: 10px;
+}
+.breadCrumb a + a {
+  border-left: 1px solid #868686;
+  padding: 0 10px;
+}
+.breadCrumb a.active {
+  color: #0f1c44;
+}
+
+/*Genel sosyal medya paylas*/
+.shareWrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.shareWrapper span {
+  font-weight: 300;
+  font-size: 10px;
+  color: #454545;
+}
+.shareWrapper .socialShare {
+  display: flex;
+  align-items: center;
+}
+.shareWrapper .socialShare a {
+  cursor: pointer;
+}
+
+/*banner makale*/
+.acticleSection {
+  height: 438px;
+}
+.acticleSection > div {
+  height: 100%;
+}
+.acticleSection .leftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75%;
+  padding-bottom: 4.6vw;
+  padding-left: 4.1vw;
+}
+.acticleSection .categoryName {
+  font-weight: 400;
+  color: #bebebe;
+  font-size: 14.5px;
+}
+.acticleSection .articleTitle {
+  font-weight: 500;
+  font-size: 28px;
+  color: #ffffff;
+  line-height: 31px;
+}
+.acticleSection .articleWrites {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 14px;
+}
+.acticleSection .all-btn {
+  margin-left: 0;
+}
+.acticleSection .articleImages {
+  height: 80%;
+  aspect-ratio: 3/2;
+  margin-left: auto;
+  overflow: hidden;
+  margin-right: 40px;
+}
+.acticleSection .articleImages .imageWrapper {
+  display: block;
+}
+
+.fixTitle h4 {
+  font-weight: 500;
+  color: #0f1c44;
+  font-size: 12px;
+  border-left: 2px solid #ff4200;
+  padding-left: 10px;
+  line-height: 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.fixTitle.type2 h4 {
+  color: #ff4200;
+}
+
+.pageWrapper .leftColumn {
+  flex: 1;
+}
+.pageWrapper .rightColumn {
+  width: 300px;
+  min-width: 300px;
+}
+.pageWrapper .shortText {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f1c44;
+}
+/*Kurumsal Sayfa List*/
+.degerlerList .item {
+  display: flex;
+  align-items: flex-start;
+}
+.degerlerList .item .icon {
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.degerlerList .item .title {
+  font-weight: 600;
+  color: #0f1c44;
+  font-size: 14px;
+}
+.degerlerList .item p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #4f4f4f;
+}
+
+.listWrapper .list {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+.listWrapper .list li::marker {
+  font-size: 10px;
+  color: #ff4200;
+}
+.listWrapper .list a {
+  font-weight: 400;
+  color: #454545;
+  font-size: 12px;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .listWrapper .list a:hover {
+    color: #ff4200;
+  }
+}
+
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 50px;
   font-weight: 600;
   line-height: 59px;
   color: #0f1c44;
+}
+
+h5 {
+  font-weight: 500;
+  color: #0f1c44;
+  font-size: 14px;
 }
 
 .paragraph {
