@@ -1007,10 +1007,36 @@ footer .footer .bottom nav .menuItem .menuLink {
 
 .cards:not(.swiper-wrapper) {
   display: flex;
+  flex-wrap: wrap;
   margin: -20px;
 }
 .cards:not(.swiper-wrapper) .card {
   padding: 20px;
+}
+.cards:not(.swiper-wrapper) .card.type1 {
+  width: 31%;
+  padding: 20px 20px 60px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a {
+  padding: 35px 0 0;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body {
+  padding: 0 40px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body .card-title {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body .card-text {
+  line-height: 22px;
+  padding-bottom: 26px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-body .all-btn {
+  font-size: 12.4px;
+}
+.cards:not(.swiper-wrapper) .card.type1 a .card-footer span {
+  margin-right: 25px;
+  font-size: 4.7vw;
 }
 .cards.swiper-wrapper.type1 .card {
   width: 100%;
@@ -1123,6 +1149,45 @@ footer .footer .bottom nav .menuItem .menuLink {
 }
 .cards.type2 {
   margin: -45px;
+}
+.cards.type2.makaleler {
+  margin: -27px;
+}
+.cards.type2.makaleler .card {
+  padding: 30px;
+}
+.cards.type2.makaleler .card .card-text p {
+  font-size: 15px;
+}
+.cards.type2.d-block {
+  padding-left: 6px;
+}
+.cards.type2.d-block .card {
+  width: 100%;
+  padding: 45px 45px 0px;
+}
+.cards.type2.d-block .card .card-body {
+  padding: 5px 0;
+}
+.cards.type2.d-block .card .card-body .card-text p {
+  font-size: 12.5px;
+}
+.cards.type2.d-block .card .imageWrapper {
+  aspect-ratio: 5/4;
+}
+.cards.type2.teamlist .card .card-body {
+  display: flex;
+  justify-content: space-between;
+}
+.cards.type2.teamlist .card .card-text {
+  display: flex;
+  flex-direction: column;
+}
+.cards.type2.teamlist .card .card-text span.name {
+  font-size: 18px;
+}
+.cards.type2.teamlist .card .card-text span.titleTag {
+  font-size: 14px;
 }
 .cards.type2 .card {
   width: 33.33333%;
@@ -1821,6 +1886,14 @@ section .teamContent p {
 }
 
 /*Genel banner*/
+.bannerWrapper.type2 .breadCrumb {
+  padding-left: 6.5vw;
+  padding-top: 1.2vw;
+}
+.bannerWrapper .breadCrumb {
+  padding-left: 6.5vw;
+  padding-top: 0.2vw;
+}
 .bannerWrapper .bannerContainer {
   height: 390px;
   position: relative;
@@ -1847,19 +1920,21 @@ section .teamContent p {
   z-index: 1;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 30px;
+  padding-bottom: 88px;
+  padding-left: 123px;
 }
 .bannerWrapper .pageTitle h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 38px;
+  font-size: 25px;
+  text-transform: uppercase;
   font-weight: 600;
-  line-height: 59px;
+  line-height: 47px;
   color: #ffffff;
   position: relative;
 }
 .bannerWrapper .pageTitle h2:after {
   content: "";
-  width: 80%;
+  width: 59%;
   height: 2px;
   background-color: #ffffff;
   display: block;
@@ -1885,18 +1960,30 @@ section .teamContent p {
   display: flex;
   align-items: center;
   margin-left: auto;
+  justify-content: space-between;
+  padding-right: 6vw;
+  min-width: 27.3%;
+  width: 27.3%;
 }
 .shareWrapper span {
   font-weight: 300;
-  font-size: 10px;
+  font-size: 14px;
   color: #454545;
 }
 .shareWrapper .socialShare {
   display: flex;
   align-items: center;
+  padding-right: 36px;
 }
 .shareWrapper .socialShare a {
   cursor: pointer;
+  padding: 0 15px;
+}
+.shareWrapper .socialShare a.linkedin span {
+  font-size: 32px;
+}
+.shareWrapper .socialShare a.twitter span {
+  font-size: 27px;
 }
 
 /*banner makale*/
@@ -1905,6 +1992,27 @@ section .teamContent p {
 }
 .acticleSection > div {
   height: 100%;
+}
+.acticleSection.type2 {
+  height: 467px !important;
+  padding-top: 30px;
+  margin-bottom: 15px;
+}
+.acticleSection.type2 .leftColumn {
+  padding-left: 6.5vw;
+  padding-bottom: 7vw;
+}
+.acticleSection.type2 .articleImages {
+  height: 70%;
+  margin-right: 126px;
+}
+.acticleSection.type2 h1 {
+  font-size: 39px;
+}
+.acticleSection.type2 .articleWrites {
+  font-weight: 500;
+  color: #454545;
+  font-size: 17px;
 }
 .acticleSection .leftColumn {
   display: flex;
@@ -1956,44 +2064,255 @@ section .teamContent p {
 }
 .fixTitle.type2 h4 {
   color: #ff4200;
+  font-size: 20px;
+  padding-left: 16px;
+  line-height: 20px;
 }
 
+.otherSlide {
+  padding-left: 6.4vw;
+  padding-right: 6vw;
+  padding-top: 12vw;
+  padding-bottom: 8.8vw;
+}
+.otherSlide .fixTitle {
+  padding-bottom: 83px;
+  padding-left: 5px;
+}
+.otherSlide .fixTitle h4 {
+  font-size: 25px;
+  line-height: 20px;
+  padding-left: 14px;
+  text-transform: capitalize;
+}
+
+.pageWrapper .pageContent {
+  padding-left: 6.4vw;
+  padding-top: 0.8vw;
+  padding-bottom: 3.3vw;
+}
+.pageWrapper .pageContent.type2 {
+  padding-top: 2vw;
+  padding-right: 20vw;
+  padding-bottom: 19vw;
+}
+.pageWrapper .pageContent.type3 {
+  padding-right: 6vw;
+}
+.pageWrapper .pageContent.type3 .shortText {
+  padding-top: 7px;
+}
+.pageWrapper .pageContent.type3 .rightColumn {
+  width: 340px;
+  min-width: 340px;
+  padding-top: 4.7vw;
+}
+.pageWrapper .pageContent.type3 .rightColumn .listWrapper .list {
+  padding-left: 32px;
+  padding-top: 0;
+}
+.pageWrapper .pageContent .cards.type1 {
+  padding-top: 65px;
+}
+.pageWrapper .pageContent .paragraph {
+  padding-left: 2px;
+  padding-top: 0;
+}
+.pageWrapper .pageContent .paragraph p {
+  font-size: 16px;
+  line-height: 30px;
+  padding-top: 30px;
+}
+.pageWrapper .pageContent h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+.pageWrapper .pageContent h1.type2 {
+  padding-top: 2.7vw;
+}
+.pageWrapper .pageContent .degerlerContent {
+  padding-top: 124px;
+}
+.pageWrapper .pageContent .degerlerContent .fixTitle {
+  padding-left: 7px;
+}
+.pageWrapper .pageContent .teamContent {
+  padding-top: 115px;
+}
+.pageWrapper .pageContent .teamImg {
+  width: auto;
+  height: 100%;
+  min-width: 30.1%;
+}
+.pageWrapper .pageContent .teamImg .imageWrapper {
+  aspect-ratio: 6/6.6;
+  width: auto;
+  height: auto;
+}
+.pageWrapper .pageContent .teamDetails {
+  padding-left: 7.3vw;
+}
+.pageWrapper .pageContent .teamDetails .paragraph {
+  padding-right: 112px;
+  padding-left: 0;
+  padding-top: 19px;
+}
+.pageWrapper .pageContent .teamDetails .paragraph p {
+  font-size: 16px;
+}
+.pageWrapper .pageContent .teamDetails .socialMedia {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  padding-bottom: 40px;
+}
+.pageWrapper .pageContent .teamDetails .socialMedia a {
+  display: flex;
+  align-items: center;
+  padding-bottom: 21px;
+}
+.pageWrapper .pageContent .teamDetails .socialMedia a.linkedin {
+  margin-left: -3px;
+}
+.pageWrapper .pageContent .teamDetails .socialMedia a span {
+  padding-left: 39px;
+  font-size: 14px;
+}
+.pageWrapper .pageContent .teamDetails .socialMedia a span.icon-email {
+  font-size: 25px;
+  padding-left: 0;
+}
+.pageWrapper .pageContent .teamDetails .socialMedia a span.icon-linkedin-2 {
+  font-size: 32px;
+  padding-left: 0;
+}
+.pageWrapper .pageContent .teamDetails .listWrapper {
+  padding-top: 93px;
+}
+.pageWrapper .pageContent .teamDetails .listWrapper h4 {
+  font-size: 15px;
+  line-height: 19px;
+  padding-left: 15px;
+}
+.pageWrapper .pageContent .teamDetails .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.pageWrapper .pageContent .teamDetails .top .titleColumn h1 {
+  font-size: 27px;
+  line-height: 10px;
+  padding-bottom: 16px;
+}
+.pageWrapper .pageContent .teamDetails .top a {
+  line-height: 10px;
+  font-size: 14px;
+}
+.pageWrapper .pageContent .teamDetails .top a .transform23 {
+  transform: rotate(-154deg) !important;
+  font-size: 17px;
+  padding-left: 21px;
+  padding-bottom: 5px;
+}
 .pageWrapper .leftColumn {
   flex: 1;
+  padding-top: 1.6vw;
+  padding-right: 6vw;
 }
 .pageWrapper .rightColumn {
-  width: 300px;
-  min-width: 300px;
+  width: 350px;
+  min-width: 350px;
+  padding-top: 2.5vw;
+}
+.pageWrapper .rightColumn .fixTitle {
+  padding-bottom: 50px;
+}
+.pageWrapper .rightColumn .fixTitle h4 {
+  text-transform: capitalize;
+  font-size: 18px;
+  line-height: 20px;
 }
 .pageWrapper .shortText {
+  padding-top: 40px;
+  padding-bottom: 27px;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 22px;
   color: #0f1c44;
 }
+.pageWrapper .filterWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 55px 0;
+}
+.pageWrapper .filterWrapper .searchColumn {
+  background-color: #f0efef;
+  border: 1px solid #b8b8b8;
+  padding: 0 5px 0 20px;
+  height: 55px;
+  min-width: 485px;
+  display: flex;
+  align-items: center;
+}
+.pageWrapper .filterWrapper .searchColumn input {
+  background-color: transparent;
+  width: 100%;
+}
+.pageWrapper .filterWrapper .searchColumn a {
+  line-height: 0;
+  font-size: 50px;
+  opacity: 0.7;
+}
+.pageWrapper .filterWrapper .filterSelect {
+  background-color: #f0efef;
+  border: 1px solid #b8b8b8;
+  height: 50px;
+  padding: 0 20px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageWrapper .filterWrapper .filterSelect select {
+  background-color: transparent;
+  width: 100%;
+}
+
 /*Kurumsal Sayfa List*/
+.degerlerList {
+  padding: 43px 34px 116px;
+}
 .degerlerList .item {
   display: flex;
   align-items: flex-start;
+  padding: 50px 0;
 }
 .degerlerList .item .icon {
-  margin-right: 20px;
-  margin-top: 30px;
+  margin-right: 42px;
+  margin-top: 50px;
+  filter: sepia(1) saturate(25.5);
 }
 .degerlerList .item .title {
   font-weight: 600;
   color: #0f1c44;
-  font-size: 14px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 .degerlerList .item p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15.5px;
+  line-height: 32px;
   color: #4f4f4f;
+  padding-top: 17px;
 }
 
 .listWrapper .list {
   list-style-type: disc;
-  padding-left: 30px;
+  padding-left: 55px;
+  padding-top: 32px;
+}
+.listWrapper .list li {
+  padding-bottom: 14px;
 }
 .listWrapper .list li::marker {
   font-size: 10px;
@@ -2002,7 +2321,8 @@ section .teamContent p {
 .listWrapper .list a {
   font-weight: 400;
   color: #454545;
-  font-size: 12px;
+  font-size: 14px;
+  padding-left: 13px;
   transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {
