@@ -10,8 +10,26 @@
 /* Typography */
 html {
   font-size: 16px;
-}
 
+
+
+}
+body{
+  &::-webkit-scrollbar{
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    width: 0;
+    /* Chrome, Safari, Edge ve Opera için */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    width: 0;
+    /* Chrome, Safari, Edge ve Opera için */
+  }
+}
 body,
 h1,
 h2,
@@ -75,6 +93,7 @@ img {
   overflow: clip;
   overflow-clip-margin: content-box;
 }
+
 /* Reset Table */
 table {
   border-collapse: collapse;

@@ -90,6 +90,9 @@ section {
 
     &:not(.homeSection) {
         padding: 90px 0;
+        @media screen and (max-width:1440px) {
+             padding: 50px 0;
+        }
     }
 
     .sectionHead {
@@ -120,25 +123,48 @@ section {
     }
 
     &.calismaAlanlariSection {
+        .sectionHead{
+            @media screen  and (max-width:991.98px){
+                padding-left: 26px;
+                padding-right: 26px;
+            }
+        }
         .sectionContent {
             padding-left: 1.5vw;
+            @media screen  and (max-width:991.98px){
+                padding-left: 26px;
+                padding-right: 26px;
+            }
         }
     }
 
     &.guncelSection {
         .sectionHead {
             margin-top: 52px;
+            @media screen  and (max-width:991.98px){
+                padding-left: 26px;
+                padding-right: 26px;
+            }
         }
 
         .sectionContent {
             padding-left: 2.5vw;
+            @media screen  and (max-width:991.98px){
+                padding-left: 26px;
+                padding-right: 26px;
+            }
         }
     }
 
     &.acticleSection {
         height: 478px;
         padding: 36px 0 36px 26px;
-
+        @media screen  and (max-width:1280px){
+            height: 300px;
+        }
+        @media screen  and (max-width:991.98px){
+            padding: 36px 26px 36px 26px;
+        }
         &>div {
             height: 100%;
 
@@ -160,6 +186,9 @@ section {
             font-weight: 400;
             color: #bebebe;
             font-size: 14.5px;
+            @media screen  and (max-width:1280px){
+                font-size: 11px;
+            }
         }
 
         .articleTitle {
@@ -167,13 +196,18 @@ section {
             font-size: 28px;
             color: #ffffff;
             line-height: 31px;
+            @media screen  and (max-width:1280px){
+                font-size: 22px;
+            }
         }
 
         .articleWrites {
             font-weight: 500;
             color: #ffffff;
             font-size: 14px;
-
+            @media screen  and (max-width:1280px){
+                font-size: 12px;
+            }
         }
 
         .all-btn {
@@ -195,6 +229,9 @@ section {
 
     &.teamSection {
         padding: 36px 0 36px 26px;
+        @media screen  and (max-width:991.98px){
+            padding: 36px 26px 36px 26px;
+        }   
     }
 
     .teamLogo {
@@ -213,6 +250,9 @@ section {
             color: #0f1c44;
             display: block;
             margin-bottom: 10px;
+            @media screen  and (max-width:1280px){
+                font-size: 22px;
+            }
         }
 
         p {
@@ -222,6 +262,9 @@ section {
             width: 77%;
             margin-bottom: 41px;
             margin-top: 11px;
+            @media screen  and (max-width:1280px){
+                font-size: 12px;
+            }
         }
     }
 }
