@@ -35,6 +35,63 @@ $container-max-width: (
 
 @include generate-containers($container-max-width);
 
+$padding-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  // Diğer değerleri ekleyebilirsiniz
+);
+
+// Temel class
+%padding-class {
+  padding-right: 0 !important; // veya padding: 0 !important; kullanabilirsiniz
+}
+
+// Ekran boyutuna özel mixin
+@mixin padding-responsive($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// Ekran boyutuna özel class'lar
+// Ekran boyutuna özel class'lar
+@each $key, $value in $padding-values {
+  .pe-#{$key} {
+    @extend %padding-class;
+  }
+
+  @include padding-responsive(576px) {
+    .pe-sm-#{$key} {
+      padding-right: #{$value} !important; // veya padding: #{$value} !important; kullanabilirsiniz
+    }
+  }
+
+  @include padding-responsive(768px) {
+    .pe-md-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+
+  @include padding-responsive(992px) {
+    .pe-lg-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+
+  @include padding-responsive(1200px) {
+    .pe-xl-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+
+  @include padding-responsive(1400px) {
+    .pe-xxl-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+}
+
 
 /*Custom Color ve background class*/
 $primary: #0f1c44;
@@ -124,6 +181,7 @@ $colors: (
     align-items: center;
   }
 }
+
 .d-block{
   display: block!important;
 }

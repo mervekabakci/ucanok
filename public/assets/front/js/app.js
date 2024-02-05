@@ -65,6 +65,10 @@ $(".tabsTitle > .tabButton").click(function () {
  */
 var homeCarousel = new Swiper('.homeCarousel', {
   loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: '.swiper-paginationCarousel',
     clickable: true,
@@ -84,6 +88,10 @@ var homeCarousel = new Swiper('.homeCarousel', {
 
 var calismaSlider = new Swiper(".calismaSlider", {
   slidesPerView: 1,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   centerMode: true,
   loop: true,
   spaceBetween: 55,

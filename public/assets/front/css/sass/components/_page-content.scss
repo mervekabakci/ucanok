@@ -38,12 +38,22 @@
 .pageWrapper {
     .pageContent {
         padding-left: 6.4vw;
-        padding-top: 0.8vw; 
-        padding-bottom: 3.3vw;
+        padding-right: 20vw;
+            // padding-top: 0.8vw; 
+        // padding-bottom: 3.3vw;
+        @media screen and (max-width:1280px){
+             padding-right:6.4vw;
+        }
+        @media screen and (max-width:991.98px){
+            padding-right:40px;
+            padding-left: 40px;
+        }
+        @media screen and (max-width:360px){
+            padding-right:16px;
+            padding-left:16px;
+        }
         &.type2 {
-            padding-top: 2vw;
-            padding-right: 20vw;
-            padding-bottom: 19vw;
+            // padding-bottom: 19vw;
         }
         &.type3{
             padding-right: 6vw; 
@@ -77,6 +87,13 @@
                 font-size: 16px;
                 line-height: 30px;
                 padding-top: 30px;
+                @media screen and (max-width:991.98px) {
+                     text-align: justify;
+                }
+                span{
+                    color: #0f1c44;
+                    font-weight: 500;
+                }
             }
         }
 
@@ -85,14 +102,6 @@
             line-height: 50px;
             &.type2{
                 padding-top: 2.7vw;
-            }
-        }
-
-        .degerlerContent {
-            padding-top: 124px;
-
-            .fixTitle {
-                padding-left: 7px;
             }
         }
 
@@ -268,18 +277,52 @@
 }
 
 /*Kurumsal Sayfa List*/
+.degerlerContent {
+    padding-top: 124px;
+    @media screen and (max-width:991.98px){
+        padding-top: 30px;
+    }
+
+    .fixTitle {
+        padding-left: 7px;
+    }
+}
 .degerlerList {
-    padding: 43px 34px 116px;
+    padding:43px 90px 116px 34px;
+    @media screen and (max-width:991.98px) {
+        padding:20px 0 0 0;
+    }
 
     .item {
         display: flex;
         align-items: flex-start;
-        padding: 50px 0;
-
+        padding: 48px 0;
+        @media screen and (max-width:991.98px) {
+            padding:20px 0 0 0;
+        }
+    
+        .iconWrapper{
+            width: 70px;
+            min-width: 70px;
+            max-width: 70px;
+            display: flex;
+            justify-content: center;
+            padding-top: 47px;
+            align-items: center;
+            padding-right: 22px;
+            margin-right: 20px;
+            @media screen and (max-width:991.98px) {
+                margin-right: 0;
+                padding-right: 10px;
+                width: 60px;
+                min-width: 60px;
+                max-width: 60px;
+            }
+        }
         .icon {
-            margin-right: 42px;
-            margin-top: 50px;
-            filter: sepia(1) saturate(25.5);
+            // margin-right: 42px;
+            // margin-top: 50px;
+            // filter: sepia(1) saturate(25.5);
         }
 
         .title {
@@ -291,10 +334,13 @@
 
         p {
             font-weight: 400;
-            font-size: 15.5px;
-            line-height: 32px;
+            font-size: 15px;
+            line-height: 34px;
             color: #4f4f4f;
-            padding-top: 17px;
+            padding-top: 15px;
+            @media screen and (max-width:991.98px) {
+              text-align: justify;
+            }
         }
     }
 }

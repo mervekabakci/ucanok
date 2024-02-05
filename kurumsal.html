@@ -55,9 +55,15 @@
 
 <body>
     <div id="app">
-        <div id="preloader">
-            <div class="preloader">
-
+        <div class="preloader">
+            <div class="preloader-container">
+                <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+                    <circle cx="170" cy="170" r="160" stroke="#0f1c44"/>
+                    <circle cx="170" cy="170" r="135" stroke="#ff4200"/>
+                    <circle cx="170" cy="170" r="110" stroke="#0f1c44"/>
+                    <circle cx="170" cy="170" r="85" stroke="#ff4200"/>
+                </svg>
+                <span class="icon-right-arrow-1"></span>
             </div>
         </div>
         <header>
@@ -70,22 +76,22 @@
                 <a class="logo" href="index.html"><span>UÇANOK</span><span class="small">HUKUK BÜROSU</span></a>
                 <nav id="headerMenu">
                     <ul>
-                        <li class="menuItem"><a class="menuLink" href="javascript:;">Kurumsal</a></li>
-                        <li class="menuItem"><a class="menuLink" href="javascript:;">Ekibimiz</a></li>
+                        <li class="menuItem"><a class="menuLink" href="kurumsal.html">Kurumsal</a></li>
+                        <li class="menuItem"><a class="menuLink" href="ekibimiz.html">Ekibimiz</a></li>
                         <li class="menuItem">
                             <span class="menuLink">Çalışma Alanları <span
                                     class="icon-right-arrow tansform90"></span></span>
                             <ul class="subMenu">
-                                <li class="menuItem"><a class="menuLink" href="javascript:;">Alt Menu 1</a></li>
-                                <li class="menuItem"><a class="menuLink" href="javascript:;">Alt Menu 2</a></li>
-                                <li class="menuItem"><a class="menuLink" href="javascript:;">Alt Menu 3</a></li>
-                                <li class="menuItem"><a class="menuLink" href="javascript:;">Alt Menu 4</a></li>
+                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay</a></li>
+                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay 2</a></li>
+                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay 3</a></li>
+                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay 4</a></li>
                             </ul>
                         </li>
-                        <li class="menuItem"><a class="menuLink" href="javascript:;">Makaleler</a></li>
+                        <li class="menuItem"><a class="menuLink" href="makaleler.html">Makaleler</a></li>
                         <li class="menuItem"><a class="menuLink" href="javascript:;">Medya</a></li>
-                        <li class="menuItem"><a class="menuLink" href="javascript:;">Kariyer</a></li>
-                        <li class="menuItem"><a class="menuLink" href="javascript:;">İletişim</a></li>
+                        <li class="menuItem"><a class="menuLink" href="kariyer.html">Kariyer</a></li>
+                        <li class="menuItem"><a class="menuLink" href="iletisim.html">İletişim</a></li>
                     </ul>
                 </nav>
                 <div class="language">
@@ -113,12 +119,12 @@
             </div>
             <div class="pageWrapper">
                 <div class="container-3xl">
-                    <div class="pageContent type2">
+                    <div class="pageContent">
                         <h1 class="preLine">Müvekkil odaklı
                             hukuki danışmanlık ve ticari çözümler</h1>
                         <div class="paragraph">
-                            <p>İstanbul’da kurulu Uçanok Hukuk Bürosu olarak, kurucumuz Av. Merve UÇANOK ve yönetici
-                                avukatımız Av. Oğuz MESCİOĞLU öncülüğünde müvekkillerimize yurt içi ve yurt dışında
+                            <p>İstanbul’da kurulu Uçanok Hukuk Bürosu olarak, kurucumuz <span>Av. Merve UÇANOK</span> ve yönetici
+                                avukatımız <span>Av. Oğuz MESCİOĞLU</span> öncülüğünde müvekkillerimize yurt içi ve yurt dışında
                                 avukatlık ve hukuki danışmanlık hizmeti vermekteyiz. </p>
                             <p>Büromuz, Ceza Hukuku, Aile Hukuku, Ticaret Hukuku, Sigorta Hukuku, Borçlar Hukuku,
                                 Bilişim Hukuku ve İcra İflas Hukuku alanları başta olmak üzere, müvekkillerine her türlü
@@ -133,31 +139,39 @@
                             </div>
                             <div class="degerlerList">
                                 <div class="item">
-                                    <img class="icon" src="public/assets/images/statics/icon/account.png" alt="">
+                                    <div class="iconWrapper">
+                                        <img class="icon" src="public/assets/images/statics/icon/account-orange.png" alt="">
+                                    </div>
                                     <div>
                                         <span class="title">Müvekkil Odaklı Yaklaşım</span>
                                         <p>Müşterilerimiz bizim itici gücümüz ve motivasyonumuzdur. Müşterilerimizin yararına mümkün olan en yüksek etkiyi elde etmek için her vakanın arkasında güçlerimizi birleştiriyoruz ve kimsenin yapamayacağı ekstra mesafeyi kat edeceğiz. </p>
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <img class="icon" src="public/assets/images/statics/icon/border-clear.png" alt="">
+                                    <div class="iconWrapper">
+                                        <img class="icon" src="public/assets/images/statics/icon/border-clear-orange.png" alt="">
+                                    </div>
                                     <div>
                                         <span class="title">Şeffaflık</span>
-                                        <p>Müşterilerimiz bizim itici gücümüz ve motivasyonumuzdur. Müşterilerimizin yararına mümkün olan en yüksek etkiyi elde etmek için her vakanın arkasında güçlerimizi birleştiriyoruz ve kimsenin yapamayacağı ekstra mesafeyi kat edeceğiz. </p>
+                                        <p>Profesyonellik ve yüksek standartların ana değerlerimiz olduğu ve hiçbir gizli sorunun bulunmadığı etkileşimlerimizde şeffaflığı ön planda tutuyoruz. Yalın çalışma süreçlerini ve düşük kaldıracı uygulayarak, müşterilerimize, her vaka üzerinde en iyi yeteneklerin çalıştığı, son derece deneyimli ekibimize doğrudan erişim olanağı sunabiliyoruz. Yatay bir yönetim yapısı kullanarak, her bölgesel ve uluslararası müşteriye aynı düzeyde iç sorumluluk sunabiliyoruz, karar verme sürecimiz ise sorunsuz ve kişisel kalıyor.</p>
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <img class="icon" src="public/assets/images/statics/icon/book.png" alt="">
+                                    <div class="iconWrapper">
+                                        <img class="icon" src="public/assets/images/statics/icon/book-orange.png" alt="">
+                                    </div>
                                     <div>
                                         <span class="title">Bilimsellik</span>
-                                        <p>Müşterilerimiz bizim itici gücümüz ve motivasyonumuzdur. Müşterilerimizin yararına mümkün olan en yüksek etkiyi elde etmek için her vakanın arkasında güçlerimizi birleştiriyoruz ve kimsenin yapamayacağı ekstra mesafeyi kat edeceğiz. </p>
+                                        <p>Tüm hukuki süreçleri aklı ve bilgiyi esas alan bilimsel yöntemlerle ele alırız. Bir problemi çözmek ya da açıklayabilmek için belirli yasalara dayanan, nesnel, güvenilir bilgilere başvurur, kişisel düşünce ve yargılardan uzak dururuz. Bilimsel yaklaşımı özendirir, tüm ekip arkadaşlarımızı okumaya, araştırmaya, sorgulamaya ve analiz etmeye yönlendiririz. </p>
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <img class="icon" src="public/assets/images/statics/icon/border-clear.png" alt="">
+                                    <div class="iconWrapper">
+                                        <img class="icon" src="public/assets/images/statics/icon/border-clear-orange.png" alt="">
+                                    </div>
                                     <div>
                                         <span class="title">Şeffaflık</span>
-                                        <p>Müşterilerimiz bizim itici gücümüz ve motivasyonumuzdur. Müşterilerimizin yararına mümkün olan en yüksek etkiyi elde etmek için her vakanın arkasında güçlerimizi birleştiriyoruz ve kimsenin yapamayacağı ekstra mesafeyi kat edeceğiz. </p>
+                                        <p>Profesyonellik ve yüksek standartların ana değerlerimiz olduğu ve hiçbir gizli sorunun bulunmadığı etkileşimlerimizde şeffaflığı ön planda tutuyoruz. Yalın çalışma süreçlerini ve düşük kaldıracı uygulayarak, müşterilerimize, her vaka üzerinde en iyi yeteneklerin çalıştığı, son derece deneyimli ekibimize doğrudan erişim olanağı sunabiliyoruz. Yatay bir yönetim yapısı kullanarak, her bölgesel ve uluslararası müşteriye aynı düzeyde iç sorumluluk sunabiliyoruz, karar verme sürecimiz ise sorunsuz ve kişisel kalıyor.</p>
                                     </div>
                                 </div>
                             </div>
