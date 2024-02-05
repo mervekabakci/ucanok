@@ -9,63 +9,304 @@
         margin: 0;
         text-transform: uppercase;
     }
-    &.type2{
-        h4{
-            color:#ff4200 ;
+
+    &.type2 {
+        h4 {
+            color: #ff4200;
+            font-size: 20px;
+            padding-left: 16px;
+            line-height: 20px;
         }
     }
 }
-
+.otherSlide{
+    padding-left: 6.4vw;
+    padding-right: 6vw; 
+    padding-top: 12vw;
+    padding-bottom: 8.8vw;
+    .fixTitle{
+        padding-bottom: 83px;
+        padding-left: 5px;
+        h4{
+            font-size: 25px;
+            line-height: 20px;
+            padding-left: 14px;
+            text-transform: capitalize;
+        }
+    }
+}
 .pageWrapper {
+    .pageContent {
+        padding-left: 6.4vw;
+        padding-top: 0.8vw; 
+        padding-bottom: 3.3vw;
+        &.type2 {
+            padding-top: 2vw;
+            padding-right: 20vw;
+            padding-bottom: 19vw;
+        }
+        &.type3{
+            padding-right: 6vw; 
+            .shortText{
+                padding-top: 7px;
+            }
+            .rightColumn{
+                width: 340px;
+                min-width: 340px;
+                padding-top: 4.7vw;
+                .listWrapper{
+                    .list{
+                        padding-left: 32px;
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+        .cards{
+            &.type1{
+                padding-top: 65px;
+            }
+        }
+        
+
+        .paragraph {
+            padding-left: 2px;
+            padding-top: 0;
+
+            p {
+                font-size: 16px;
+                line-height: 30px;
+                padding-top: 30px;
+            }
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 50px;
+            &.type2{
+                padding-top: 2.7vw;
+            }
+        }
+
+        .degerlerContent {
+            padding-top: 124px;
+
+            .fixTitle {
+                padding-left: 7px;
+            }
+        }
+
+        .teamContent {
+            padding-top: 115px;
+        }
+
+        .teamImg {
+            width: auto;
+            height: 100%;
+            min-width: 30.1%;
+
+            .imageWrapper {
+                aspect-ratio: 6/6.6;
+                width: auto;
+                height: auto;
+            }
+        }
+
+        .teamDetails {
+            padding-left: 7.3vw;
+
+            .paragraph {
+                padding-right: 112px;
+                padding-left: 0;
+                padding-top: 19px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .socialMedia {
+                display: flex;
+                flex-direction: column;
+                padding-top: 55px;
+                padding-bottom: 40px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 21px;
+
+                    &.linkedin {
+                        margin-left: -3px;
+                    }
+
+                    span {
+                        padding-left: 39px;
+                        font-size: 14px;
+
+                        &.icon-email {
+                            font-size: 25px;
+                            padding-left: 0;
+                        }
+
+                        &.icon-linkedin-2 {
+                            font-size: 32px;
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .listWrapper {
+                padding-top: 93px;
+
+                h4 {
+                    font-size: 15px;
+                    line-height: 19px;
+                    padding-left: 15px;
+                }
+            }
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .titleColumn {
+                    h1 {
+                        font-size: 27px;
+                        line-height: 10px;
+                        padding-bottom: 16px;
+                    }
+                }
+
+                a {
+                    line-height: 10px;
+                    font-size: 14px;
+
+                    .transform23 {
+                        transform: rotate(-154deg) !important;
+                        font-size: 17px;
+                        padding-left: 21px;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
     .leftColumn {
         flex: 1;
+        padding-top: 1.6vw;
+        padding-right: 6vw; 
     }
 
     .rightColumn {
-        width: 300px;
-        min-width: 300px;
+        width: 350px;
+        min-width: 350px;
+        padding-top: 2.5vw;
+        .fixTitle{
+            padding-bottom: 50px;
+            h4{
+                text-transform: capitalize;
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+       
     }
 
     .shortText {
-
+        padding-top: 40px;
+        padding-bottom: 27px;
         font-family: "Cormorant Garamond", serif;
         font-weight: 600;
-        font-size: 15px;
+        font-size: 22px;
         color: #0f1c44;
     }
 
     .paragraph {
         p {}
     }
-}
-
-/*Kurumsal Sayfa List*/
-.degerlerList{
-    .item{
+    .filterWrapper{
         display: flex;
-        align-items: flex-start;
-        .icon{
-            margin-right: 20px;
-            margin-top: 30px;
+        justify-content: space-between;
+        padding: 55px 0;
+        .searchColumn{
+            background-color: #f0efef;
+            border: 1px solid #b8b8b8;
+            padding: 0 5px 0 20px;
+            height: 55px;
+            min-width: 485px;
+            display: flex;
+            align-items: center;
+            input{
+                background-color: transparent;
+                width: 100%; 
+            }
+            a{
+                line-height: 0;
+                font-size: 50px;
+                opacity: 0.7;
+            }
         }
-        .title{
-            font-weight: 600;
-            color: #0f1c44;
-            font-size: 14px;
-        }
-        p{
-            font-weight: 400;
-            font-size: 14px;
-            color: #4f4f4f;
+      
+        .filterSelect{ 
+            background-color: #f0efef;
+            border: 1px solid #b8b8b8;
+            height: 50px;
+            padding: 0 20px;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            select{
+                background-color: transparent;
+                width: 100%;
+            }
         }
     }
 }
+
+/*Kurumsal Sayfa List*/
+.degerlerList {
+    padding: 43px 34px 116px;
+
+    .item {
+        display: flex;
+        align-items: flex-start;
+        padding: 50px 0;
+
+        .icon {
+            margin-right: 42px;
+            margin-top: 50px;
+            filter: sepia(1) saturate(25.5);
+        }
+
+        .title {
+            font-weight: 600;
+            color: #0f1c44;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 15.5px;
+            line-height: 32px;
+            color: #4f4f4f;
+            padding-top: 17px;
+        }
+    }
+}
+
 .listWrapper {
     .list {
         list-style-type: disc;
-        padding-left: 30px;
+        padding-left: 55px;
+        padding-top: 32px;
 
         li {
+            padding-bottom: 14px;
             &::marker {
                 font-size: 10px;
                 color: #ff4200;
@@ -75,7 +316,8 @@
         a {
             font-weight: 400;
             color: #454545;
-            font-size: 12px;
+            font-size: 14px;
+            padding-left: 13px;
             transition: all .3s linear;
 
             @media screen and (min-width:992px) {

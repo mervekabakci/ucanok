@@ -1,9 +1,38 @@
 .cards{
     &:not(.swiper-wrapper){
         display: flex;
+        flex-wrap: wrap;
         margin: -20px;
         .card{
-            padding: 20px;
+            padding: 20px; 
+            &.type1{ 
+                width: 31%;
+                padding: 20px 20px 60px; 
+                a{
+                    padding: 35px 0 0;
+                    .card-body{
+                        padding: 0 40px;
+                        .card-title{
+                            font-size: 18px; 
+                            padding-bottom: 10px;
+                        }
+                        .card-text{
+                            line-height: 22px;
+                            padding-bottom: 26px;
+                        }
+                        .all-btn{
+                            font-size: 12.4px;
+                        }
+                    }
+                    .card-footer{
+                        span{
+                            margin-right: 25px;
+                            font-size: 4.7vw;
+                        }
+                    }
+                }
+                
+            }
         }
     }
     &.swiper-wrapper{
@@ -61,7 +90,7 @@
             }
         }
     }
-    &.type1{
+    &.type1{ 
         .card{
             a{
                 width: 100%;
@@ -138,6 +167,55 @@
     }
     &.type2{
         margin: -45px;
+        &.makaleler{
+            margin: -27px;
+                .card{
+                    padding: 30px;
+                    .card-text{
+                        p{
+                            font-size: 15px;
+                        }
+                    }
+                }
+        }
+        &.d-block{
+            padding-left: 6px;
+            .card{
+                width: 100%;
+                padding: 45px 45px 0px;
+                .card-body{
+                    padding: 5px 0;
+                    .card-text{
+                        p{
+                            font-size: 12.5px;
+                        }
+                    }
+                }
+                .imageWrapper{
+                    aspect-ratio: 5/4;
+                }
+            }
+        }
+        &.teamlist {
+            .card{
+                .card-body{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .card-text{
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        &.name{
+                            font-size: 18px;
+                        }
+                        &.titleTag{
+                            font-size: 14px; 
+                        }
+                    }
+                }
+            }
+        }
         .card{
             width: 33.33333%;
             padding: 45px;
@@ -182,5 +260,6 @@
                 }
             }
         }
+
     }
 }
