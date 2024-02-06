@@ -17,7 +17,8 @@ h1 {
 h5 {
     font-weight: 500;
     color: #0f1c44;
-    font-size: 14px;
+    font-size: 18px;
+    display: block;
 }
 
 main {
@@ -40,6 +41,31 @@ main {
         font-weight: 400;
         font-size: 14px;
         color: #454545;
+        @media screen and (max-width:991.98px) {
+            text-align: justify;
+        }
+    }
+}
+
+.backButton {
+    line-height: 10px;
+    font-size: 14px;
+    height: 18px;
+
+
+    .icon-right-arrow-1 {
+        font-size: 17px;
+        padding-left: 21px;
+    }
+
+    @media screen and (min-width:992px){
+         &:hover{
+            color: #0f1c44;
+            .icon-right-arrow-1 {
+                transform: rotate(-154deg) translate(5px, 0) !important;
+                color: #0f1c44;
+            }
+         }
     }
 }
 

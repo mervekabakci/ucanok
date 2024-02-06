@@ -66,7 +66,7 @@
                 <span class="icon-right-arrow-1"></span>
             </div>
         </div>
-        <header>
+        <header id="header">
             <div class="mobileHeader">
                 <a class="logo" href="index.html"><span>UÇANOK</span><span class="small">HUKUK BÜROSU</span></a>
                 <div class="navMenuButton">
@@ -74,7 +74,7 @@
             </div>
             <div class="header container-3xl">
                 <a class="logo" href="index.html"><span>UÇANOK</span><span class="small">HUKUK BÜROSU</span></a>
-     <nav id="headerMenu">
+                <nav id="headerMenu">
                     <ul>
                         <li class="menuItem"><a class="menuLink" href="kurumsal.html">Kurumsal</a></li>
                         <li class="menuItem"><a class="menuLink" href="ekibimiz.html">Ekibimiz</a></li>
@@ -101,17 +101,20 @@
             </div>
         </header>
         <main>
-            <div class="bannerWrapper type2 container-3xl">
-                <div class="breadCrumb">
-                    <a href="index.html">Anasayfa</a>
-                    <a href="Ekibimiz">Ekibimiz</a>
-                    <a class="active" href="javascript:;">Av. Merve Uçanok</a>
+            <div class="bannerWrapper container-3xl">
+                <div class="d-lg-flex w-100">
+                    <div class="breadCrumb">
+                        <a href="index.html">Anasayfa</a>
+                        <a href="Ekibimiz">Ekibimiz</a>
+                        <a class="active" href="javascript:;">Av. Merve Uçanok</a>
+                    </div>
+                    <a href="javascript:;" class="backButton" onclick="history.back()"> <span class="icon-right-arrow-1 transform154"></span><span>Ekibimize Geri Dön</span></a>
                 </div>
             </div>
             <div class="pageWrapper">
                 <div class="container-3xl">
-                    <div class="pageContent">
-                        <div class="d-flex">
+                    <div class="pageContent pe-lg-0">
+                        <div class="d-flex teamDetailsWrapper">
                             <div class="teamImg">
                                 <div class="imageWrapper">
                                     <img src="public/assets/images/media/ekip-1.jpeg" alt="">
@@ -123,10 +126,10 @@
                                         <h1>Av. Merve Uçanok, LL.M</h1>
                                         <span>Kurucu</span>
                                     </div>
-                                    <a href="javascript:;" onclick="history.back()"> <span class="icon-right-arrow-1 transform23"></span><span>Ekibimize Geri Dön</span></a>
+                                    <a href="javascript:;" class="backButton" onclick="history.back()"> <span class="icon-right-arrow-1 transform154"></span><span>Ekibimize Geri Dön</span></a>
                                 </div>
                                 <div class="paragraph">
-                                    <p>İstanbul’da kurulu Uçanok Hukuk Bürosu olarak, kurucumuz Av. Merve UÇANOK ve yönetici avukatımız Av. Oğuz MESCİOĞLU öncülüğünde müvekkillerimize yurt içi ve yurt dışında avukatlık ve hukuki danışmanlık hizmeti vermekteyiz. </p>
+                                    <p>İstanbul’da kurulu Uçanok Hukuk Bürosu olarak, kurucumuz <b>Av. Merve UÇANOK</b> ve yönetici avukatımız <b>Av. Oğuz MESCİOĞLU</b> öncülüğünde müvekkillerimize yurt içi ve yurt dışında avukatlık ve hukuki danışmanlık hizmeti vermekteyiz. </p>
                                 </div>
                                 <div class="socialMedia">
                                     <a href="javascript:;" class="linkedin"><span class="icon-linkedin-2"></span><span>Linkedin</span></a>
@@ -251,6 +254,7 @@
 
 
     <script src="public/assets/plugins/jquery.min.js"></script>
+    <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/sharer.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
     <script src="public/assets/front/js/app.js"></script>

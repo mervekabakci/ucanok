@@ -4,15 +4,27 @@
         flex-wrap: wrap;
         margin: -20px;
 
-        .card {
-            padding: 20px;
-
-            &.type1 {
+        &.type1 {
+            .card {
+                padding: 20px;
                 width: 31%;
                 padding: 20px 20px 60px;
+                @media screen and (max-width:1280px) {
+                    padding: 20px 10px 40px;
+                    width: 33.3%;
+                }
+
+                @media screen and (max-width:991.98px) {
+                    width: 50%;
+                }
+
+                @media screen and (max-width:480px) {
+                    width: 100%;
+                }
 
                 a {
                     padding: 35px 0 0;
+                    aspect-ratio: 5/4.25;
 
                     .card-body {
                         padding: 0 40px;
@@ -302,7 +314,12 @@
 
             .card {
                 padding: 30px;
-
+                @media screen and (max-width:1366px) {
+                    width: 50%;
+                }
+                @media screen and (max-width:640px) {
+                   width: 100%;
+                }
                 .card-text {
                     p {
                         font-size: 15px;
@@ -313,10 +330,10 @@
 
         &.d-block {
             padding-left: 6px;
-
+            margin: 0 auto;
             .card {
                 width: 100%;
-                padding: 45px 45px 0px;
+                padding: 45px 0 0px;
 
                 .card-body {
                     padding: 5px 0;
@@ -335,20 +352,25 @@
         }
 
         &.teamlist {
-            & + .teamlist{
+            &+.teamlist {
                 padding-top: 74px;
             }
+
             .card {
                 width: 450px;
+
                 @media screen and (max-width:1280px) {
                     width: 315px;
                 }
+
                 @media screen and (max-width:560px) {
                     margin: 0 auto;
                 }
-                a{
+
+                a {
                     overflow: hidden;
                 }
+
                 .imageWrapper {
                     aspect-ratio: 5/6.3;
                     max-height: 450px;
@@ -358,7 +380,8 @@
                 .card-text {
                     display: flex;
                     flex-direction: column;
-                    span{
+
+                    span {
                         &.name {
                             font-size: 18.2px;
                             font-weight: 500;
@@ -366,26 +389,29 @@
                             padding-bottom: 10px;
                             color: #0f1c44;
                         }
-                        &.titleTag{
+
+                        &.titleTag {
                             font-size: 14px;
                         }
                     }
                 }
+
                 .card-body {
                     display: flex;
                     justify-content: space-between;
                 }
-                .icon-right-arrow-1{
-                    transform:rotate(-23deg) translateX(-50px)!important;
+
+                .icon-right-arrow-1 {
+                    transform: rotate(-23deg) translateX(-50px) !important;
                     opacity: 0;
                     visibility: hidden;
                     overflow: hidden;
                 }
 
                 @media screen and (min-width:992px) {
-                    &:hover{
-                        .icon-right-arrow-1{
-                            transform:rotate(-23deg) translateX(0)!important;
+                    &:hover {
+                        .icon-right-arrow-1 {
+                            transform: rotate(-23deg) translateX(0) !important;
                             visibility: visible;
                             overflow: visible;
                             opacity: 1;

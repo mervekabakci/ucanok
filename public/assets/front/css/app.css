@@ -463,9 +463,9 @@ video {
 }
 
 :root {
-  --swiper-theme-color:$secondary;
-  --swiper-navigation-color:#0f1c44;
-  --swiper-navigation-size:26px;
+  --swiper-theme-color: $secondary;
+  --swiper-navigation-color: #0f1c44;
+  --swiper-navigation-size: 26px;
 }
 
 /*Standart css style*/
@@ -488,6 +488,12 @@ video {
 
 .transform180 {
   transform: rotate(180deg) !important;
+  transition: all 0.3s linear;
+  display: inline-block;
+}
+
+.transform154 {
+  transform: rotate(-154deg) !important;
   transition: all 0.3s linear;
   display: inline-block;
 }
@@ -521,6 +527,15 @@ video {
 }
 .d-flex.hstack {
   align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .d-lg-flex {
+    display: flex;
+  }
+  .d-lg-flex.hstack {
+    align-items: center;
+  }
 }
 
 .d-block {
@@ -1138,31 +1153,46 @@ footer .footer .bottom nav .menuItem .menuLink {
   flex-wrap: wrap;
   margin: -20px;
 }
-.cards:not(.swiper-wrapper) .card {
+.cards:not(.swiper-wrapper).type1 .card {
   padding: 20px;
-}
-.cards:not(.swiper-wrapper) .card.type1 {
   width: 31%;
   padding: 20px 20px 60px;
 }
-.cards:not(.swiper-wrapper) .card.type1 a {
-  padding: 35px 0 0;
+@media screen and (max-width: 1280px) {
+  .cards:not(.swiper-wrapper).type1 .card {
+    padding: 20px 10px 40px;
+    width: 33.3%;
+  }
 }
-.cards:not(.swiper-wrapper) .card.type1 a .card-body {
+@media screen and (max-width: 991.98px) {
+  .cards:not(.swiper-wrapper).type1 .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cards:not(.swiper-wrapper).type1 .card {
+    width: 100%;
+  }
+}
+.cards:not(.swiper-wrapper).type1 .card a {
+  padding: 35px 0 0;
+  aspect-ratio: 5/4.25;
+}
+.cards:not(.swiper-wrapper).type1 .card a .card-body {
   padding: 0 40px;
 }
-.cards:not(.swiper-wrapper) .card.type1 a .card-body .card-title {
+.cards:not(.swiper-wrapper).type1 .card a .card-body .card-title {
   font-size: 18px;
   padding-bottom: 10px;
 }
-.cards:not(.swiper-wrapper) .card.type1 a .card-body .card-text {
+.cards:not(.swiper-wrapper).type1 .card a .card-body .card-text {
   line-height: 22px;
   padding-bottom: 26px;
 }
-.cards:not(.swiper-wrapper) .card.type1 a .card-body .all-btn {
+.cards:not(.swiper-wrapper).type1 .card a .card-body .all-btn {
   font-size: 12.4px;
 }
-.cards:not(.swiper-wrapper) .card.type1 a .card-footer span {
+.cards:not(.swiper-wrapper).type1 .card a .card-footer span {
   margin-right: 25px;
   font-size: 4.7vw;
 }
@@ -1381,15 +1411,26 @@ footer .footer .bottom nav .menuItem .menuLink {
 .cards.type2.makaleler .card {
   padding: 30px;
 }
+@media screen and (max-width: 1366px) {
+  .cards.type2.makaleler .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cards.type2.makaleler .card {
+    width: 100%;
+  }
+}
 .cards.type2.makaleler .card .card-text p {
   font-size: 15px;
 }
 .cards.type2.d-block {
   padding-left: 6px;
+  margin: 0 auto;
 }
 .cards.type2.d-block .card {
   width: 100%;
-  padding: 45px 45px 0px;
+  padding: 45px 0 0px;
 }
 .cards.type2.d-block .card .card-body {
   padding: 5px 0;
@@ -2394,6 +2435,86 @@ section .teamContent p {
     padding-left: 16px;
   }
 }
+.bannerWrapper .bannerContainer.acticleSection {
+  height: 467px;
+  padding-top: 30px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 1280px) {
+  .bannerWrapper .bannerContainer.acticleSection {
+    height: 290px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .bannerWrapper .bannerContainer.acticleSection {
+    height: 230px;
+  }
+}
+.bannerWrapper .bannerContainer.acticleSection > div {
+  height: 100%;
+}
+.bannerWrapper .bannerContainer.acticleSection .leftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75%;
+  padding-bottom: 7.1vw;
+  padding-left: 6.4vw;
+}
+.bannerWrapper .bannerContainer.acticleSection h1 {
+  font-size: 39px;
+  line-height: 55px;
+}
+@media screen and (max-width: 991.98px) {
+  .bannerWrapper .bannerContainer.acticleSection h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bannerWrapper .bannerContainer.acticleSection h1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.bannerWrapper .bannerContainer.acticleSection .date {
+  color: #707070;
+  font-size: 14px;
+}
+.bannerWrapper .bannerContainer.acticleSection .categoryName {
+  font-weight: 400;
+  color: #707070;
+  font-size: 14.5px;
+}
+.bannerWrapper .bannerContainer.acticleSection .articleTitle {
+  font-weight: 500;
+  font-size: 28px;
+  color: #0f1c44;
+  line-height: 31px;
+}
+.bannerWrapper .bannerContainer.acticleSection .articleWrites {
+  font-weight: 500;
+  color: #707070;
+  font-size: 14px;
+}
+.bannerWrapper .bannerContainer.acticleSection .all-btn {
+  margin-left: 0;
+}
+.bannerWrapper .bannerContainer.acticleSection .articleImages {
+  height: 71%;
+  aspect-ratio: 3/2;
+  margin-left: auto;
+  overflow: hidden;
+  margin-right: 126px;
+}
+@media screen and (max-width: 991.98px) {
+  .bannerWrapper .bannerContainer.acticleSection .articleImages {
+    display: none;
+  }
+}
+.bannerWrapper .bannerContainer.acticleSection .articleImages .imageWrapper {
+  display: block;
+}
 .bannerWrapper .pageTitle h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 25px;
@@ -2410,11 +2531,29 @@ section .teamContent p {
   background-color: #ffffff;
   display: block;
 }
+.bannerWrapper .backButton {
+  display: none;
+}
+@media screen and (max-width: 991.98px) {
+  .bannerWrapper .backButton {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top: 13px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .bannerWrapper .backButton {
+    display: flex;
+    width: 200px;
+    margin: 0 auto 20px auto;
+  }
+}
 
 /*Genel breadcrumb*/
 .breadCrumb {
   padding-left: 6.5vw;
-  padding-bottom: 44px;
+  margin-bottom: 44px;
   margin-top: 14px;
   display: flex;
   align-items: center;
@@ -2435,7 +2574,13 @@ section .teamContent p {
   font-size: 12px;
   padding-right: 15px;
   display: block;
-  line-height: 10px;
+  line-height: 15px;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .breadCrumb a:hover {
+    color: #0f1c44;
+  }
 }
 .breadCrumb a + a {
   border-left: 1px solid #868686;
@@ -2452,8 +2597,19 @@ section .teamContent p {
   margin-left: auto;
   justify-content: space-between;
   padding-right: 6vw;
-  min-width: 27.3%;
-  width: 27.3%;
+  margin-bottom: 27px;
+}
+@media screen and (max-width: 991.98px) {
+  .shareWrapper {
+    padding-right: 40px;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .shareWrapper {
+    padding-right: 16px;
+  }
 }
 .shareWrapper span {
   font-weight: 300;
@@ -2464,6 +2620,13 @@ section .teamContent p {
   display: flex;
   align-items: center;
   padding-right: 36px;
+  padding-left: 3.8vw;
+}
+@media screen and (max-width: 1200px) {
+  .shareWrapper .socialShare {
+    padding-left: 10px;
+    padding-right: 0;
+  }
 }
 .shareWrapper .socialShare a {
   cursor: pointer;
@@ -2474,72 +2637,6 @@ section .teamContent p {
 }
 .shareWrapper .socialShare a.twitter span {
   font-size: 27px;
-}
-
-/*banner makale*/
-.acticleSection {
-  height: 438px;
-}
-.acticleSection > div {
-  height: 100%;
-}
-.acticleSection.type2 {
-  height: 467px !important;
-  padding-top: 30px;
-  margin-bottom: 15px;
-}
-.acticleSection.type2 .leftColumn {
-  padding-left: 6.5vw;
-  padding-bottom: 7vw;
-}
-.acticleSection.type2 .articleImages {
-  height: 70%;
-  margin-right: 126px;
-}
-.acticleSection.type2 h1 {
-  font-size: 39px;
-}
-.acticleSection.type2 .articleWrites {
-  font-weight: 500;
-  color: #454545;
-  font-size: 17px;
-}
-.acticleSection .leftColumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 75%;
-  padding-bottom: 4.6vw;
-  padding-left: 4.1vw;
-}
-.acticleSection .categoryName {
-  font-weight: 400;
-  color: #bebebe;
-  font-size: 14.5px;
-}
-.acticleSection .articleTitle {
-  font-weight: 500;
-  font-size: 28px;
-  color: #ffffff;
-  line-height: 31px;
-}
-.acticleSection .articleWrites {
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 14px;
-}
-.acticleSection .all-btn {
-  margin-left: 0;
-}
-.acticleSection .articleImages {
-  height: 80%;
-  aspect-ratio: 3/2;
-  margin-left: auto;
-  overflow: hidden;
-  margin-right: 40px;
-}
-.acticleSection .articleImages .imageWrapper {
-  display: block;
 }
 
 .fixTitle h4 {
@@ -2576,6 +2673,9 @@ section .teamContent p {
   text-transform: capitalize;
 }
 
+.pageWrapper {
+  padding-bottom: 100px;
+}
 .pageWrapper .pageContent {
   padding-left: 6.4vw;
   padding-right: 20vw;
@@ -2597,27 +2697,15 @@ section .teamContent p {
     padding-left: 16px;
   }
 }
-.pageWrapper .pageContent.type3 {
-  padding-right: 6vw;
-}
-.pageWrapper .pageContent.type3 .shortText {
-  padding-top: 7px;
-}
-.pageWrapper .pageContent.type3 .rightColumn {
-  width: 340px;
-  min-width: 340px;
-  padding-top: 4.7vw;
-}
-.pageWrapper .pageContent.type3 .rightColumn .listWrapper .list {
-  padding-left: 32px;
-  padding-top: 0;
-}
 .pageWrapper .pageContent .cards.type1 {
   padding-top: 65px;
 }
 .pageWrapper .pageContent .paragraph {
   padding-left: 2px;
   padding-top: 0;
+}
+.pageWrapper .pageContent .paragraph h5 {
+  margin-top: 40px;
 }
 .pageWrapper .pageContent .paragraph p {
   font-size: 16px;
@@ -2632,6 +2720,11 @@ section .teamContent p {
 .pageWrapper .pageContent .paragraph p span {
   color: #0f1c44;
   font-weight: 500;
+  display: block;
+}
+.pageWrapper .pageContent .paragraph p b {
+  color: #0f1c44;
+  font-weight: 500;
 }
 .pageWrapper .pageContent h1 {
   font-size: 40px;
@@ -2643,32 +2736,64 @@ section .teamContent p {
 .pageWrapper .pageContent .teamContent {
   padding-top: 115px;
 }
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamDetailsWrapper {
+    display: block;
+  }
+}
 .pageWrapper .pageContent .teamImg {
-  width: auto;
+  width: 31.5%;
   height: 100%;
-  min-width: 30.1%;
+  min-width: 31.5%;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamImg {
+    width: 280px;
+    min-width: 280px;
+    margin: 0 auto;
+  }
 }
 .pageWrapper .pageContent .teamImg .imageWrapper {
-  aspect-ratio: 6/6.6;
-  width: auto;
-  height: auto;
+  aspect-ratio: 6/7.42;
+  overflow: hidden;
 }
 .pageWrapper .pageContent .teamDetails {
-  padding-left: 7.3vw;
+  padding-left: 6.2vw;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamDetails {
+    padding-left: 0;
+    padding-top: 30px;
+  }
 }
 .pageWrapper .pageContent .teamDetails .paragraph {
   padding-right: 112px;
   padding-left: 0;
   padding-top: 19px;
 }
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamDetails .paragraph {
+    padding-right: 0;
+  }
+}
 .pageWrapper .pageContent .teamDetails .paragraph p {
   font-size: 16px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamDetails .paragraph p {
+    text-align: justify;
+  }
 }
 .pageWrapper .pageContent .teamDetails .socialMedia {
   display: flex;
   flex-direction: column;
   padding-top: 55px;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamDetails .socialMedia {
+    padding-bottom: 0;
+  }
 }
 .pageWrapper .pageContent .teamDetails .socialMedia a {
   display: flex;
@@ -2690,46 +2815,97 @@ section .teamContent p {
   font-size: 32px;
   padding-left: 0;
 }
-.pageWrapper .pageContent .teamDetails .listWrapper {
-  padding-top: 93px;
-}
-.pageWrapper .pageContent .teamDetails .listWrapper h4 {
-  font-size: 15px;
-  line-height: 19px;
-  padding-left: 15px;
-}
 .pageWrapper .pageContent .teamDetails .top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamDetails .top {
+    justify-content: center;
+    text-align: center;
+  }
+}
+.pageWrapper .pageContent .teamDetails .top .backButton {
+  display: flex;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .teamDetails .top .backButton {
+    display: none;
+  }
 }
 .pageWrapper .pageContent .teamDetails .top .titleColumn h1 {
   font-size: 27px;
   line-height: 10px;
   padding-bottom: 16px;
 }
-.pageWrapper .pageContent .teamDetails .top a {
-  line-height: 10px;
-  font-size: 14px;
+@media screen and (min-width: 992px) {
+  .pageWrapper .pageContent.type2 {
+    padding-right: 6vw;
+  }
 }
-.pageWrapper .pageContent .teamDetails .top a .transform23 {
-  transform: rotate(-154deg) !important;
-  font-size: 17px;
-  padding-left: 21px;
-  padding-bottom: 5px;
+.pageWrapper .pageContent.type2 .paragraph p {
+  font-size: 16.9px;
+  line-height: 35.1px;
+  margin-bottom: 34px;
+  padding-top: 0;
+}
+.pageWrapper .pageContent.type2 .shortText {
+  padding-top: 34px;
+  line-height: 35px;
+  padding-bottom: 61px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent.type2 .shortText {
+    text-align: justify;
+  }
+}
+.pageWrapper .pageContent.type2 .rightColumn {
+  width: 348px;
+  min-width: 348px;
+  padding-top: 44px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent.type2 .rightColumn {
+    width: 100%;
+  }
+}
+.pageWrapper .pageContent.type2 .rightColumn .listWrapper .list {
+  padding-left: 32px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent.d-flex {
+    flex-direction: column;
+  }
 }
 .pageWrapper .leftColumn {
   flex: 1;
   padding-top: 1.6vw;
   padding-right: 6vw;
 }
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .leftColumn {
+    padding-right: 0;
+  }
+}
 .pageWrapper .rightColumn {
   width: 350px;
   min-width: 350px;
   padding-top: 2.5vw;
 }
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .rightColumn {
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+}
 .pageWrapper .rightColumn .fixTitle {
   padding-bottom: 50px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .rightColumn .fixTitle {
+    padding-bottom: 0;
+  }
 }
 .pageWrapper .rightColumn .fixTitle h4 {
   text-transform: capitalize;
@@ -2749,6 +2925,11 @@ section .teamContent p {
   justify-content: space-between;
   padding: 55px 0;
 }
+@media screen and (max-width: 640px) {
+  .pageWrapper .filterWrapper {
+    flex-direction: column;
+  }
+}
 .pageWrapper .filterWrapper .searchColumn {
   background-color: #f0efef;
   border: 1px solid #b8b8b8;
@@ -2757,6 +2938,18 @@ section .teamContent p {
   min-width: 485px;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 1366px) {
+  .pageWrapper .filterWrapper .searchColumn {
+    min-width: 361px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .pageWrapper .filterWrapper .searchColumn {
+    margin-bottom: 10px;
+    min-width: initial;
+    width: 100%;
+  }
 }
 .pageWrapper .filterWrapper .searchColumn input {
   background-color: transparent;
@@ -2770,12 +2963,17 @@ section .teamContent p {
 .pageWrapper .filterWrapper .filterSelect {
   background-color: #f0efef;
   border: 1px solid #b8b8b8;
-  height: 50px;
+  height: 55px;
   padding: 0 20px;
   min-width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 1366px) {
+  .pageWrapper .filterWrapper .filterSelect {
+    min-width: 188px;
+  }
 }
 .pageWrapper .filterWrapper .filterSelect select {
   background-color: transparent;
@@ -2852,6 +3050,19 @@ section .teamContent p {
   }
 }
 
+.listWrapper {
+  padding-top: 93px;
+}
+@media screen and (max-width: 991.98px) {
+  .listWrapper {
+    padding-top: 30px;
+  }
+}
+.listWrapper h4 {
+  font-size: 15px;
+  line-height: 14px;
+  padding-left: 15px;
+}
 .listWrapper .list {
   list-style-type: disc;
   padding-left: 55px;
@@ -2894,7 +3105,8 @@ h1 {
 h5 {
   font-weight: 500;
   color: #0f1c44;
-  font-size: 14px;
+  font-size: 18px;
+  display: block;
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2916,6 +3128,30 @@ h5 {
   font-weight: 400;
   font-size: 14px;
   color: #454545;
+}
+@media screen and (max-width: 991.98px) {
+  .paragraph p {
+    text-align: justify;
+  }
+}
+
+.backButton {
+  line-height: 10px;
+  font-size: 14px;
+  height: 18px;
+}
+.backButton .icon-right-arrow-1 {
+  font-size: 17px;
+  padding-left: 21px;
+}
+@media screen and (min-width: 992px) {
+  .backButton:hover {
+    color: #0f1c44;
+  }
+  .backButton:hover .icon-right-arrow-1 {
+    transform: rotate(-154deg) translate(5px, 0) !important;
+    color: #0f1c44;
+  }
 }
 
 .all-btn {
