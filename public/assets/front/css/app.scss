@@ -87,9 +87,9 @@ main {
     .icon-right-arrow-1 {
         font-size: 18px;
         color: #999999;
-        margin-left: 6px;
+        margin-left: 4px;
         position: relative;
-        bottom: -1px;
+        bottom: -3px;
         transition: all .3s linear;
 
         @media screen and (max-width:991.98px) {
@@ -107,7 +107,7 @@ main {
                 }
 
                 .icon-right-arrow-1 {
-                    transform: rotate(-23deg) translate(5px, -5px) scale(1.1) !important;
+                    transform: rotate(-26deg) translate(5px, -5px) scale(1.1) !important;
                     color: #0f1c44;
 
                 }

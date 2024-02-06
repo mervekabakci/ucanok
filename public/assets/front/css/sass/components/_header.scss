@@ -16,7 +16,7 @@ header {
             padding-left: 40px;
             padding-right: 40px;
             position: relative;
-            z-index: 999;
+            z-index: 9999;
             height: 60px;
 
             .logo {
@@ -39,6 +39,9 @@ header {
         justify-content: center;
         align-items: flex-end;
         transition: all .3s linear;
+        @media screen and (max-width:991.98px ) {
+            margin-top: 7px;
+        }
 
         &:before,
         &:after {
@@ -81,10 +84,10 @@ header {
             position: fixed;
             width: 100vw;
             height: 100vh;
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
             background: #ffffff;
-            z-index: 99;
+            z-index: 999;
             top: 0;
             padding-top: 63px;
             left: 100%;
@@ -113,9 +116,9 @@ header {
             }
 
             @media screen and (max-width:991.98px) {
-                padding-left: 0;
+                padding-left: 40px;
                 padding-bottom: 50px;
-                text-align: center;
+                text-align: left;
             }
             .menuItem{
                 .menuLink{
@@ -182,6 +185,32 @@ header {
         background: #ffffff;
         width: 100%;
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+    .socialMediaWrapper{
+        display: none;
+        padding-left: 40px;
+        & > span{
+            display: inline-block;
+            position: relative;
+            font-size: 12px;
+
+            &:after{
+                content: "";
+                width: 40%;
+                height: 2px;
+                background-color: #0f1c44;
+                display: block;
+            }
+        }
+        @media screen and (max-width:991.98px ) {
+           display: block;
+        }
+        .socialMedia{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
     }
 }
 

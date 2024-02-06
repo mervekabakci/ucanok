@@ -17,12 +17,8 @@ footer {
         justify-content: space-between;
 
         @media screen and (max-width:991.98px) {
-            height: 400px;
+            height: auto;
             padding-bottom: 30px;
-        }
-
-        @media screen and (max-width:480px) {
-            height: 340px;
         }
 
         .top {
@@ -39,6 +35,8 @@ footer {
             @media screen and (max-width:991.98px) {
                 display: block;
                 text-align: center;
+                padding-left: 16px;
+                padding-right: 16px;
             }
 
             @media screen and (max-width:480px) {
@@ -66,8 +64,11 @@ footer {
                 }
 
                 @media screen and (max-width:991.98px) {
-                    display: none;
+                    padding-left: 0;
                 }
+
+
+
 
                 nav {
                     display: flex;
@@ -75,6 +76,11 @@ footer {
                     height: 100%;
                     max-height: 332px;
                     justify-content: space-between;
+
+                    @media screen and (max-width:991.98px) {
+                        height: auto;
+                        max-height: initial;
+                    }
 
                     &>ul {
                         align-items: flex-start;
@@ -86,6 +92,11 @@ footer {
                                 @media screen and (max-width:1199.98px) {
                                     padding-left: 24px;
                                 }
+
+                                @media screen and (max-width:991.98px) {
+                                    padding-left: 0;
+                                    padding-bottom: 5px;
+                                }
                             }
 
                             &>.menuLink {
@@ -93,15 +104,24 @@ footer {
                                 position: relative;
                                 font-size: 15.5px;
 
-                                &:not(.noLine) {
-                                    &:after {
-                                        content: "";
-                                        width: 20px;
-                                        height: 1px;
-                                        position: absolute;
-                                        bottom: -2px;
-                                        left: -2px;
-                                        background-color: #ffffff;
+                                @media screen and (max-width:991.98px) {
+                                    font-size: 13px;
+
+                                }
+
+                                @media screen and (min-width:992px) {
+                                    font-size: 13px;
+
+                                    &:not(.noLine) {
+                                        &:after {
+                                            content: "";
+                                            width: 20px;
+                                            height: 1px;
+                                            position: absolute;
+                                            bottom: -2px;
+                                            left: -2px;
+                                            background-color: #ffffff;
+                                        }
                                     }
                                 }
                             }
@@ -109,21 +129,29 @@ footer {
                             &>.subMenu {
                                 padding-top: 9px;
 
+                                @media screen and (max-width:991.98px) {
+                                    padding-bottom: 15px;
+                                }
+
                                 .menuItem {
                                     padding-top: 9px;
+
+                                    @media screen and (max-width:991.98px) {
+                                        padding-top: 0;
+                                    }
                                 }
                             }
                         }
 
                         .subMenu {
                             &.grid {
-                                display: grid;
-                                grid-template-columns: repeat(4, min-content);
-                                gap: 10px;
-                                padding-top: 17px;
 
                                 @media screen and (min-width:992px) {
+                                    display: grid;
                                     grid-template-columns: repeat(3, min-content);
+                                    // grid-template-columns: repeat(4, min-content);
+                                    gap: 10px;
+                                    padding-top: 17px;
                                 }
 
                                 @media screen and (min-width:1200px) {
@@ -145,17 +173,28 @@ footer {
 
                                     &+.menuItem {
                                         padding-left: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        position: relative;
-                                        justify-content: space-around;
-                                        min-width: 163px;
 
-                                        &:before {
-                                            content: "|";
-                                            display: inline-block;
+                                        @media screen and (min-width:992px) {
+                                            display: flex;
+                                            align-items: center;
                                             position: relative;
-                                            color: #606060;
+                                            justify-content: space-around;
+                                            min-width: 163px;
+
+                                            &:before {
+                                                content: "|";
+                                                display: inline-block;
+                                                position: relative;
+                                                color: #606060;
+                                            }
+                                        }
+                                    }
+
+                                    @media screen and (max-width:991.98px) {
+                                        .menuLink {
+                                            margin: 0 auto;
+                                            font-size: 12px;
+                                            line-height: 26px;
                                         }
                                     }
 
@@ -229,6 +268,7 @@ footer {
                 flex-direction: column-reverse;
                 text-align: center;
                 padding-left: 0;
+                height: auto;
             }
 
             .copyRight {

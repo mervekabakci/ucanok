@@ -65,10 +65,10 @@ $(".tabsTitle > .tabButton").click(function () {
  */
 var homeCarousel = new Swiper('.homeCarousel', {
   loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: '.swiper-paginationCarousel',
     clickable: true,

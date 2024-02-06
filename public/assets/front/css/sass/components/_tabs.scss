@@ -4,6 +4,9 @@
     .tabsTitle {
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width:991.98px) {
+            margin-bottom: 20px;
+        }
 
         .tabButton {
             color: #707070;
