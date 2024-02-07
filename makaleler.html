@@ -50,6 +50,7 @@
     <title>Uçanok Hukuk Bürosu | Kurumsal</title>
 
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
@@ -147,7 +148,7 @@
                             </div>
                             <div class="filterSelect">
                                 <select name="" id="">
-                                    <option selected disabled value="">Yıl Seçiniz</option>
+                                    <option selected disabled value="" data-display="Select">Yıl Seçiniz</option>
                                     <option value="2023">2023</option>
                                     <option value="2022">2022</option>
                                     <option value="2021">2021</option>
@@ -351,9 +352,14 @@
     <script src="public/assets/plugins/jquery.min.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/sharer.min.js"></script>
+    <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
     <script src="public/assets/front/js/app.js"></script>
-
+    <script>
+        $(document).ready(function() {
+            $('select').niceSelect();
+        });
+    </script>
 </body>
 
 </html>
