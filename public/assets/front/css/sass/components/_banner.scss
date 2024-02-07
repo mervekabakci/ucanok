@@ -95,12 +95,18 @@
             .date {
                 color: #707070;
                 font-size: 14px;
+                @media screen and (max-width:991.98px) {
+                    font-size: 9px;
+                }
             }
 
             .categoryName {
                 font-weight: 400;
                 color: #707070;
                 font-size: 14.5px;
+                @media screen and (max-width:991.98px) {
+                    display: none;
+                }
             }
 
             .articleTitle {
@@ -204,7 +210,7 @@
 
         @media screen and (min-width:992px) {
             &:hover {
-                color: #0f1c44;
+                color: #ff4200;
             }
         }
 
@@ -229,19 +235,27 @@
     margin-bottom: 27px;
 
     @media screen and (max-width:991.98px) {
-        padding-right: 40px;
-        justify-content: flex-end;
+        position: absolute;
+        top: -49px;
+        right: 40px;
+        padding-right: 0;
         margin-bottom: 0;
+        // padding-right: 40px;
+        // justify-content: flex-end;
+        // margin-bottom: 0;
     }
 
     @media screen and (max-width:360px) {
-        padding-right: 16px;
+       right: 16px;
     }
 
-    span {
+    & > span {
         font-weight: 300;
         font-size: 14px;
         color: #454545;
+        @media screen and (max-width:991.98px) {
+           display: none;
+        }
     }
 
     .socialShare {
@@ -258,16 +272,33 @@
         a {
             cursor: pointer;
             padding: 0 15px;
-
+            @media screen and (max-width:991.98px) {
+                padding: 0 7px;
+             }
+            span{
+                transition: all .3s linear;
+            }
             &.linkedin {
                 span {
                     font-size: 32px;
+                    @media screen and (max-width:991.98px) {
+                        font-size: 24px;
+                     }
                 }
             }
 
             &.twitter {
                 span {
                     font-size: 27px;
+                    @media screen and (max-width:991.98px) {
+                        font-size: 18px;
+                     }
+                }
+            }
+
+            @media screen and (min-width:992px) {
+                &:hover{
+                    color: #ff4200;
                 }
             }
         }

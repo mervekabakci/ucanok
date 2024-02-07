@@ -299,7 +299,7 @@ section {
 
         .articleWrites {
             font-weight: 500;
-            color: #ffffff;
+            color: #f2f2f2;
             font-size: 14px;
 
             @media screen and (max-width:1280px) {
@@ -338,7 +338,7 @@ section {
                     border-color: #ffffff;
                 }
                 .all-btn {
-                    color: #ff4200;
+                    color: #ffffff;
 
                     span {
                         transform: translate(5px, -5px);
@@ -346,7 +346,7 @@ section {
 
                     .icon-right-arrow-1 {
                         transform: rotate(-23deg) translate(5px, -5px) scale(1.1) !important;
-                        color: #ff4200;
+                        color: #ffffff;
 
                     }
                 }

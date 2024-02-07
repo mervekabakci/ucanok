@@ -1,341 +1,681 @@
 <!DOCTYPE html>
 <html lang="tr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta name="robots" content="all">
-    <link rel="canonical" href="" />
-    <meta name="publisher" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:url" content="">
-    <meta name="twitter:image" content="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta name="description" content>
+        <meta name="keywords" content>
+        <meta name="author" content>
+        <meta name="robots" content="all">
+        <link rel="canonical" href />
+        <meta name="publisher" content>
+        <meta property="og:title" content>
+        <meta property="og:description" content>
+        <meta property="og:url" content>
+        <meta property="og:image" content>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content>
+        <meta name="twitter:description" content>
+        <meta name="twitter:url" content>
+        <meta name="twitter:image" content>
 
-    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon'">
-    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" href="public/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="public/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="public/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="public/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="public/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="public/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="public/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="public/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="public/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="public/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
-    <link rel="manifest" href="public/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="public/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+        <link rel="shortcut icon" href="public/favicon.ico"
+            type="image/x-icon'">
+        <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57"
+            href="public/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60"
+            href="public/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72"
+            href="public/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76"
+            href="public/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114"
+            href="public/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120"
+            href="public/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144"
+            href="public/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152"
+            href="public/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="public/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"
+            href="public/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="public/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96"
+            href="public/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="public/favicon-16x16.png">
+        <link rel="manifest" href="public/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage"
+            content="public/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+        <title>Uçanok Hukuk Bürosu | Kurumsal</title>
 
-    <title>Uçanok Hukuk Bürosu | Kurumsal</title>
+        <link rel="stylesheet"
+            href="public/assets/plugins/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="public/assets/front/css/app.css">
+    </head>
 
-    <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="public/assets/front/css/app.css">
-</head>
-
-<body>
-    <div id="app">
-        <div class="preloader">
-            <div class="preloader-container">
-                <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
-                    <circle cx="170" cy="170" r="160" stroke="#0f1c44"/>
-                    <circle cx="170" cy="170" r="135" stroke="#ff4200"/>
-                    <circle cx="170" cy="170" r="110" stroke="#0f1c44"/>
-                    <circle cx="170" cy="170" r="85" stroke="#ff4200"/>
-                </svg>
-                <span class="icon-right-arrow-1"></span>
-            </div>
-        </div>
-        <header id="header">
-            <div class="mobileHeader">
-                <a class="logo" href="index.html"><span>UÇANOK</span><span class="small">HUKUK BÜROSU</span></a>
-                <div class="navMenuButton">
+    <body>
+        <div id="app">
+            <div class="preloader">
+                <div class="preloader-container">
+                    <svg class="loader" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 340 340">
+                        <circle cx="170" cy="170" r="160" stroke="#0f1c44" />
+                        <circle cx="170" cy="170" r="135" stroke="#ff4200" />
+                        <circle cx="170" cy="170" r="110" stroke="#0f1c44" />
+                        <circle cx="170" cy="170" r="85" stroke="#ff4200" />
+                    </svg>
+                    <span class="icon-right-arrow-1"></span>
                 </div>
             </div>
-            <div class="header container-3xl">
-                <a class="logo" href="index.html"><span>UÇANOK</span><span class="small">HUKUK BÜROSU</span></a>
-                <nav id="headerMenu">
-                    <ul>
-                        <li class="menuItem"><a class="menuLink" href="kurumsal.html">Kurumsal</a></li>
-                        <li class="menuItem"><a class="menuLink" href="ekibimiz.html">Ekibimiz</a></li>
-                        <li class="menuItem">
-                            <span class="menuLink">Çalışma Alanları <span
-                                    class="icon-right-arrow tansform90"></span></span>
-                            <ul class="subMenu">
-                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay</a></li>
-                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay 2</a></li>
-                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay 3</a></li>
-                                <li class="menuItem"><a class="menuLink" href="calisma-alanlari-detay.html">Çalışma Alanı Detay 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="menuItem"><a class="menuLink" href="makaleler.html">Makaleler</a></li>
-                        <li class="menuItem"><a class="menuLink" href="javascript:;">Medya</a></li>
-                        <li class="menuItem"><a class="menuLink" href="kariyer.html">Kariyer</a></li>
-                        <li class="menuItem"><a class="menuLink" href="iletisim.html">İletişim</a></li>
-                    </ul>
-                </nav>
-                <div class="socialMediaWrapper">
-                    <span>Bizi Takip Et!</span>
-                    <div class="socialMedia">
-                        <a href="javascript:;" target="_blank"><span class="icon-instagram" data-aos="fade-down" data-aos-duration="700" data-aos-delay="300"></span></a>
-                        <a href="javascript:;" target="_blank"><span class="icon-twitter" data-aos="fade-down" data-aos-duration="700" data-aos-delay="200"></span></a>
-                        <a href="javascript:;" target="_blank"><span class="icon-linkedin-2" data-aos="fade-down" data-aos-duration="700" data-aos-delay="100"></span></a>
+            <header id="header">
+                <div class="mobileHeader">
+                    <a class="logo" href="index.html"><span>UÇANOK</span><span
+                            class="small">HUKUK BÜROSU</span></a>
+                    <div class="navMenuButton">
                     </div>
                 </div>
-                <div class="language">
-                    <a href="javascript:;">TR</a>
-                    <a href="javascript:;">EN</a>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="bannerWrapper container-3xl">
-                <div class="bannerContainer acticleSection">
-                    <div class="bg-gray d-flex hstack">
-                        <div class="leftColumn">
-                            <div>
-                                <span class="categoryName">MAKALE</span>
-                                <h1>Güncel Kararlar Işığında Bilgi Değişimi Çalıştayı</h1>
-                                <span class="date">11.11.2023</span>
-                            </div>
-                            <span class="articleWrites">Av. Merve UÇANOK, LL.M.</span>
-                        </div>
-                        <div class="articleImages">
-                            <div class="imageWrapper">
-                                <img src="public/assets/images/media/pexels.jpg" alt="">
-                            </div>
+                <div class="header container-3xl">
+                    <a class="logo" href="index.html"><span>UÇANOK</span><span
+                            class="small">HUKUK BÜROSU</span></a>
+                    <nav id="headerMenu">
+                        <ul>
+                            <li class="menuItem"><a class="menuLink"
+                                    href="kurumsal.html">Kurumsal</a></li>
+                            <li class="menuItem"><a class="menuLink"
+                                    href="ekibimiz.html">Ekibimiz</a></li>
+                            <li class="menuItem">
+                                <span class="menuLink">Çalışma Alanları <span
+                                        class="icon-right-arrow tansform90"></span></span>
+                                <ul class="subMenu">
+                                    <li class="menuItem"><a class="menuLink"
+                                            href="calisma-alanlari-detay.html">Çalışma
+                                            Alanı Detay</a></li>
+                                    <li class="menuItem"><a class="menuLink"
+                                            href="calisma-alanlari-detay.html">Çalışma
+                                            Alanı Detay 2</a></li>
+                                    <li class="menuItem"><a class="menuLink"
+                                            href="calisma-alanlari-detay.html">Çalışma
+                                            Alanı Detay 3</a></li>
+                                    <li class="menuItem"><a class="menuLink"
+                                            href="calisma-alanlari-detay.html">Çalışma
+                                            Alanı Detay 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem"><a class="menuLink"
+                                    href="makaleler.html">Makaleler</a></li>
+                            <li class="menuItem"><a class="menuLink"
+                                    href="javascript:;">Medya</a></li>
+                            <li class="menuItem"><a class="menuLink"
+                                    href="kariyer.html">Kariyer</a></li>
+                            <li class="menuItem"><a class="menuLink"
+                                    href="iletisim.html">İletişim</a></li>
+                        </ul>
+                    </nav>
+                    <div class="socialMediaWrapper">
+                        <span>Bizi Takip Et!</span>
+                        <div class="socialMedia">
+                            <a href="javascript:;" target="_blank"><span
+                                    class="icon-instagram" data-aos="fade-down"
+                                    data-aos-duration="700"
+                                    data-aos-delay="300"></span></a>
+                            <a href="javascript:;" target="_blank"><span
+                                    class="icon-twitter" data-aos="fade-down"
+                                    data-aos-duration="700"
+                                    data-aos-delay="200"></span></a>
+                            <a href="javascript:;" target="_blank"><span
+                                    class="icon-linkedin-2" data-aos="fade-down"
+                                    data-aos-duration="700"
+                                    data-aos-delay="100"></span></a>
                         </div>
                     </div>
-                </div>
-                <div class="d-lg-flex">
-                    <div class="breadCrumb">
-                        <a href="index.html">Anasayfa</a>
-                        <a class="active" href="makaleler.html">Makaleler</a>
-                        <a class="active" href="javascript:;">Güncel Kararlar Işığında Bilgi Değişimi Çalıştayı</a>
-                    </div>
-                    <div class="shareWrapper">
-                        <span>Bu yazıyı paylaş</span> 
-                        <div class="socialShare">
-                            <a  class="button linkedin" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/"><span class="icon-linkedin-2"></span></a>
-                            <a class="button twitter" data-sharer="twitter" data-via="ellisonleao" data-picture="https://ellisonleao.github.io/sharer.js/img/socialbg.png" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"><span class="icon-twitter"></span></a>
-                        </div>
+                    <div class="language">
+                        <a href="javascript:;">TR</a>
+                        <a href="javascript:;">EN</a>
                     </div>
                 </div>
-            </div>
-            <div class="pageWrapper">
-                <div class="container-3xl">
-                    <div class="pageContent d-flex type2">
-                        <div class="leftColumn">
-                            <div class="shortText">
-                                Türk Borçlar Hukuku ve Ticaret Hukukunda, konsinye satış şartı ve konsinye satış sözleşmesi diye anılan sözleşme türü açıkça düzenlenmemiş bir kavram olup sözleşme serbestisi kapsamında uygulama ve öğretide gelişmiş, yargı kararları ve ikincil hukuk kaynaklarında sıkça ifade bulmuş bir kavramdır.
-                            </div>
-                            <div class="paragraph">
-                                <p>Birçok özelge ve yargı kararında ifade bulduğu üzere konsinye işlem, firmaların daha önceden tespit edilen bir fiyatla ya da günün koşullarına göre satılmak üzere ticari işlemde bulundukları diğer firmalara mal gönderilmesidir. Uygulamada genellikle, malı gönderen tüccar veya firmaya “konsinyatör”; malı satmak üzere alan tüccar veya firmaya ise “konsinye” denilir. Konsinye satımın öğretide kabul edilen bir diğer adı da Satım İçin Bırakma Sözleşmesidir.</p>
-                                <p>Konsinye satışlardaki malın teslim edilme sebebi satım için bırakılan konsinyenin bunu üçüncü bir kişiye satmakiçin azami çaba ve özen gösterme borcu altına girmesi ve başarılı olması halinde kendi ad ve hesabına üçüncü kişiye satışı gerçekleştirmesidir. Bu tür sözleşmelerin en ayırt edici yönü, tarafların aralarında önceden sabit bir fiyat saptamaları ve konsinyenin belirlenen bu fiyat aralığından daha yükseğe veya daha düşüğe satmaktan doğacak sorumluluğu üstlenecek olmasıdır.</p>
-                                <p>Konsinye işlemlerde, konsinyeye tanınan seçimlik malı satma veya malı satmaktan cayıp malı iade etme hakkı, bu işlem türünü ayırıcı kılan diğer bir unsurdur. Konsinye satışlara ilişkin öğretide en tartışmalı konu malın mülkiyetinin konsinyatörden konsinyeye geçip geçmediği noktasındadır. Bu konuda öğretide çokça görüş öne sürülmekle beraber, öğretideki hâkim görüş konsinyeye bırakılan malın üçüncü kişiye satılması durumunda, mülkiyetin, satım için bırakan konsinyatörden çıkıp, konsinyeye hiç geçmeden, doğrudan doğruya üçüncü kişiye geçeceği yönündedir.</p>
-                                <p>Mahiyeti itibariyle ticaretin özellikle de tedarikçi ve perakendeci boyutunda sıkça karşılaşılan konsinye satışlar, Rekabet Hukuku bağlamında da inceleme konusu olmuş ve Rekabet Kurulu (“Kurul”) ilgili kararlarında konu özelinde yerleşik sayılan birtakım uygulamalar geliştirmiştir. Bu yazımızda dikey nitelikteki ilişkilerde Kurul tarafından rekabetçi yapıya aykırı kabul edilen bazı durumların konsinye satışlar bakımından verilmiş kararlarda ne şekilde ele alındığını inceledik.</p>
-                                <h5>A. Yeniden Satış Fiyatının Belirlenmesi Yasağı Bakımından</h5>
-                                <p>Kurul’un 04-22/235-51 ve 11-54/1379-489 sayılı kararlarında, konsinye satışlar, Türk Borçlar Kanunu’nda, özel olarak düzenlenmemiş olan sadece doktrinde yapılan tartışmalar çerçevesinde değerlendirilmesi mümkün ve bir malın sahibi tarafından satılmak amacıyla bir başka kişiye bırakılmasını konu alan sözleşmeler olarak tanımlanmıştır. Kurul kararlarında konsinye satışlar bakımından muafiyet veya menfi tespit değerlendirmesi yapılabilmesi için önce malları konsinye satış için bırakılmış tacirin ekonomik olarak bağımsız ve riskleri taşıyan nitelikte olup olmadığına bakılması gerektiği kabul edilmiştir. Kurul kararlarına göre, konsinye satış için bırakılan kişinin, satışların ekonomik riskini taşıyan bağımsız bir teşebbüs olması halinde, taraflar arasındaki ilişki 4054 sayılı Rekabetin Korunması Hakkında Kanun’un (“Kanun”) 4. maddesi kapsamında değerlendirilebilecektir. Lakin satış için bırakılan kişinin herhangi bir ekonomik risk taşımıyor olması halinde, taraflar arasındaki ilişki - gerçek bir acentelik ilişkisinde olduğu gibi - konsinyenin satış için bırakanın bir departmanı gibi değerlendirilmesi sonucunu doğurur.</p>
-                                <p>Hakim görüş olarak ifade edildiği gibi, konsinye satış sisteminde satış için bırakılan taraf malların mülkiyetini edinmemekte mülkiyet ancak üçüncü kişilere satışın gerçekleştiği anda bırakandan üçüncü kişiye el değiştirmektedir. İşte bu noktada konsinye satış sözleşmesinde yer alan ve görünüşte yeniden satış fiyatının tespiti gibi gözüken hükümlerin konsinye sözleşmesinin kendine has özellikleri ile birlikte değerlendirildiğinde, sözleşmede Rekabet Hukuku kapsamında bir yeniden satış fiyatının tespiti halinin öngörülmediği kabul edilmektedir. Çünkü konsinye satış sözleşmeleri, normal alım satım sözleşmesinin aksine, malın zilyetliğinin devri ile taraflar arasında malın alıcıya maliyetini belirleyecek bir fiyat oluşturmamakta ve iktisaden, konsinyatörü bir taban fiyat belirleme zorunluluğu içerisinde bırakmaktadır. Aksi durumda yani konsinyenin, konsinyatörün maliyetinin de altına ürünü nihai kullanıcıya satabilme serbestisine sahip olması konsinye satış sözleşmelerinin özüne ters bir durum yaratır. Kurul kararlarında da ifade bulduğu üzere, ekonomik riski üzerine alan konsinye, belirlenen fiyattan saparak kendi komisyonundan taviz vermek suretiyle malı daha düşüğe satma hakkına sahiptir. İşte Kurul yukarıda ifade bulan tespitleri sebebiyle, konsinye satış sözleşmelerinde yer alan azami ve asgari fiyat uygulamalarının yeniden satış fiyatının tespiti yasağı kapsamında olmadığı, bunların konsinye sözleşmesinin doğası gereği olduğu ve Kanun’un 4. maddesi kapsamında değerlendirilemeyeceği görüşündedir.</p>
-                                <h5>B. İndirim Uygulamaları ve Muafiyet Değerlendirmesi Bakımından</h5>
-                                <p>Konsinye satış sözleşmeleri ifade edildiği gibi, malın mülkiyetinin konsinyatörde kaldığı ve belirlenen fiyat aralığı üzerinden satışı yapılmak üzere konsinyeye bırakıldığı sözleşmelerdir. İşte bu sebeple konsinye satışa konu mallara ilişkin fiyat aralığının belirlenmesinde olduğu gibi mallara ilişkin indirim dönemlerine karar verilmesi bakımından da konsinyatörün karar verebilme hakkı mevcuttur. Genel olarak dikey ilişkilerde, tedarikçi konumundaki teşebbüsün indirim dönemlerine müdaheluygulamaları Rekabet Hukuku bağlamında yasaklı ve tehlikeli görülebilecekken, konsinye satış sözleşmeleri özelinde Kurul, tarafların belirlemiş olduğu indirim dönemlerini konsinye satışın özünden kaynaklı bir durum olarak nitelendirmekte ve bu uygulamaları rekabetçi yapıya aykırı olarak değerlendirmemektedir.</p>
-                                <h5>C. Konsinye Satış Sözleşmelerinin Rekabetçi Endişe Doğurabildiği Durumlar</h5>
-                                <p>Bir sözleşmenin konsinye satış sözleşmesi niteliğinde olması veya içerisinde konsinye satışa ilişkin bir hüküm bulunması doğrudan muafiyet kapsamında değerlendirilmesi anlamına gelmemektedir. Özellikle Kurul’un 04-22/235-51 sayılı kararında da ifade edildiği üzere, konsinye satış sözleşmelerinin bireysel muafiyet değerlendirmesine tabi tutulduğu hallerde çeşitli ürün gruplarının bir arada bulunabildiği ve promosyon uygulamalarının yaygın olarak kullanıldığı mağazaların yaygınlaşmasının tüketiciler açısından da fayda sağlayan ve bu tip ilişkilerin kurulduğu mağazaların çok sayıda markayı ve ürünü barındırmasının, tüketicilerin karşılaştıkları ürünlerin çeşitliliğini artırıp tüketicilere olan arzın artırılması ve erişilebilecek ürün çeşidinin artırılması sonuçlarını doğuran nitelikte olabileceği belirtilmektedir.</p>
-                                <p>Kurul, önüne gelen her konsinye satış sözleşmesinde rekabetçi yapıya katkı sağlayan durumları tespit etmekte ve her ne kadar konsinye nitelikte olsa da satış sözleşmelerinin rekabetçi yapıyı gereğinden fazla ihlal eden veya maiyeti itibariyle konsinye yapılarda olması </p>
-                                <p>gerekeni aşan nitelikteki hallerde bu sözleşmelere menfi tespit veya muafiyet vermekten imtina edebilmektedir.</p>
-                                <h5>Sonuç</h5>
-                                <p>Sonuç olarak, konsinye yapılar mevzuatımızda açıkça düzenlenmemekle beraber ticari uygulamada çokça rastlanılan ve yargı kararlarına da konu olmuş yapılardır. Bu yapılara ilişkin Kurul, verdiği kararlarla konuya ilişkin uygulamada konsinye satış sistemlerine ilişkin soru işaretlerini gidermektedir. Yukarıda detaylıca açıkladığımız üzere, konsinye satış sözleşmelerine ilişkin genel bakış açısı, bu sözleşmelerin rekabetçi endişe doğurmadığı yönündedir. Ancak elbette her bir somut olay özelinde ilgili yapı detaylıca incelenmelidir.</p>
-                            </div>
-                        </div>
-                        <div class="rightColumn">
-                            <div class="listWrapper">
-                                <div class="fixTitle">
-                                    <h4>İlgili Çalışma Alanları</h4>
+            </header>
+            <main>
+                <div class="bannerWrapper container-3xl">
+                    <div class="bannerContainer acticleSection">
+                        <div class="bg-gray d-flex hstack">
+                            <div class="leftColumn">
+                                <div>
+                                    <span class="categoryName">MAKALE</span>
+                                    <h1>Güncel Kararlar Işığında Bilgi Değişimi
+                                        Çalıştayı</h1>
+                                    <span class="date">11.11.2023</span>
                                 </div>
-                                <ul class="list">
-                                    <li><a href="javascript:;" target="_blank">İnfaz Düzenlemeleri neler getiriyor</a></li>
-                                    <li><a href="javascript:;" target="_blank">Konutların Turizm Amaçlı Kiralanmasına Dair Konunun İncelenmesi</a></li>
-                                </ul>
+                                <span class="articleWrites">Av. Merve UÇANOK,
+                                    LL.M.</span>
+                            </div>
+                            <div class="articleImages">
+                                <div class="imageWrapper">
+                                    <img
+                                        src="public/assets/images/media/pexels.jpg"
+                                        alt>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="w-100 otherSlide">
-                        <div class="fixTitle">
-                            <h4>Diğer Makaleler</h4>
+                    <div class="d-lg-flex position-relative">
+                        <div class="breadCrumb">
+                            <a href="index.html">Anasayfa</a>
+                            <a class="active"
+                                href="makaleler.html">Makaleler</a>
                         </div>
-                        <div class="cards type2">
-                            <div class="card">
-                                <a href="javascript:;">
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/haber1.jpg" alt="">
-                                        <div class="image-overlay">
-                                            <span class="icon-right-arrow-1 transform23"></span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <span class="date">11.11.2023</span>
-                                            <p>Güncel Kararlar Işığında Bilgi Değişimi Çalıştayı</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="javascript:;">
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/haber2.png" alt="">
-                                        <div class="image-overlay">
-                                            <span class="icon-right-arrow-1 transform23"></span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <span class="date">11.11.2023</span>
-                                            <p>Güncel Kararlar Işığında Bilgi Değişimi Çalıştayı</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="javascript:;">
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/haber-3.jpg" alt="">
-                                        <div class="image-overlay">
-                                            <span class="icon-right-arrow-1 transform23"></span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <span class="date">11.11.2023</span>
-                                            <p>Güncel Kararlar Işığında Bilgi Değişimi Çalıştayı</p>
-                                        </div>
-                                    </div>
-                                </a>
+                        <div class="shareWrapper">
+                            <span>Bu yazıyı paylaş</span>
+                            <div class="socialShare">
+                                <a class="button linkedin"
+                                    data-sharer="linkedin"
+                                    data-url="https://ellisonleao.github.io/sharer.js/"><span
+                                        class="icon-linkedin-2"></span></a>
+                                <a class="button twitter" data-sharer="twitter"
+                                    data-via="ellisonleao"
+                                    data-picture="https://ellisonleao.github.io/sharer.js/img/socialbg.png"
+                                    data-title="Sharer.js is the ultimate sharer js lib"
+                                    data-url="https://ellisonleao.github.io/sharer.js/"><span
+                                        class="icon-twitter"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-        <footer>
-            <div class="container-3xl">
-                <div class="footer">
-                    <div class="top">
-                        <div class="leftColumn">
-                            <a class="logo light" href="index.html"><span>UÇANOK</span><span class="small">HUKUK
-                                    BÜROSU</span></a>
-                            <div class="contact-buttons">
-                                <a href="https://tr.linkedin.com/in/avmerveucanok" target="_blank"><span
-                                        class="icon-linkedin-2"></span><span>Linkedin</span></a>
-                                <a href="tel:02122365494"><span class="icon-phone"></span><span>0212 236 54
-                                        94</span></a>
+                <div class="pageWrapper">
+                    <div class="container-3xl">
+                        <div class="pageContent d-flex type2">
+                            <div class="leftColumn">
+                                <div class="shortText">
+                                    Türk Borçlar Hukuku ve Ticaret Hukukunda,
+                                    konsinye satış şartı ve konsinye satış
+                                    sözleşmesi diye anılan sözleşme türü açıkça
+                                    düzenlenmemiş bir kavram olup sözleşme
+                                    serbestisi kapsamında uygulama ve öğretide
+                                    gelişmiş, yargı kararları ve ikincil hukuk
+                                    kaynaklarında sıkça ifade bulmuş bir
+                                    kavramdır.
+                                </div>
+                                <div class="paragraph">
+                                    <p>Birçok <b>özelge ve yargı</b> kararında
+                                        <strong> ifade bulduğu</strong> üzere
+                                        konsinye işlem, <a
+                                            href="javascript:;">firmaların</a>
+                                        daha önceden tespit edilen bir fiyatla
+                                        ya da günün koşullarına göre satılmak
+                                        üzere ticari işlemde bulundukları diğer
+                                        firmalara mal gönderilmesidir.
+                                        Uygulamada genellikle, malı gönderen
+                                        tüccar veya firmaya “konsinyatör”; malı
+                                        satmak üzere alan tüccar veya firmaya
+                                        ise “konsinye” denilir. Konsinye satımın
+                                        öğretide kabul edilen bir diğer adı da
+                                        Satım İçin Bırakma Sözleşmesidir.</p>
+                                    <p>Konsinye satışlardaki malın teslim edilme
+                                        sebebi satım için bırakılan konsinyenin
+                                        bunu üçüncü bir kişiye satmakiçin azami
+                                        çaba ve özen gösterme borcu altına
+                                        girmesi ve başarılı olması halinde kendi
+                                        ad ve hesabına üçüncü kişiye satışı
+                                        gerçekleştirmesidir. Bu tür
+                                        sözleşmelerin en ayırt edici yönü,
+                                        tarafların aralarında önceden sabit bir
+                                        fiyat saptamaları ve konsinyenin
+                                        belirlenen bu fiyat aralığından daha
+                                        yükseğe veya daha düşüğe satmaktan
+                                        doğacak sorumluluğu üstlenecek
+                                        olmasıdır.</p>
+                                    <p>Konsinye işlemlerde, konsinyeye tanınan
+                                        seçimlik malı satma veya malı satmaktan
+                                        cayıp malı iade etme hakkı, bu işlem
+                                        türünü ayırıcı kılan diğer bir unsurdur.
+                                        Konsinye satışlara ilişkin öğretide en
+                                        tartışmalı konu malın mülkiyetinin
+                                        konsinyatörden konsinyeye geçip
+                                        geçmediği noktasındadır. Bu konuda
+                                        öğretide çokça görüş öne sürülmekle
+                                        beraber, öğretideki hâkim görüş
+                                        konsinyeye bırakılan malın üçüncü kişiye
+                                        satılması durumunda, mülkiyetin, satım
+                                        için bırakan konsinyatörden çıkıp,
+                                        konsinyeye hiç geçmeden, doğrudan
+                                        doğruya üçüncü kişiye geçeceği
+                                        yönündedir.</p>
+                                    <p>Mahiyeti itibariyle ticaretin özellikle
+                                        de tedarikçi ve perakendeci boyutunda
+                                        sıkça karşılaşılan konsinye satışlar,
+                                        Rekabet Hukuku bağlamında da inceleme
+                                        konusu olmuş ve Rekabet Kurulu (“Kurul”)
+                                        ilgili kararlarında konu özelinde
+                                        yerleşik sayılan birtakım uygulamalar
+                                        geliştirmiştir. Bu yazımızda dikey
+                                        nitelikteki ilişkilerde Kurul tarafından
+                                        rekabetçi yapıya aykırı kabul edilen
+                                        bazı durumların konsinye satışlar
+                                        bakımından verilmiş kararlarda ne
+                                        şekilde ele alındığını inceledik.</p>
+                                    <span class="pTitle">A. Yeniden Satış
+                                        Fiyatının Belirlenmesi Yasağı
+                                        Bakımından</span>
+                                    <p>Kurul’un 04-22/235-51 ve 11-54/1379-489
+                                        sayılı kararlarında, konsinye satışlar,
+                                        Türk Borçlar Kanunu’nda, özel olarak
+                                        düzenlenmemiş olan sadece doktrinde
+                                        yapılan tartışmalar çerçevesinde
+                                        değerlendirilmesi mümkün ve bir malın
+                                        sahibi tarafından satılmak amacıyla bir
+                                        başka kişiye bırakılmasını konu alan
+                                        sözleşmeler olarak tanımlanmıştır. Kurul
+                                        kararlarında konsinye satışlar
+                                        bakımından muafiyet veya menfi tespit
+                                        değerlendirmesi yapılabilmesi için önce
+                                        malları konsinye satış için bırakılmış
+                                        tacirin ekonomik olarak bağımsız ve
+                                        riskleri taşıyan nitelikte olup
+                                        olmadığına bakılması gerektiği kabul
+                                        edilmiştir. Kurul kararlarına göre,
+                                        konsinye satış için bırakılan kişinin,
+                                        satışların ekonomik riskini taşıyan
+                                        bağımsız bir teşebbüs olması halinde,
+                                        taraflar arasındaki ilişki 4054 sayılı
+                                        Rekabetin Korunması Hakkında Kanun’un
+                                        (“Kanun”) 4. maddesi kapsamında
+                                        değerlendirilebilecektir. Lakin satış
+                                        için bırakılan kişinin herhangi bir
+                                        ekonomik risk taşımıyor olması halinde,
+                                        taraflar arasındaki ilişki - gerçek bir
+                                        acentelik ilişkisinde olduğu gibi -
+                                        konsinyenin satış için bırakanın bir
+                                        departmanı gibi değerlendirilmesi
+                                        sonucunu doğurur.</p>
+                                    <p>Hakim görüş olarak ifade edildiği gibi,
+                                        konsinye satış sisteminde satış için
+                                        bırakılan taraf malların mülkiyetini
+                                        edinmemekte mülkiyet ancak üçüncü
+                                        kişilere satışın gerçekleştiği anda
+                                        bırakandan üçüncü kişiye el
+                                        değiştirmektedir. İşte bu noktada
+                                        konsinye satış sözleşmesinde yer alan ve
+                                        görünüşte yeniden satış fiyatının
+                                        tespiti gibi gözüken hükümlerin konsinye
+                                        sözleşmesinin kendine has özellikleri
+                                        ile birlikte değerlendirildiğinde,
+                                        sözleşmede Rekabet Hukuku kapsamında bir
+                                        yeniden satış fiyatının tespiti halinin
+                                        öngörülmediği kabul edilmektedir. Çünkü
+                                        konsinye satış sözleşmeleri, normal alım
+                                        satım sözleşmesinin aksine, malın
+                                        zilyetliğinin devri ile taraflar
+                                        arasında malın alıcıya maliyetini
+                                        belirleyecek bir fiyat oluşturmamakta ve
+                                        iktisaden, konsinyatörü bir taban fiyat
+                                        belirleme zorunluluğu içerisinde
+                                        bırakmaktadır. Aksi durumda yani
+                                        konsinyenin, konsinyatörün maliyetinin
+                                        de altına ürünü nihai kullanıcıya
+                                        satabilme serbestisine sahip olması
+                                        konsinye satış sözleşmelerinin özüne
+                                        ters bir durum yaratır. Kurul
+                                        kararlarında da ifade bulduğu üzere,
+                                        ekonomik riski üzerine alan konsinye,
+                                        belirlenen fiyattan saparak kendi
+                                        komisyonundan taviz vermek suretiyle
+                                        malı daha düşüğe satma hakkına sahiptir.
+                                        İşte Kurul yukarıda ifade bulan
+                                        tespitleri sebebiyle, konsinye satış
+                                        sözleşmelerinde yer alan azami ve asgari
+                                        fiyat uygulamalarının yeniden satış
+                                        fiyatının tespiti yasağı kapsamında
+                                        olmadığı, bunların konsinye
+                                        sözleşmesinin doğası gereği olduğu ve
+                                        Kanun’un 4. maddesi kapsamında
+                                        değerlendirilemeyeceği görüşündedir.</p>
+                                    <h2>B. İndirim Uygulamaları ve Muafiyet
+                                        Değerlendirmesi Bakımından</h2>
+                                    <p>Konsinye satış sözleşmeleri ifade
+                                        edildiği gibi, malın mülkiyetinin
+                                        konsinyatörde kaldığı ve belirlenen
+                                        fiyat aralığı üzerinden satışı yapılmak
+                                        üzere konsinyeye bırakıldığı
+                                        sözleşmelerdir. İşte bu sebeple konsinye
+                                        satışa konu mallara ilişkin fiyat
+                                        aralığının belirlenmesinde olduğu gibi
+                                        mallara ilişkin indirim dönemlerine
+                                        karar verilmesi bakımından da
+                                        konsinyatörün karar verebilme hakkı
+                                        mevcuttur. Genel olarak dikey
+                                        ilişkilerde, tedarikçi konumundaki
+                                        teşebbüsün indirim dönemlerine
+                                        müdaheluygulamaları Rekabet Hukuku
+                                        bağlamında yasaklı ve tehlikeli
+                                        görülebilecekken, konsinye satış
+                                        sözleşmeleri özelinde Kurul, tarafların
+                                        belirlemiş olduğu indirim dönemlerini
+                                        konsinye satışın özünden kaynaklı bir
+                                        durum olarak nitelendirmekte ve bu
+                                        uygulamaları rekabetçi yapıya aykırı
+                                        olarak değerlendirmemektedir.</p>
+                                    <h2>C. Konsinye Satış Sözleşmelerinin
+                                        Rekabetçi Endişe Doğurabildiği
+                                        Durumlar</h2>
+                                    <p>Bir sözleşmenin konsinye satış sözleşmesi
+                                        niteliğinde olması veya içerisinde
+                                        konsinye satışa ilişkin bir hüküm
+                                        bulunması doğrudan muafiyet kapsamında
+                                        değerlendirilmesi anlamına
+                                        gelmemektedir. Özellikle Kurul’un
+                                        04-22/235-51 sayılı kararında da ifade
+                                        edildiği üzere, konsinye satış
+                                        sözleşmelerinin bireysel muafiyet
+                                        değerlendirmesine tabi tutulduğu
+                                        hallerde çeşitli ürün gruplarının bir
+                                        arada bulunabildiği ve promosyon
+                                        uygulamalarının yaygın olarak
+                                        kullanıldığı mağazaların
+                                        yaygınlaşmasının tüketiciler açısından
+                                        da fayda sağlayan ve bu tip ilişkilerin
+                                        kurulduğu mağazaların çok sayıda markayı
+                                        ve ürünü barındırmasının, tüketicilerin
+                                        karşılaştıkları ürünlerin çeşitliliğini
+                                        artırıp tüketicilere olan arzın
+                                        artırılması ve erişilebilecek ürün
+                                        çeşidinin artırılması sonuçlarını
+                                        doğuran nitelikte olabileceği
+                                        belirtilmektedir.</p>
+                                    <p>Kurul, önüne gelen her konsinye satış
+                                        sözleşmesinde rekabetçi yapıya katkı
+                                        sağlayan durumları tespit etmekte ve her
+                                        ne kadar konsinye nitelikte olsa da
+                                        satış sözleşmelerinin rekabetçi yapıyı
+                                        gereğinden fazla ihlal eden veya maiyeti
+                                        itibariyle konsinye yapılarda olması
+                                    </p>
+                                    <p>gerekeni aşan nitelikteki hallerde bu
+                                        sözleşmelere menfi tespit veya muafiyet
+                                        vermekten imtina edebilmektedir.</p>
+                                    <h2>Sonuç</h2>
+                                    <p>Sonuç olarak, konsinye yapılar
+                                        mevzuatımızda açıkça düzenlenmemekle
+                                        beraber ticari uygulamada çokça
+                                        rastlanılan ve yargı kararlarına da konu
+                                        olmuş yapılardır. Bu yapılara ilişkin
+                                        Kurul, verdiği kararlarla konuya ilişkin
+                                        uygulamada konsinye satış sistemlerine
+                                        ilişkin soru işaretlerini gidermektedir.
+                                        Yukarıda detaylıca açıkladığımız üzere,
+                                        konsinye satış sözleşmelerine ilişkin
+                                        genel bakış açısı, bu sözleşmelerin
+                                        rekabetçi endişe doğurmadığı yönündedir.
+                                        Ancak elbette her bir somut olay
+                                        özelinde ilgili yapı detaylıca
+                                        incelenmelidir.</p>
+                                </div>
+                            </div>
+                            <div class="rightColumn">
+                                <div class="listWrapper">
+                                    <div class="fixTitle">
+                                        <span>İlgili Çalışma Alanları</span>
+                                    </div>
+                                    <ul class="list">
+                                        <li><a href="javascript:;"
+                                                target="_blank">İnfaz
+                                                Düzenlemeleri neler
+                                                getiriyor</a></li>
+                                        <li><a href="javascript:;"
+                                                target="_blank">Konutların
+                                                Turizm Amaçlı Kiralanmasına Dair
+                                                Konunun İncelenmesi</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="rightColumn">
-                            <nav class="show light">
-                                <ul>
+
+                        <div class="w-100 otherSlide">
+                            <div class="fixTitle">
+                                <span>Diğer Makaleler</span>
+                            </div>
+                            <div class="cards type2">
+                                <div class="card">
+                                    <a href="javascript:;">
+                                        <div class="imageWrapper">
+                                            <img
+                                                src="public/assets/images/media/haber1.jpg"
+                                                alt>
+                                            <div class="image-overlay">
+                                                <span
+                                                    class="icon-right-arrow-1 transform23"></span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <span
+                                                    class="date">11.11.2023</span>
+                                                <p>Güncel Kararlar Işığında
+                                                    Bilgi Değişimi Çalıştayı</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card">
+                                    <a href="javascript:;">
+                                        <div class="imageWrapper">
+                                            <img
+                                                src="public/assets/images/media/haber2.png"
+                                                alt>
+                                            <div class="image-overlay">
+                                                <span
+                                                    class="icon-right-arrow-1 transform23"></span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <span
+                                                    class="date">11.11.2023</span>
+                                                <p>Güncel Kararlar Işığında
+                                                    Bilgi Değişimi Çalıştayı</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card">
+                                    <a href="javascript:;">
+                                        <div class="imageWrapper">
+                                            <img
+                                                src="public/assets/images/media/haber-3.jpg"
+                                                alt>
+                                            <div class="image-overlay">
+                                                <span
+                                                    class="icon-right-arrow-1 transform23"></span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <span
+                                                    class="date">11.11.2023</span>
+                                                <p>Güncel Kararlar Işığında
+                                                    Bilgi Değişimi Çalıştayı</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="container-3xl">
+                    <div class="footer">
+                        <div class="top">
+                            <div class="leftColumn">
+                                <a class="logo light"
+                                    href="index.html"><span>UÇANOK</span><span
+                                        class="small">HUKUK
+                                        BÜROSU</span></a>
+                                <div class="contact-buttons">
+                                    <a
+                                        href="https://tr.linkedin.com/in/avmerveucanok"
+                                        target="_blank"><span
+                                            class="icon-linkedin-2"></span><span>Linkedin</span></a>
+                                    <a href="tel:02122365494"><span
+                                            class="icon-phone"></span><span>0212
+                                            236 54
+                                            94</span></a>
+                                </div>
+                            </div>
+                            <div class="rightColumn">
+                                <nav class="show light">
+                                    <ul>
+                                        <li class="menuItem">
+                                            <span class="menuLink"
+                                                href="javascript:;">Kurumsal</span>
+                                            <ul class="subMenu">
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        href="javascript:;">Hakkımızda</a>
+                                                </li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        href="javascript:;">Ekibimiz</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menuItem">
+                                            <span class="menuLink"
+                                                href="javascript:;">Medya</span>
+                                            <ul class="subMenu">
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        href="javascript:;">Haberler</a>
+                                                </li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        href="javascript:;">Basında
+                                                        Biz</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menuItem"><a class="menuLink"
+                                                href="javascript:;">Makaleler</a></li>
+                                        <li class="menuItem"><a class="menuLink"
+                                                href="javascript:;">Kariyer</a></li>
+                                        <li class="menuItem"><a class="menuLink"
+                                                href="javascript:;">İletişim</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="menuItem w-100">
+                                            <span class="menuLink noLine"
+                                                href="javascript:;">Çalışma
+                                                Alanları</span>
+                                            <ul class="subMenu grid">
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Aile
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Ceza
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Ticaret
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Şirketler
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Sözleşmeler
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">İcra
+                                                        ve İflas Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Bilişim
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Miras
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">idare
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Arabuluculuk</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Rekabet
+                                                        Hukuku</a></li>
+                                                <li class="menuItem"><a
+                                                        class="menuLink"
+                                                        target="_blank"
+                                                        href="javascript:;">Sigorta
+                                                        Hukuku</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="copyRight">© 2023 Uçanok Hukuk Bürosu .
+                                Tüm Hakları Saklıdır</div>
+                            <nav class="light">
+                                <ul class>
                                     <li class="menuItem">
-                                        <span class="menuLink" href="javascript:;">Kurumsal</span>
-                                        <ul class="subMenu">
-                                            <li class="menuItem"><a class="menuLink" href="javascript:;">Hakkımızda</a>
-                                            </li>
-                                            <li class="menuItem"><a class="menuLink" href="javascript:;">Ekibimiz</a>
-                                            </li>
-                                        </ul>
+                                        <a href="javascript:;"
+                                            class="menuLink">Yasal Uyarı</a>
                                     </li>
                                     <li class="menuItem">
-                                        <span class="menuLink" href="javascript:;">Medya</span>
-                                        <ul class="subMenu">
-                                            <li class="menuItem"><a class="menuLink" href="javascript:;">Haberler</a>
-                                            </li>
-                                            <li class="menuItem"><a class="menuLink" href="javascript:;">Basında Biz</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menuItem"><a class="menuLink" href="javascript:;">Makaleler</a></li>
-                                    <li class="menuItem"><a class="menuLink" href="javascript:;">Kariyer</a></li>
-                                    <li class="menuItem"><a class="menuLink" href="javascript:;">İletişim</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="menuItem w-100">
-                                        <span class="menuLink noLine" href="javascript:;">Çalışma Alanları</span>
-                                        <ul class="subMenu grid">
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Aile Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Ceza Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Ticaret Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Şirketler Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Sözleşmeler Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">İcra ve İflas Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Bilişim Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Miras Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">idare Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Arabuluculuk</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Rekabet Hukuku</a></li>
-                                            <li class="menuItem"><a class="menuLink" target="_blank"
-                                                    href="javascript:;">Sigorta Hukuku</a></li>
-                                        </ul>
+                                        <a href="javascript:;"
+                                            class="menuLink">Kvkk Aydınlatma
+                                            Metni</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                    <div class="bottom">
-                        <div class="copyRight">© 2023 Uçanok Hukuk Bürosu . Tüm Hakları Saklıdır</div>
-                        <nav class="light">
-                            <ul class="">
-                                <li class="menuItem">
-                                    <a href="javascript:;" class="menuLink">Yasal Uyarı</a>
-                                </li>
-                                <li class="menuItem">
-                                    <a href="javascript:;" class="menuLink">Kvkk Aydınlatma Metni</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
                 </div>
-            </div>
-        </footer>
-    </div>
+            </footer>
+        </div>
 
+        <script src="public/assets/plugins/jquery.min.js"></script>
+        <script src="public/assets/plugins/aos/aos.js"></script>
+        <script src="public/assets/plugins/sharer.min.js"></script>
+        <script
+            src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+        <script src="public/assets/front/js/app.js"></script>
 
-    <script src="public/assets/plugins/jquery.min.js"></script>
-    <script src="public/assets/plugins/aos/aos.js"></script>
-    <script src="public/assets/plugins/sharer.min.js"></script>
-    <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
-    <script src="public/assets/front/js/app.js"></script>
-
-</body>
+    </body>
 
 </html>

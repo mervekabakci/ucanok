@@ -25,7 +25,7 @@ AOS.init({
 $(".navMenuButton").on("click", function () {
   $(this).toggleClass("active");
   $("header").toggleClass("active");
-  $("body").toggleClass("overflow-hidden")
+  $("html").toggleClass("overflow-hidden")
 })
 console.log(wWidth)
 if (wWidth <= 992) {

@@ -96,20 +96,18 @@ $padding-values: (
 /*Custom Color ve background class*/
 $primary: #0f1c44;
 $secondary: #ff4200;
-$tertiary: #650b77;
 $gray :#f2f2f2;
 
 $colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "tertiary": $tertiary,
   "gray": $gray
 );
 
 @mixin generate-background-classes($colors) {
   @each $name, $color in $colors {
     .bg-#{$name} {
-      background-color: $color;
+      background-color: $color!important;
     }
   }
 }
@@ -117,7 +115,7 @@ $colors: (
 @mixin generate-text-classes($colors) {
   @each $name, $color in $colors {
     .text-#{$name} {
-      color: $color;
+      color: $color!important;
     }
   }
 }
@@ -210,7 +208,12 @@ $colors: (
 .d-block {
   display: block !important;
 }
-
+.overflow-hidden{
+  overflow: hidden!important;
+}
+.position-relative{
+  position: relative!important;
+}
 .icon-instagram {
   font-size: 24px;
 

@@ -431,35 +431,27 @@ video {
 }
 /*Custom Color ve background class*/
 .bg-primary {
-  background-color: #0f1c44;
+  background-color: #0f1c44 !important;
 }
 
 .bg-secondary {
-  background-color: #ff4200;
-}
-
-.bg-tertiary {
-  background-color: #650b77;
+  background-color: #ff4200 !important;
 }
 
 .bg-gray {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2 !important;
 }
 
 .text-primary {
-  color: #0f1c44;
+  color: #0f1c44 !important;
 }
 
 .text-secondary {
-  color: #ff4200;
-}
-
-.text-tertiary {
-  color: #650b77;
+  color: #ff4200 !important;
 }
 
 .text-gray {
-  color: #f2f2f2;
+  color: #f2f2f2 !important;
 }
 
 :root {
@@ -544,6 +536,14 @@ video {
 
 .d-block {
   display: block !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.position-relative {
+  position: relative !important;
 }
 
 .icon-instagram {
@@ -671,6 +671,7 @@ header {
 @media screen and (max-width: 991.98px) {
   header {
     height: 60px;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 991.98px) {
@@ -684,9 +685,23 @@ header {
     position: relative;
     z-index: 9999;
     height: 60px;
+    background-color: #ffffff;
   }
   header .mobileHeader .logo {
     padding-top: 16px;
+  }
+  header .mobileHeader .language {
+    position: absolute;
+    right: 80px;
+    height: auto;
+    top: 8px;
+    display: flex;
+  }
+}
+@media screen and (max-width: 360px) {
+  header .mobileHeader {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -751,6 +766,9 @@ header .navMenuButton.active:after {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s linear;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-bottom: 30px;
   }
   header .header .logo {
     display: none;
@@ -776,12 +794,26 @@ header .header nav {
 @media screen and (max-width: 991.98px) {
   header .header nav {
     padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 50px;
     text-align: left;
   }
 }
+@media screen and (max-width: 991.98px) {
+  header .header nav .menuItem {
+    padding: 12px 0;
+  }
+  header .header nav .menuItem + .menuItem {
+    border-top: 1px dotted #999999;
+  }
+}
 header .header nav .menuItem .menuLink {
   padding-top: 13px;
+}
+@media screen and (max-width: 991.98px) {
+  header .header nav .menuItem .menuLink {
+    padding-top: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   header .header nav,
@@ -799,15 +831,18 @@ header .language {
 }
 @media screen and (max-width: 991.98px) {
   header .language {
-    position: absolute;
-    top: 12px;
-    right: 94px;
-    height: auto;
+    display: none;
   }
 }
 header .language a {
   font-weight: 400;
   font-size: 13.3px;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  header .language a:hover {
+    color: #ff4200;
+  }
 }
 header .language a + a {
   margin-left: 33px;
@@ -1034,9 +1069,42 @@ footer .footer .top .rightColumn nav > ul > .menuItem > .subMenu {
 footer .footer .top .rightColumn nav > ul > .menuItem > .subMenu .menuItem {
   padding-top: 9px;
 }
+footer .footer .top .rightColumn nav > ul > .menuItem > .subMenu .menuItem .menuLink {
+  position: relative;
+}
+footer .footer .top .rightColumn nav > ul > .menuItem > .subMenu .menuItem .menuLink:after {
+  content: "";
+  display: flex !important;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+@media screen and (max-width: 991.98px) {
+  footer .footer .top .rightColumn nav > ul > .menuItem > .subMenu .menuItem .menuLink {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 34px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .footer .top .rightColumn nav > ul > .menuItem > .subMenu .menuItem .menuLink:hover:after {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 991.98px) {
   footer .footer .top .rightColumn nav > ul > .menuItem > .subMenu .menuItem {
     padding-top: 0;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  footer .footer .top .rightColumn nav > ul > .menuItem {
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1089,7 +1157,7 @@ footer .footer .top .rightColumn nav > ul .subMenu.grid .menuItem + .menuItem {
   footer .footer .top .rightColumn nav > ul .subMenu.grid .menuItem .menuLink {
     margin: 0 auto;
     font-size: 12px;
-    line-height: 26px;
+    line-height: 34px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -1145,7 +1213,7 @@ footer .footer .bottom {
 }
 @media screen and (max-width: 991.98px) {
   footer .footer .bottom {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     padding-left: 0;
     height: auto;
@@ -1161,6 +1229,8 @@ footer .footer .bottom .copyRight {
   footer .footer .bottom .copyRight {
     font-size: 10px;
     width: 100%;
+    position: absolute;
+    bottom: 100px;
   }
 }
 @media screen and (min-width: 1366px) {
@@ -1172,7 +1242,7 @@ footer .footer .bottom .copyRight {
 }
 @media screen and (max-width: 991.98px) {
   footer .footer .bottom nav {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 }
 footer .footer .bottom nav > ul {
@@ -1218,6 +1288,19 @@ footer .footer .bottom nav .menuItem .menuLink {
   .contact-buttons a:hover {
     opacity: 0.7;
   }
+}
+
+.trios {
+  margin-left: auto;
+  margin-right: 42px;
+}
+@media screen and (max-width: 991.98px) {
+  .trios {
+    margin: 20px auto 0 auto;
+  }
+}
+.trios img {
+  max-width: 80px;
 }
 
 .cards:not(.swiper-wrapper) {
@@ -1453,7 +1536,6 @@ footer .footer .bottom nav .menuItem .menuLink {
 @media screen and (max-width: 640px) {
   .cards.type2 {
     flex-wrap: wrap;
-    margin: -5px -15px;
   }
 }
 .cards.type2 .card {
@@ -1468,17 +1550,18 @@ footer .footer .bottom nav .menuItem .menuLink {
 @media screen and (max-width: 640px) {
   .cards.type2 .card {
     width: 100%;
-    padding: 10px 15px;
+    padding: 20px 15px;
   }
 }
 .cards.type2 .card a {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 .cards.type2 .card .imageWrapper {
   aspect-ratio: 5/3;
+  height: auto;
+  overflow: hidden;
 }
 .cards.type2 .card .card-body {
   padding: 10px 0;
@@ -1540,7 +1623,7 @@ footer .footer .bottom nav .menuItem .menuLink {
 }
 .cards.type2.d-block {
   padding-left: 6px;
-  margin: 0 auto;
+  margin: -45px auto;
 }
 .cards.type2.d-block .card {
   width: 100%;
@@ -1564,11 +1647,6 @@ footer .footer .bottom nav .menuItem .menuLink {
 @media screen and (max-width: 1280px) {
   .cards.type2.teamlist .card {
     width: 315px;
-  }
-}
-@media screen and (max-width: 560px) {
-  .cards.type2.teamlist .card {
-    margin: 0 auto;
   }
 }
 .cards.type2.teamlist .card a {
@@ -1596,6 +1674,7 @@ footer .footer .bottom nav .menuItem .menuLink {
 }
 .cards.type2.teamlist .card .card-text span.titleTag {
   font-size: 14px;
+  color: #707070;
 }
 .cards.type2.teamlist .card .card-body {
   display: flex;
@@ -2311,7 +2390,7 @@ section.acticleSection .articleTitle {
 }
 section.acticleSection .articleWrites {
   font-weight: 500;
-  color: #ffffff;
+  color: #f2f2f2;
   font-size: 14px;
 }
 @media screen and (max-width: 1280px) {
@@ -2348,14 +2427,14 @@ section.acticleSection .articleImages .imageWrapper {
     border-color: #ffffff;
   }
   section.acticleSection:hover .all-btn {
-    color: #ff4200;
+    color: #ffffff;
   }
   section.acticleSection:hover .all-btn span {
     transform: translate(5px, -5px);
   }
   section.acticleSection:hover .all-btn .icon-right-arrow-1 {
     transform: rotate(-23deg) translate(5px, -5px) scale(1.1) !important;
-    color: #ff4200;
+    color: #ffffff;
   }
 }
 section.teamSection {
@@ -2877,10 +2956,20 @@ section .teamContent p {
   color: #707070;
   font-size: 14px;
 }
+@media screen and (max-width: 991.98px) {
+  .bannerWrapper .bannerContainer.acticleSection .date {
+    font-size: 9px;
+  }
+}
 .bannerWrapper .bannerContainer.acticleSection .categoryName {
   font-weight: 400;
   color: #707070;
   font-size: 14.5px;
+}
+@media screen and (max-width: 991.98px) {
+  .bannerWrapper .bannerContainer.acticleSection .categoryName {
+    display: none;
+  }
 }
 .bannerWrapper .bannerContainer.acticleSection .articleTitle {
   font-weight: 500;
@@ -2975,7 +3064,7 @@ section .teamContent p {
 }
 @media screen and (min-width: 992px) {
   .breadCrumb a:hover {
-    color: #0f1c44;
+    color: #ff4200;
   }
 }
 .breadCrumb a + a {
@@ -2997,20 +3086,27 @@ section .teamContent p {
 }
 @media screen and (max-width: 991.98px) {
   .shareWrapper {
-    padding-right: 40px;
-    justify-content: flex-end;
+    position: absolute;
+    top: -49px;
+    right: 40px;
+    padding-right: 0;
     margin-bottom: 0;
   }
 }
 @media screen and (max-width: 360px) {
   .shareWrapper {
-    padding-right: 16px;
+    right: 16px;
   }
 }
-.shareWrapper span {
+.shareWrapper > span {
   font-weight: 300;
   font-size: 14px;
   color: #454545;
+}
+@media screen and (max-width: 991.98px) {
+  .shareWrapper > span {
+    display: none;
+  }
 }
 .shareWrapper .socialShare {
   display: flex;
@@ -3028,11 +3124,34 @@ section .teamContent p {
   cursor: pointer;
   padding: 0 15px;
 }
+@media screen and (max-width: 991.98px) {
+  .shareWrapper .socialShare a {
+    padding: 0 7px;
+  }
+}
+.shareWrapper .socialShare a span {
+  transition: all 0.3s linear;
+}
 .shareWrapper .socialShare a.linkedin span {
   font-size: 32px;
 }
+@media screen and (max-width: 991.98px) {
+  .shareWrapper .socialShare a.linkedin span {
+    font-size: 24px;
+  }
+}
 .shareWrapper .socialShare a.twitter span {
   font-size: 27px;
+}
+@media screen and (max-width: 991.98px) {
+  .shareWrapper .socialShare a.twitter span {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .shareWrapper .socialShare a:hover {
+    color: #ff4200;
+  }
 }
 
 .pageWrapper {
@@ -3065,8 +3184,21 @@ section .teamContent p {
 .pageWrapper .pageContent .paragraph {
   padding-left: 2px;
   padding-top: 0;
+  font-size: 16px;
+  line-height: 30px;
+  padding-top: 30px;
 }
-.pageWrapper .pageContent .paragraph h5 {
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .paragraph {
+    text-align: justify;
+    font-size: 12px;
+    line-height: 22px;
+    padding-top: 10px;
+  }
+}
+.pageWrapper .pageContent .paragraph h5,
+.pageWrapper .pageContent .paragraph h2,
+.pageWrapper .pageContent .paragraph .pTitle {
   margin-top: 40px;
 }
 .pageWrapper .pageContent .paragraph p {
@@ -3090,6 +3222,55 @@ section .teamContent p {
 .pageWrapper .pageContent .paragraph p b {
   color: #0f1c44;
   font-weight: 500;
+}
+.pageWrapper .pageContent .paragraph a {
+  color: #0f1c44;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  position: relative;
+}
+.pageWrapper .pageContent .paragraph a:after {
+  content: "";
+  width: 100%;
+  right: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  height: 1px;
+  border-bottom: 2px dotted #ff4200;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .pageWrapper .pageContent .paragraph a:hover {
+    color: #ff4200;
+  }
+  .pageWrapper .pageContent .paragraph a:hover:after {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+}
+.pageWrapper .pageContent .paragraph span {
+  color: #0f1c44;
+  font-weight: 500;
+  display: block;
+}
+.pageWrapper .pageContent .paragraph b {
+  color: #0f1c44;
+  font-weight: 500;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .paragraph b {
+    font-size: 12px;
+  }
+}
+.pageWrapper .pageContent .paragraph strong {
+  color: #ff4200;
+  font-weight: 700;
 }
 .pageWrapper .pageContent h1 {
   font-size: 40px;
@@ -3151,6 +3332,9 @@ section .teamContent p {
     padding-top: 30px;
   }
 }
+.pageWrapper .pageContent .teamDetails .titleTag {
+  color: #707070;
+}
 .pageWrapper .pageContent .teamDetails .paragraph {
   padding-right: 112px;
   padding-left: 0;
@@ -3187,6 +3371,7 @@ section .teamContent p {
   display: flex;
   align-items: center;
   padding-bottom: 21px;
+  transition: all 0.3s linear;
 }
 .pageWrapper .pageContent .teamDetails .socialMedia a.linkedin {
   margin-left: -3px;
@@ -3202,6 +3387,11 @@ section .teamContent p {
 .pageWrapper .pageContent .teamDetails .socialMedia a span.icon-linkedin-2 {
   font-size: 32px;
   padding-left: 0;
+}
+@media screen and (min-width: 992px) {
+  .pageWrapper .pageContent .teamDetails .socialMedia a:hover {
+    color: #ff4200;
+  }
 }
 .pageWrapper .pageContent .teamDetails .top {
   display: flex;
@@ -3224,7 +3414,7 @@ section .teamContent p {
 }
 .pageWrapper .pageContent .teamDetails .top .titleColumn h1 {
   font-size: 27px;
-  line-height: 10px;
+  line-height: 27px;
   padding-bottom: 16px;
 }
 @media screen and (min-width: 992px) {
@@ -3257,6 +3447,7 @@ section .teamContent p {
     font-size: 16px;
     line-height: 25px;
     padding-bottom: 20px;
+    padding-top: 0;
   }
 }
 .pageWrapper .pageContent.type2 .rightColumn {
@@ -3306,7 +3497,7 @@ section .teamContent p {
     padding-bottom: 0;
   }
 }
-.pageWrapper .rightColumn .fixTitle h4 {
+.pageWrapper .rightColumn .fixTitle span {
   text-transform: capitalize;
   font-size: 18px;
   line-height: 20px;
@@ -3415,24 +3606,33 @@ section .teamContent p {
   padding-left: 7px;
 }
 
-.fixTitle h4 {
+.fixTitle span {
   font-weight: 500;
   color: #0f1c44;
   font-size: 12px;
-  border-left: 2px solid #ff4200;
   padding-left: 10px;
   line-height: 10px;
   margin: 0;
   text-transform: uppercase;
+  position: relative;
 }
-.fixTitle.type2 h4 {
+.fixTitle span:before {
+  content: "";
+  width: 2px;
+  height: calc(100% - 7px);
+  background-color: #ff4200;
+  position: absolute;
+  left: 0;
+  top: 3.5px;
+}
+.fixTitle.type2 span {
   color: #ff4200;
   font-size: 20px;
   padding-left: 16px;
   line-height: 20px;
 }
 @media screen and (max-width: 991.98px) {
-  .fixTitle.type2 h4 {
+  .fixTitle.type2 span {
     font-size: 14px;
     padding-left: 10px;
     line-height: 15px;
@@ -3449,7 +3649,7 @@ section .teamContent p {
   padding-bottom: 83px;
   padding-left: 5px;
 }
-.otherSlide .fixTitle h4 {
+.otherSlide .fixTitle span {
   font-size: 25px;
   line-height: 20px;
   padding-left: 14px;
@@ -3530,7 +3730,7 @@ section .teamContent p {
     padding-top: 30px;
   }
 }
-.listWrapper h4 {
+.listWrapper .fixTitle span {
   font-size: 15px;
   line-height: 14px;
   padding-left: 15px;
@@ -3540,8 +3740,19 @@ section .teamContent p {
   padding-left: 55px;
   padding-top: 32px;
 }
+@media screen and (max-width: 991.98px) {
+  .listWrapper .list {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .listWrapper .list {
+    padding-left: 16px;
+  }
+}
 .listWrapper .list li {
   padding-bottom: 14px;
+  padding-left: 13px;
 }
 .listWrapper .list li::marker {
   font-size: 10px;
@@ -3551,7 +3762,7 @@ section .teamContent p {
   font-weight: 400;
   color: #454545;
   font-size: 14px;
-  padding-left: 13px;
+  padding-left: 0;
   transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {
@@ -3652,6 +3863,14 @@ h5 {
 .paragraph {
   padding-left: 5px;
   padding-top: 18px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #454545;
+}
+@media screen and (max-width: 991.98px) {
+  .paragraph {
+    text-align: justify;
+  }
 }
 .paragraph p {
   font-weight: 400;
@@ -3662,6 +3881,57 @@ h5 {
   .paragraph p {
     text-align: justify;
   }
+}
+.paragraph a {
+  color: #0f1c44;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  position: relative;
+}
+.paragraph a:after {
+  content: "";
+  width: 100%;
+  right: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  height: 1px;
+  border-bottom: 2px dotted #ff4200;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .paragraph a:hover {
+    color: #ff4200;
+  }
+  .paragraph a:hover:after {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+}
+.paragraph b {
+  color: #0f1c44;
+  font-weight: 500;
+}
+.paragraph span {
+  color: #0f1c44;
+  font-weight: 500;
+  display: block;
+}
+.paragraph strong {
+  color: #ff4200;
+  font-weight: 700;
+}
+.paragraph .pTitle,
+.paragraph h2 {
+  font-weight: 500;
+  color: #0f1c44;
+  font-size: 18px;
+  display: block;
 }
 
 .backButton {
@@ -3675,11 +3945,11 @@ h5 {
 }
 @media screen and (min-width: 992px) {
   .backButton:hover {
-    color: #0f1c44;
+    color: #ff4200;
   }
   .backButton:hover .icon-right-arrow-1 {
     transform: rotate(-154deg) translate(5px, 0) !important;
-    color: #0f1c44;
+    color: #ff4200;
   }
 }
 

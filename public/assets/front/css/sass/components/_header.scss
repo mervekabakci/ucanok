@@ -4,7 +4,8 @@ header {
     position: absolute;
     width: 100%;
     @media screen and (max-width:991.98px ) {
-        height: 60px
+        height: 60px;
+        overflow: hidden;
     }
 
     .mobileHeader {
@@ -18,10 +19,22 @@ header {
             position: relative;
             z-index: 9999;
             height: 60px;
+            background-color: #ffffff;
 
             .logo {
                 padding-top: 16px;
             }
+            .language{
+                position: absolute;
+                right: 80px;
+                height: auto;
+                top: 8px;
+                display: flex;
+            }
+        }
+        @media screen and (max-width:360px) {
+            padding-left: 16px;
+            padding-right: 16px;
         }
 
         @media screen and (min-width:992px) {
@@ -94,7 +107,9 @@ header {
             opacity: 0;
             visibility: hidden;
             transition: all .3s linear;
-
+            overflow: hidden;
+            overflow-y: auto;
+            padding-bottom: 30px;
             .logo {
                 display: none;
             }
@@ -117,12 +132,23 @@ header {
 
             @media screen and (max-width:991.98px) {
                 padding-left: 40px;
+                padding-right: 40px;
                 padding-bottom: 50px;
                 text-align: left;
             }
             .menuItem{
+                @media screen and (max-width:991.98px) {
+                    padding:12px 0;
+                    & + .menuItem{
+                        border-top: 1px dotted #999999;
+                    }
+               
+                }
                 .menuLink{
                     padding-top: 13px;
+                    @media screen and (max-width:991.98px) {
+                        padding-top: 0;
+                    }
                 }
             }
         }
@@ -146,15 +172,18 @@ header {
         padding-right: 4px;
 
         @media screen and (max-width:991.98px) {
-            position: absolute;
-            top: 12px;
-            right: 94px;
-            height: auto;
+          display: none;
         }
 
         a {
             font-weight: 400;
             font-size: 13.3px;
+            transition: all .3s linear;
+            @media screen and (min-width:992px) {
+                &:hover{
+                    color:#ff4200;
+                }
+            }
 
             &+a {
                 margin-left: 33px;
