@@ -1347,24 +1347,6 @@ footer .footer .bottom nav .menuItem .menuLink {
 .cards:not(.swiper-wrapper).type1 .card a .card-body .all-btn {
   font-size: 12.4px;
 }
-.cards:not(.swiper-wrapper).type1 .card a .card-footer span {
-  margin-right: 40px;
-  font-size: 4.7vw;
-}
-@media screen and (max-width: 1366px) {
-  .cards:not(.swiper-wrapper).type1 .card a .card-footer span {
-    font-size: 50px;
-  }
-}
-.cards:not(.swiper-wrapper).type1 .card a .card-footer img {
-  height: 90px;
-  width: auto;
-}
-@media screen and (max-width: 1366px) {
-  .cards:not(.swiper-wrapper).type1 .card a .card-footer img {
-    height: 50px;
-  }
-}
 .cards.swiper-wrapper.type1 .card {
   width: 100%;
   height: 100%;
@@ -1481,6 +1463,16 @@ footer .footer .bottom nav .menuItem .menuLink {
   letter-spacing: -0.1px;
   line-height: 27px;
   padding-bottom: 39px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.cards.type1 .card .card-text p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 @media screen and (max-width: 991.98px) {
   .cards.type1 .card .card-text {
@@ -1497,7 +1489,7 @@ footer .footer .bottom nav .menuItem .menuLink {
   margin-right: 40px;
   margin-bottom: 28px;
   display: block;
-  font-size: 4.7vw;
+  font-size: 90px;
 }
 @media screen and (max-width: 1366px) {
   .cards.type1 .card .card-footer span {
@@ -1522,7 +1514,7 @@ footer .footer .bottom nav .menuItem .menuLink {
 }
 @media screen and (min-width: 1921px) {
   .cards.type1 .card .card-footer img {
-    font-size: 90px;
+    height: 90px;
   }
 }
 .cards.type2 {
@@ -3224,7 +3216,7 @@ section .teamContent p {
   font-weight: 500;
 }
 .pageWrapper .pageContent .paragraph a {
-  color: #0f1c44;
+  color: #ff4200;
   font-weight: 700;
   transition: all 0.3s linear;
   position: relative;
@@ -3232,10 +3224,10 @@ section .teamContent p {
 .pageWrapper .pageContent .paragraph a:after {
   content: "";
   width: 100%;
-  right: 100%;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
   height: 1px;
   border-bottom: 2px dotted #ff4200;
   position: absolute;
@@ -3244,14 +3236,11 @@ section .teamContent p {
   transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {
-  .pageWrapper .pageContent .paragraph a:hover {
-    color: #ff4200;
-  }
   .pageWrapper .pageContent .paragraph a:hover:after {
-    right: 0;
-    opacity: 1;
-    visibility: visible;
-    overflow: visible;
+    visibility: hidden;
+    transform: translateY(100%);
+    opacity: 0;
+    overflow: hidden;
   }
 }
 .pageWrapper .pageContent .paragraph span {
@@ -3883,7 +3872,7 @@ h5 {
   }
 }
 .paragraph a {
-  color: #0f1c44;
+  color: #ff4200;
   font-weight: 700;
   transition: all 0.3s linear;
   position: relative;
@@ -3891,10 +3880,10 @@ h5 {
 .paragraph a:after {
   content: "";
   width: 100%;
-  right: 100%;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
   height: 1px;
   border-bottom: 2px dotted #ff4200;
   position: absolute;
@@ -3903,14 +3892,11 @@ h5 {
   transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {
-  .paragraph a:hover {
-    color: #ff4200;
-  }
   .paragraph a:hover:after {
-    right: 0;
-    opacity: 1;
-    visibility: visible;
-    overflow: visible;
+    visibility: hidden;
+    transform: translateY(100%);
+    opacity: 0;
+    overflow: hidden;
   }
 }
 .paragraph b {

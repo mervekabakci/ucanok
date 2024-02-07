@@ -51,17 +51,17 @@ main {
         }
     }
     a{
-        color: #0f1c44;
+        color: #ff4200;
         font-weight: 700;
         transition: all .3s linear;
         position: relative;
         &:after{
             content: "";
             width: 100%;
-            right: 100%;
-            opacity: 0;
-            visibility: hidden;
-            overflow: hidden;
+            right: 0;
+            opacity:1;
+            visibility: visible;
+            overflow: visible;
             height: 1px;
             border-bottom:2px dotted #ff4200;
             position: absolute;
@@ -71,12 +71,11 @@ main {
         }
         @media screen and (min-width:992px) {
             &:hover{
-                color: #ff4200;
                 &:after{
-                    right: 0;
-                    opacity: 1;
-                    visibility: visible;
-                    overflow: visible;
+                    visibility: hidden;
+                    transform: translateY(100%);
+                    opacity: 0;
+                    overflow: hidden;
                 }
             }
         }

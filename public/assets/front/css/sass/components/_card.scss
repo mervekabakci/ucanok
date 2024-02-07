@@ -45,25 +45,7 @@
                         }
                     }
 
-                    .card-footer {
-                        span {
-                            margin-right: 40px;
-                            font-size: 4.7vw;
-
-                            @media screen and (max-width:1366px) {
-                                font-size: 50px;
-                            }
-                        }
-
-                        img {
-                            height: 90px;
-                            width: auto;
-
-                            @media screen and (max-width:1366px) {
-                                height: 50px;
-                            }
-                        }
-                    }
+            
                 }
 
             }
@@ -213,7 +195,17 @@
                 color: #454545;
                 letter-spacing: -0.1px;
                 line-height: 27px;
-                padding-bottom: 39px;
+                padding-bottom: 39px;  
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                p{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
 
                 @media screen and (max-width:991.98px) {
                     font-size: 12px;
@@ -230,16 +222,14 @@
                     margin-right: 40px;
                     margin-bottom: 28px;
                     display: block;
-                    font-size: 4.7vw;
+                    font-size: 90px;
+
                     @media screen and (max-width:1366px) {
                         font-size: 50px;
                     }
                     @media screen and (min-width:1921px) {
                         font-size: 90px;
                     }
-
-                    &.icon-pedestrian {}
-
                 }
 
                 img {
@@ -252,7 +242,7 @@
                         height: 50px;
                     }
                     @media screen and (min-width:1921px) {
-                        font-size: 90px;
+                        height: 90px;
                     }
                 }
             }
