@@ -204,7 +204,9 @@ $colors: (
     }
   }
 }
-
+.a-flex-end{
+  align-items: flex-end!important;
+}
 .d-block {
   display: block !important;
 }

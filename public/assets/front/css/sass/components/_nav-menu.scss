@@ -44,8 +44,12 @@ nav {
                 text-transform: uppercase;
             }
 
-        }
+            &.active{
+                color: #ff4200;
+            }
 
+        }
+        
         @media screen and (min-width:992px) {
             &:hover {
                 &>.menuLink {

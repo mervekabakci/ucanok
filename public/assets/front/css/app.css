@@ -538,6 +538,10 @@ video {
   }
 }
 
+.a-flex-end {
+  align-items: flex-end !important;
+}
+
 .d-block {
   display: block !important;
 }
@@ -1943,6 +1947,9 @@ nav .menuItem .menuLink {
     text-transform: uppercase;
   }
 }
+nav .menuItem .menuLink.active {
+  color: #ff4200;
+}
 @media screen and (min-width: 992px) {
   nav .menuItem:hover > .menuLink {
     color: #ff4200;
@@ -2506,6 +2513,105 @@ section .teamContent p {
   display: block;
 }
 
+.formTitle {
+  font-weight: 500;
+  color: #0f1c44;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.form {
+  max-width: 1104px;
+  margin-top: 66px;
+  padding: 55px 10px 74px 123px;
+}
+@media screen and (max-width: 991.98px) {
+  .form {
+    padding: 55px;
+  }
+}
+.form form {
+  padding-top: 48px;
+}
+.form .inputColumn {
+  margin-bottom: 36px;
+  width: 330px;
+  margin-right: 27px;
+  position: relative;
+}
+@media screen and (max-width: 991.98px) {
+  .form .inputColumn {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.form .inputColumn.first {
+  width: 517px;
+}
+@media screen and (max-width: 991.98px) {
+  .form .inputColumn.first {
+    width: 100%;
+  }
+}
+.form .inputColumn label {
+  font-size: 15px;
+  color: #454545;
+  display: block;
+  font-weight: 400;
+  line-height: 27px;
+}
+.form .inputColumn pre {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #0f1c44;
+  margin: 0;
+}
+.form .formControl,
+.form input {
+  height: 45px;
+  background-color: #ffffff;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.form .formControl.is-invalid,
+.form input.is-invalid {
+  border: 1px solid red;
+}
+.form .invalid-message {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  color: red;
+}
+.form input.is-invalid ~ .invalid-message {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  bottom: -21px;
+  left: 0;
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+}
+.form input[type=file].is-invalid ~ label .file-box {
+  border: 1px solid red;
+}
+.form input[type=file].is-invalid ~ .invalid-message {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  bottom: -21px;
+  left: 0;
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .fixBtn {
   display: flex;
   align-items: center;
@@ -2537,6 +2643,142 @@ section .teamContent p {
     color: #ffffff;
     background-color: #0f1c44;
   }
+}
+
+.fixBtn-2 {
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #0f1c44;
+  border: 1px solid #0f1c44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 328px;
+  height: 45px;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .fixBtn-2:hover {
+    color: #0f1c44;
+    background-color: #ffffff;
+  }
+}
+
+.fileNote {
+  color: #454545;
+  font-weight: 400;
+  font-size: 13px;
+  padding-left: 38px;
+  padding-bottom: 7px;
+}
+@media screen and (max-width: 991.98px) {
+  .fileNote {
+    padding-left: 0;
+  }
+}
+
+/*inputFile*/
+.inputfile-box {
+  position: relative;
+  width: 330px;
+  margin-top: 24px;
+  margin-bottom: 0 !important;
+}
+@media screen and (max-width: 991.98px) {
+  .inputfile-box {
+    width: 100%;
+  }
+}
+.inputfile-box .inputfile {
+  display: none;
+}
+.inputfile-box .file-box {
+  display: inline-flex;
+  width: 100%;
+  padding: 0 40px 0 16px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  height: 45px;
+  align-items: center;
+}
+.inputfile-box .file-button {
+  position: absolute;
+  top: 40px;
+  right: 21px;
+  width: 25px;
+  height: 25px;
+}
+
+.checkbox-wrapper {
+  margin-top: 17px;
+  margin-bottom: 52px;
+}
+.checkbox-wrapper .checkText {
+  font-weight: 400;
+  color: #454545;
+  font-size: 13px;
+}
+.checkbox-wrapper .checkText a {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/*Checkbox*/
+/* Customize the label (the container) */
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 39px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Style the checkmark/indicator */
+}
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.check-container .checkmark {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  height: 18px;
+  width: 19px;
+  background-color: #ffffff;
+}
+.check-container:hover input ~ .checkmark {
+  background-color: #ffffff;
+}
+.check-container input:checked ~ .checkmark {
+  background-color: #ffffff;
+}
+.check-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.check-container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #0f1c44;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 /*Genel banner*/
@@ -2860,7 +3102,21 @@ section .teamContent p {
   }
 }
 .pageWrapper .pageContent h1.type2 {
-  padding-top: 2.7vw;
+  font-size: 50px;
+  line-height: 54px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent h1.type2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageWrapper .pageContent .textNote {
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
 .pageWrapper .pageContent .teamContent {
   padding-top: 115px;
@@ -3301,6 +3557,63 @@ section .teamContent p {
 @media screen and (min-width: 992px) {
   .listWrapper .list a:hover {
     color: #ff4200;
+  }
+}
+
+/*İletişim*/
+.contactWrapper {
+  margin: 74px 0px 86px;
+  padding-left: 12px;
+}
+.contactWrapper a {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 400;
+  color: #454545;
+  margin-bottom: 53px;
+  font-size: 16px;
+}
+@media screen and (max-width: 991.98px) {
+  .contactWrapper a {
+    font-size: 12px;
+  }
+}
+.contactWrapper a .imageWrapper {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 61px;
+}
+@media screen and (max-width: 991.98px) {
+  .contactWrapper a .imageWrapper {
+    margin-right: 20px;
+    width: 30px;
+    max-height: 20px;
+  }
+}
+.contactWrapper a .imageWrapper img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.contactWrapper a.adress .imageWrapper {
+  margin-top: 7px;
+}
+.contactWrapper a img {
+  transition: all 0.3s linear;
+}
+.map {
+  max-width: 1104px;
+  width: 100%;
+  height: 657px;
+  padding: 35px;
+}
+@media screen and (max-width: 991.98px) {
+  .map {
+    height: 480px;
+    padding: 15px;
   }
 }
 

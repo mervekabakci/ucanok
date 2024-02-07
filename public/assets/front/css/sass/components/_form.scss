@@ -1,31 +1,274 @@
-.fixBtn{
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all .3s linear;
-    width: 220px;
-    height: 60px;
-    padding: 0 20px;
-    @media screen and (max-width:991.98px) {
-        height: 45px;
-        font-size: 12px;
-        width: 180px;
-    }
-    .icon-right-arrow-1{
-        margin-left: 8px;
-        font-size: 18px;
-    }
-    &.outlineBtn{
-        background-color: rgba(0,0,0,0);
-        color: #0f1c44;
-        border: 1px solid #0f1c44;
-        @media screen and (min-width:992px){
-             &:hover{
-                color: #ffffff;
-                background-color: #0f1c44;
+.formTitle{
+  font-weight: 500;
+  color: #0f1c44;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.form {
+  max-width: 1104px;
+  margin-top: 66px;
+  padding:55px 10px 74px 123px;
+  @media screen and (max-width:991.98px) {
+    padding:55px;
+  }
 
-             }
-        }
+  form{
+    padding-top: 48px;
+  }
+
+  .inputColumn {
+    margin-bottom: 36px;
+    width: 330px;
+    margin-right: 27px;
+    position: relative;
+    @media screen and (max-width:991.98px) {
+      width: 100%;
+      margin-right: 0;
     }
+    &.first{
+      width: 517px;
+      @media screen and (max-width:991.98px) {
+        width: 100%;
+      }
+    }
+
+    label {
+      font-size: 15px;
+      color: #454545;
+      display: block;
+      font-weight: 400;
+      line-height: 27px;
+    }
+
+    pre {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 16px;
+      color: #0f1c44;
+      margin: 0;
+    }
+  }
+
+  .formControl,
+  input {
+    height: 45px;
+    background-color: #ffffff;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    &.is-invalid{
+      border: 1px solid red;
+    }
+  }
+  .invalid-message{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    color: red;
+  }
+  input.is-invalid ~ .invalid-message{
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    bottom: -21px;
+    left: 0;
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  input[type="file"].is-invalid ~ label .file-box{
+    border: 1px solid red;
+  }
+  input[type="file"].is-invalid ~ .invalid-message{
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    bottom: -21px;
+    left: 0;
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.fixBtn {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all .3s linear;
+  width: 220px;
+  height: 60px;
+  padding: 0 20px;
+
+  @media screen and (max-width:991.98px) {
+    height: 45px;
+    font-size: 12px;
+    width: 180px;
+  }
+
+  .icon-right-arrow-1 {
+    margin-left: 8px;
+    font-size: 18px;
+  }
+
+  &.outlineBtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: #0f1c44;
+    border: 1px solid #0f1c44;
+
+    @media screen and (min-width:992px) {
+      &:hover {
+        color: #ffffff;
+        background-color: #0f1c44;
+
+      }
+    }
+  }
+}
+.fixBtn-2{
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #0f1c44;
+  border:1px solid #0f1c44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 328px;
+  height: 45px;
+  transition: all .3s linear;
+  @media screen and (min-width:992px) {
+    &:hover{
+      color: #0f1c44;
+      background-color: #ffffff;
+    }
+  }
+}
+.fileNote{
+  color: #454545;
+  font-weight: 400;
+  font-size: 13px;
+  padding-left: 38px;
+  padding-bottom: 7px;
+  @media screen and (max-width:991.98px) {
+    padding-left: 0;
+  }
+}
+
+/*inputFile*/
+.inputfile-box {
+  position: relative;
+  width: 330px;
+  margin-top: 24px;
+  margin-bottom: 0!important;
+  @media screen and (max-width:991.98px) {
+    width: 100%;
+  }
+
+
+  .inputfile {
+    display: none;
+  }
+
+  .file-box {
+    display: inline-flex;
+    width: 100%;
+    padding: 0 40px 0 16px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    height: 45px;
+    align-items: center;
+  }
+
+  .file-button {
+    position: absolute;
+    top: 40px;
+    right: 21px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.checkbox-wrapper{
+  margin-top: 17px;
+  margin-bottom: 52px;
+  .checkText{
+    font-weight: 400;
+    color: #454545;
+    font-size: 13px;
+    a{
+      text-decoration: underline;
+      font-weight: 400;
+    }
+  }
+}
+/*Checkbox*/
+/* Customize the label (the container) */
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 39px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    height: 18px;
+    width: 19px;
+    background-color: #ffffff;
+  }
+
+  /* On mouse-over, add a grey background color */
+  &:hover input~.checkmark {
+    background-color: #ffffff;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  input:checked~.checkmark {
+    background-color: #ffffff;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input:checked~.checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+   .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #0f1c44;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 }
