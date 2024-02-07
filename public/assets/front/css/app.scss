@@ -171,3 +171,15 @@ main {
         }
     }
 }
+
+.hide {
+    animation: filterHide 0.3s ease 0s 1 normal forwards;
+    transform-origin: center;
+    display: none;
+}
+
+.show {
+    animation: filterShow 0.3s ease 0s 1 normal forwards;
+    transform-origin: center;
+    display: flex;
+}

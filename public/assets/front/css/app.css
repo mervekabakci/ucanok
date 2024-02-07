@@ -2852,6 +2852,23 @@ section .teamContent p {
   transform: rotate(45deg);
 }
 
+/*Nice Select*/
+.nice-select {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: #f0efef;
+  font-size: 16px;
+  line-height: initial;
+  display: flex;
+  align-items: center;
+  border: 1px solid #b8b8b8;
+}
+.nice-select.open .list {
+  width: 100%;
+  border-radius: 0;
+}
+
 /*Genel banner*/
 .bannerWrapper.type2 .breadCrumb {
   padding-left: 6.5vw;
@@ -3553,9 +3570,7 @@ section .teamContent p {
 }
 .pageWrapper .filterWrapper .filterSelect {
   background-color: #f0efef;
-  border: 1px solid #b8b8b8;
   height: 55px;
-  padding: 0 20px;
   min-width: 300px;
   display: flex;
   align-items: center;
@@ -3978,4 +3993,16 @@ h5 {
     transform: rotate(-26deg) translate(5px, -5px) scale(1.1) !important;
     color: #0f1c44;
   }
+}
+
+.hide {
+  animation: filterHide 0.3s ease 0s 1 normal forwards;
+  transform-origin: center;
+  display: none;
+}
+
+.show {
+  animation: filterShow 0.3s ease 0s 1 normal forwards;
+  transform-origin: center;
+  display: flex;
 }/*# sourceMappingURL=app.css.map */

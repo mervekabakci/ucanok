@@ -38,8 +38,20 @@ if (wWidth <= 992) {
     }
   })
 }
+function performSearch() {
+  var searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+  var cards = document.querySelectorAll('.card');
 
-
+  cards.forEach(function(card) {
+      var cardText = card.querySelector('.card-text p').textContent.toLowerCase();
+      if (cardText.includes(searchInput)) {
+          card.classList.remove('hide');
+      } else {
+          card.classList.add('hide');
+      }
+  });
+}
+document.getElementById('searchInput').addEventListener('input', performSearch);
 /**Tab Js 
  * 
  * 
